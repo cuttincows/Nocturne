@@ -19,6 +19,6 @@ public class Clam : MonoBehaviour
 
     private void OnEatStateChange(Eater eater)
     {
-        spearable.isSpearable = !eater.IsEating;
+        spearable.isSpearable = eater.IsEating;
     }
 }

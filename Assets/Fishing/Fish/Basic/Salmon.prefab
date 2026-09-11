@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 378288712160102420}
   - component: {fileID: 190569219813008638}
   - component: {fileID: 1541514451259782691}
+  - component: {fileID: 4375804181954118405}
   m_Layer: 19
   m_Name: Salmon
   m_TagString: Untagged
@@ -268,6 +269,22 @@ MonoBehaviour:
   rb: {fileID: 7637694481111627133}
   provider:
   - {fileID: 4137879464895814239}
+--- !u!114 &4375804181954118405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03823821231b90a4bb4a8f7194cf74db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eater
+  munchDuration: 2
+  disableWhileEaten:
+  - {fileID: 4211039419027188558}
+  - {fileID: 4137879464895814239}
 --- !u!1001 &1003440725436373581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342,3 +359,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1003440725436373581}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4211039419027188558 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4007198781748801795, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003440725436373581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941bbe528ade66e4487a1e5d1d32e95c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NearbyAvoider

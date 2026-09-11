@@ -10,7 +10,7 @@ public class Eater : MonoBehaviour
     public bool IsEating => eating;
 
     public Action<Eater> OnEatStateChange;
-    public List<Behaviour> disableWhileEaten;
+    public List<Behaviour> disableWhileEating;
     private void Update()
     {
         if (eating && Time.time - lastMunchTime > munchDuration)
@@ -35,7 +35,7 @@ public class Eater : MonoBehaviour
 
     private void ToggleAll(bool on)
     {
-        foreach (var comp in disableWhileEaten)
+        foreach (var comp in disableWhileEating)
         {
             comp.enabled = on;
         }

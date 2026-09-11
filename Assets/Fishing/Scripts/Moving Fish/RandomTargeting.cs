@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RandomTargeting : DirectionProvider
 {
-    public SpawnBox spawnBox;
+    public SpawnBoxReference spawnBox;
     private Vector3 target;
     private float doneDistance = 1f;
     void Start()
@@ -18,7 +18,7 @@ public class RandomTargeting : DirectionProvider
     }
     void ChangeDirection()
     {
-        target = spawnBox.GetRandomPosition();
+        target = spawnBox.SpawnBox.GetRandomPosition();
     }
 
     public override Vector3 GetDirection()

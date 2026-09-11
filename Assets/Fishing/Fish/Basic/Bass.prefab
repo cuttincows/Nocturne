@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 378288712160102420}
   - component: {fileID: 190569219813008638}
   - component: {fileID: 9105624010333293194}
+  - component: {fileID: 717573122402277930}
   m_Layer: 19
   m_Name: Bass
   m_TagString: Bass
@@ -254,6 +255,22 @@ MonoBehaviour:
   acceleration: 1
   rb: {fileID: 7637694481111627133}
   provider:
+  - {fileID: 4013984428213614815}
+  - {fileID: 7298297420578409335}
+--- !u!114 &717573122402277930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03823821231b90a4bb4a8f7194cf74db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eater
+  munchDuration: 2
+  disableWhileEaten:
   - {fileID: 4013984428213614815}
   - {fileID: 7298297420578409335}
 --- !u!1001 &11513663032445404

@@ -168,7 +168,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86549690}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -259,15 +259,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Spawning
   spawnObjects:
   - name: Bass
-    spawnable: {fileID: 592842391}
+    spawnable: {fileID: 107549408028584785, guid: d191b37838d474d4c81f0afc4db862a0,
+      type: 3}
     idealMaxAmountInSceneAtOnce: 8
     relativeRarity: 10
   - name: Salmon
-    spawnable: {fileID: 1843376059}
+    spawnable: {fileID: 107549408028584785, guid: 4cd596242c76ae84b990680d8b24dedd,
+      type: 3}
     idealMaxAmountInSceneAtOnce: 8
     relativeRarity: 10
   - name: Circuit Fry
-    spawnable: {fileID: 2068869343}
+    spawnable: {fileID: 107549408028584785, guid: 345714b36400c7849b1c16efc5871f26,
+      type: 3}
     idealMaxAmountInSceneAtOnce: 10
     relativeRarity: 4
   spawnBox: {fileID: 86549695}
@@ -560,112 +563,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &592842389
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1730017071}
-    m_Modifications:
-    - target: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.6999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.6999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.00782
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.8915899
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.10466
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7298297420578409335, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: clamper
-      value: 
-      objectReference: {fileID: 86549695}
-    - target: {fileID: 7784431384039299623, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_Name
-      value: Bass
-      objectReference: {fileID: 0}
-    - target: {fileID: 7784431384039299623, guid: d191b37838d474d4c81f0afc4db862a0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d191b37838d474d4c81f0afc4db862a0, type: 3}
---- !u!4 &592842390 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3996921033285460084, guid: d191b37838d474d4c81f0afc4db862a0,
-    type: 3}
-  m_PrefabInstance: {fileID: 592842389}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &592842391 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 107549408028584785, guid: d191b37838d474d4c81f0afc4db862a0,
-    type: 3}
-  m_PrefabInstance: {fileID: 592842389}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f80be3ca5367a7548a15c2506d9b0d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawnable
 --- !u!1 &619137844
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +578,7 @@ GameObject:
   - component: {fileID: 619137846}
   - component: {fileID: 619137845}
   m_Layer: 18
-  m_Name: Advanced
+  m_Name: Advanced Fish Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -705,6 +602,11 @@ MonoBehaviour:
       type: 3}
     idealMaxAmountInSceneAtOnce: 3
     relativeRarity: 1
+  - name: Scrapeater
+    spawnable: {fileID: 107549408028584785, guid: 34885a4b51f06f54ebf1cdf377efdc7b,
+      type: 3}
+    idealMaxAmountInSceneAtOnce: 3
+    relativeRarity: 10
   spawnBox: {fileID: 619137846}
   spawnInterval: 0.5
 --- !u!114 &619137846
@@ -1241,124 +1143,6 @@ MonoBehaviour:
   spear: {fileID: 1757456443}
   throwSpeed: 100
   retractSpeed: 100
---- !u!1001 &1557424629
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1730017071}
-    m_Modifications:
-    - target: {fileID: 3996921033285460084, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5754992177319766431, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: spawnBox
-      value: 
-      objectReference: {fileID: 86549695}
-    - target: {fileID: 7784431384039299623, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: m_Name
-      value: Circuit Fry
-      objectReference: {fileID: 0}
-    - target: {fileID: 7784431384039299623, guid: 345714b36400c7849b1c16efc5871f26,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 345714b36400c7849b1c16efc5871f26, type: 3}
---- !u!4 &1557424630 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3996921033285460084, guid: 345714b36400c7849b1c16efc5871f26,
-    type: 3}
-  m_PrefabInstance: {fileID: 1557424629}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1730017070
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1730017071}
-  m_Layer: 0
-  m_Name: Fish
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1730017071
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730017070}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.10331, y: -2.43136, z: 1.27729}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1843376065}
-  - {fileID: 1557424630}
-  - {fileID: 592842390}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1757456441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1421,114 +1205,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!1001 &1843376058
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1730017071}
-    m_Modifications:
-    - target: {fileID: 3996921033285460084, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.45865
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.43136
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.12991
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3996921033285460084, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4137879464895814239, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: spawnBox
-      value: 
-      objectReference: {fileID: 86549695}
-    - target: {fileID: 7784431384039299623, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: m_Name
-      value: Salmon
-      objectReference: {fileID: 0}
-    - target: {fileID: 7784431384039299623, guid: 4cd596242c76ae84b990680d8b24dedd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4cd596242c76ae84b990680d8b24dedd, type: 3}
---- !u!114 &1843376059 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 107549408028584785, guid: 4cd596242c76ae84b990680d8b24dedd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1843376058}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f80be3ca5367a7548a15c2506d9b0d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawnable
---- !u!4 &1843376065 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3996921033285460084, guid: 4cd596242c76ae84b990680d8b24dedd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1843376058}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2068869343 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 107549408028584785, guid: 345714b36400c7849b1c16efc5871f26,
-    type: 3}
-  m_PrefabInstance: {fileID: 1557424629}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f80be3ca5367a7548a15c2506d9b0d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawnable
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1539,4 +1215,3 @@ SceneRoots:
   - {fileID: 397424855}
   - {fileID: 994354589}
   - {fileID: 1339212662}
-  - {fileID: 1730017071}

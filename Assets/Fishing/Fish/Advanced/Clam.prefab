@@ -185,7 +185,7 @@ Rigidbody:
   m_GameObject: {fileID: 7784431384039299623}
   serializedVersion: 5
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 1
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -302,6 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ReenterBox
   targetBox:
     spawnBoxOverride: {fileID: 0}
+  tolerance: 1
 --- !u!1001 &1003440725436373581
 PrefabInstance:
   m_ObjectHideFlags: 0

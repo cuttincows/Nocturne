@@ -8,6 +8,7 @@ public interface IPositionProvider
 [System.Serializable]
 public class SpawnBoxReference
 {
+    [Header("By Default, uses the most recently loaded SpawnBox unless this is assigned.")]
     [SerializeField] SpawnBox spawnBoxOverride;
     public SpawnBox SpawnBox => spawnBoxOverride != null ? spawnBoxOverride : SpawnBox.instance;
 }

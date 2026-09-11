@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 190569219813008638}
   - component: {fileID: 9105624010333293194}
   - component: {fileID: 5754992177319766431}
+  - component: {fileID: 7280941732942276313}
   m_Layer: 19
   m_Name: Circuit Fry
   m_TagString: Untagged
@@ -268,9 +269,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b7e7f64d105b0458d989c39a7b9cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Circuit
-  spawnBox: {fileID: 0}
+  spawnBoxRef:
+    spawnBoxOverride: {fileID: 0}
   maxPositions: 4
   doneDistance: 1
+--- !u!114 &7280941732942276313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03823821231b90a4bb4a8f7194cf74db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eater
+  munchDuration: 2
+  disableWhileEaten:
+  - {fileID: 6549765401930892227}
+  - {fileID: 5754992177319766431}
 --- !u!1001 &7888370177434186432
 PrefabInstance:
   m_ObjectHideFlags: 0

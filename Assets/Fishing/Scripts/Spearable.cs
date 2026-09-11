@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Spearable : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Spearable : MonoBehaviour
     public SpearTip spearTip;
     public List<Behaviour> disableWhileSpeared;
     public Collider col;
+    public UnityEvent onSpeared;
 
     public bool Speared => spearTip != null;
 
@@ -19,6 +21,7 @@ public class Spearable : MonoBehaviour
         }
         col.enabled = false;
         this.spearTip = spearTip;
+        onSpeared?.Invoke();
         UpdatePos();
     }
 
