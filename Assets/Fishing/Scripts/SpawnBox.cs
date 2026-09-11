@@ -5,10 +5,23 @@ public interface IPositionProvider
     Vector3 GetRandomPosition();
 }
 
+[System.Serializable]
+public class SpawnBoxReference
+{
+    [SerializeField] SpawnBox spawnBoxOverride;
+    public SpawnBox SpawnBox => spawnBoxOverride != null ? spawnBoxOverride : SpawnBox.instance;
+}
+
 [RequireComponent(typeof(BoxCollider))]
 public class SpawnBox : MonoBehaviour
 {
     BoxCollider boxCollider;
+    public static SpawnBox instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public Vector3 GetRandomPosition()
     {

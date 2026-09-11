@@ -6,7 +6,7 @@ public class Circuit : DirectionProvider
     List<Vector3> positions = new();
     int currIndex = 0;
     Vector3 currTarget => positions == null ? transform.position : positions[currIndex];
-    public SpawnBox spawnBox;
+    public SpawnBoxReference spawnBoxRef;
     public int maxPositions = 6;
     public float doneDistance = 1f;
 
@@ -35,7 +35,7 @@ public class Circuit : DirectionProvider
         positions.Add(transform.position);
         for (int i = 1; i < positionsCount; i++)
         {
-            positions.Add(spawnBox.GetRandomPosition());
+            positions.Add(spawnBoxRef.SpawnBox.GetRandomPosition());
         }
     }
 

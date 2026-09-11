@@ -4,10 +4,8 @@ using UnityEngine;
 public class NearbySensorDirector : DirectionProvider
 {
     public NearbySensor sensor;
-    public SpawnBox clamper;
+    public SpawnBoxReference clamper;
     public float clampStrength = 1f;
-    // strange should remove later.
-    public float centerBias = 0.5f;
     [Header("Attraction Strength. Negative Repels.")]
     public float attractStrength = 1f;
 
@@ -23,10 +21,8 @@ public class NearbySensorDirector : DirectionProvider
         }
         if (clamper != null)
         {
-            Vector3 clampedTarget = clamper.Clamp(transform.position + targetDirection * clampStrength);
-            // ): uhrm for when you dont want to leave so hard.
-            Vector3 centerDirection = (clamper.transform.position - transform.position).normalized * centerBias;
-            targetDirection = (clampedTarget - transform.position) + centerDirection;
+            Vector3 clampedTarget = clamper.SpawnBox.Clamp(transform.position + targetDirection * clampStrength);
+            targetDirection = clampedTarget - transform.position;
         }
 
         return targetDirection.normalized;

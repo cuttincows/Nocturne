@@ -7,7 +7,7 @@ public class SpawnObject
     public string name;
     public Spawnable spawnable;
     // How many there should realistically be in the scene at once.
-    public int idealMaxAmountInSceneAtOnce;
+    public float idealMaxAmountInSceneAtOnce;
     // How rare this fish is to spawn compared to others.
     public float relativeRarity;
 }
@@ -17,7 +17,6 @@ public class SpawnObject
 public class Spawning : MonoBehaviour
 {
     float currPower = 0;
-    public float maxPower = 100;
     public List<SpawnObject> spawnObjects;
     public SpawnBox spawnBox;
 
@@ -45,7 +44,7 @@ public class Spawning : MonoBehaviour
                 Quaternion rot = objToSpawn.spawnable.transform.rotation;
                 GameObject prefab = objToSpawn.spawnable.gameObject;
                 Spawnable spawnable = Instantiate(prefab, pos, rot).GetComponent<Spawnable>();
-                float powerToAssign = maxPower / objToSpawn.idealMaxAmountInSceneAtOnce;
+                float powerToAssign = 1f / objToSpawn.idealMaxAmountInSceneAtOnce;
                 spawnable.Spawn(this, powerToAssign);
                 currPower += powerToAssign;
                 spawnable.gameObject.SetActive(true);
@@ -81,7 +80,7 @@ public class Spawning : MonoBehaviour
 
     private float GetSpawnChance()
     {
-        float ratio = currPower / maxPower;
+        float ratio = currPower;
         return 2 * (1 - (1/(1 + Mathf.Exp(-4 * ratio))));
     }
 }
