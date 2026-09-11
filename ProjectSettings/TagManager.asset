@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Bass
+  - Bait
+  - Scrap
   layers:
   - Default
   - TransparentFX
@@ -23,9 +26,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Spawner
+  - Spearable
+  - Spear
   - 
   - 
   - 
