@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Fishing/Fishing.unity
+    path: Assets/Scenes/Fishing.unity
     guid: 48c84b35fffb5f74587fcd166c213b09
   - enabled: 1
     path: Assets/FPSTemplate/Scenes/IntroMenu.unity
