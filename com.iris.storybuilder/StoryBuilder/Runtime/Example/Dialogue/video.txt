@@ -1,0 +1,58 @@
+registerSpeaker "Jess"
+registerSpeaker "Katrianna"
+registerSpeaker "Cristian"
+registerSpeaker "Oli"
+registerSpeaker "Todd"
+
+label katie
+run SetBackground "Katie"
+run SetDirection "left"
+run SetCharacter1 "Katie"
+say "Katrianna" "We wanted to explore multiple styles of visualization. Currently we've implemented a few styles as prefabs, but we still have other styles we'd also like to explore in the future."
+#goto choices
+#endscript
+
+label jess
+run SetDirection "right"
+run SetBackground "Jess"
+run SetCharacter1 "Jess"
+say "Jess" "It's a language dubbed Pythonic, loosely based off of Ren'Py's recompiled Python syntax. It also serializes to and from a Graph View, which should be a familiar layout for artists working with this project."
+#goto choices
+#endscript
+
+label oli
+run SetDirection "left"
+run SetBackground "Oli"
+run SetCharacter1 "Oli"
+say "Oli" "Let me show you how to use graphs and nodes to create dialogue, like you're reading now!"
+say "Oli" "As you can see, you can lay out a graph of your story, with dialogue, choices, logic and more! You can save to and load from Pythonic scripts, and there's even highlighting to check the consistency of your graph."
+#goto choices
+#endscript
+
+label cristian
+run SetBackground "Cristian"
+run SetCharacter1 "Cristian"
+say "Cristian" "It's actually pretty versatile, The example layouts can be easily extended to create whatever mechanics you can imagine."
+
+run SetDirection "right"
+run SetBackground "Todd"
+run SetCharacter1 "Jess"
+say "Jess" "We hope you enjoyed StoryBuilder, there are multiple UI prefabs that will help get you started! Simply open a prefab and go nuts with importing your own graphics!"
+
+endscript
+
+label choices
+choice:
+	"Visualization":
+		jump katie
+		endscript
+	"Language":
+		jump jess
+		endscript
+	"Graph View, Editor Tooling":
+		jump oli
+		endscript
+	"Layouts":
+		jump cristian
+		endscript
+endscript

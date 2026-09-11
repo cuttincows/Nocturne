@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1156c765cf8c9dd44b4621624a4af503, type: 3}
+  m_Name: Me
+  m_EditorClassIdentifier: 
+  speakerName: Me
+  fullName: 
+  font: {fileID: 12800000, guid: 9be92f4d725842b489231b230c42b17b, type: 3}
+  fontColor: {r: 0.7490196, g: 0.57254905, b: 0.3137255, a: 0}
+  portrait: {fileID: 21300000, guid: d527130c991907d4393152b637326f8d, type: 3}
+  audioBarks: []
+  additionalData: []

@@ -1,0 +1,16 @@
+say ""This works, huh"
+say "this works with choices, too!"
+say "...and with <b><i>rich text</i></b>"
+choice:
+	"Choice 1":
+		say "testing 1"
+		jump end
+	"Choice 2":
+		say "testing 2"
+		jump end
+	"Choice 3":
+		say "testing 3"
+		jump end
+block end:
+	endscript
+endblock

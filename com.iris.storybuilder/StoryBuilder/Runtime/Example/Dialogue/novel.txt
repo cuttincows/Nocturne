@@ -1,0 +1,28 @@
+block start:
+	say "Hello World"
+	run SetTitle "Eat fish on floor"
+	run SetSubtitle "Chapter 1"
+	var stat1 = "Abyssinian egyptian mau so ocicat"
+	var stat2 = "Tom himalayan malkin"
+	var stat3 = "Kitty bengal so sphynx siamese"
+	var stat4 = "Birman burmese but himalayan for bombay"
+	run TrackStatVar "stat1"
+	run TrackStatVar "stat2"
+	run TrackStatVar "stat3"
+	run TrackStatVar "stat4"
+	say "Birman donskoy" "<i>Malkin siamese <b>puma.</i> Scottish</b> fold puma, <b>for mouser or malkin or turkish angora and ocicat panther"
+	choice "Meeeeouw pushes butt to face yet i shredded your linens for you so loves cheeseburgers cat is love, cat is life. Trip owner up in kitchen i want food meeeeouw yet hiss at vacuum cleaner for meowing non stop for food kitty loves pigs or hide when guests come over curl into a furry donut. Scratch my tummy actually i hate you now fight me sleep while happily ignoring when being called. Instantly break out into full speed gallop across the house for no reason. Open the door, let me out, let me out, let me-out, let me-aow, let meaow, meaow! pretend you want to go out but then don't. ":
+		"Choice 1":
+			var stat1 = "Siamese burmese"
+			say "testing 1"
+			endscript
+		"Choice 2":
+			var stat3 = "Siamese burmese"
+			say "testing 2"
+			endscript
+		"Choice 3":
+			var stat4 = "Burmese british shorthair turkish angora jaguar"
+			say "testing 3"
+			endscript
+	endscript
+endblock

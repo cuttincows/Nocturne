@@ -1,0 +1,13 @@
+{
+  "name": "com.iris.story-builder",
+  "displayName": "Story Builder",
+  "version": "0.0.1-preview",
+  "unity": "2019.4",
+  "description": "The Story Builder package allows you to build visual novels in Unity in a scripting language similar to Ren'Py.  Write custom functions in C# and call them from script, substitute variables inline with texts, and have them saved alongside your progress in a tidy file.",
+  "keywords": [
+  ],
+  "dependencies": {
+    "com.unity.textmeshpro": "2.0.1"
+  }
+}
+

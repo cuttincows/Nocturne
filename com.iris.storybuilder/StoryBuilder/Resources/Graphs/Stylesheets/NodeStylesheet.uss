@@ -1,0 +1,151 @@
+﻿#title-label
+{
+	flex-grow: 1;	
+	-unity-font-style: bold;
+	-unity-text-align: middle-center;
+	color: white;
+	margin: 0;
+	flex-direction: row;
+
+}
+
+#title-field
+{
+	margin: 10px 0px 10px 0px;
+}
+
+#title-field Label
+{
+	min-width: 50px
+}
+
+#title-field #unity-text-input
+{
+	margin-right: 10px;
+}
+
+.node
+{
+	background-color: rgba(25,25,25,1);
+	padding-bottom: 5px;
+	border-radius: 6px;
+}
+
+.title-container
+{
+	min-height: 40px;	
+	flex-direction: row;
+}
+
+#title-text-container
+{
+	padding-top: 5px;
+	flex-direction: column;
+	align-content: center;
+	flex-grow: 1;
+	margin-right: 73px;
+}
+
+#title
+{
+	height: 40px;	
+}
+
+#type-label
+{
+	-unity-font-style: italic;
+	-unity-text-align: middle-center;
+	margin-bottom: 5px;
+	color: rgba(150,150,150,1);
+}
+
+#start-title-container
+{
+	background-color: #2A9D8F;
+	padding: 0px;
+}
+
+.dialogue-node-title-container#title 
+{
+	background-color: #264653;
+}
+
+.jump-node-title-container#title
+{
+	background-color: #9A7AA0;
+}
+
+.jump-node-title-container #type-label
+{
+	color: rgba(75,75,75,1);
+}
+
+ChoiceNode #title
+{	
+	background-color: #E9C46A;
+}
+
+ChoiceNode #title-label
+{
+	color: black;
+}
+
+ChoiceNode #type-label
+{
+	color: rgba(100,100,100,1);
+}
+
+IfNode #title
+{
+	background-color: #F4A261;
+}
+
+IfNode #title-label
+{
+	color: black;
+}
+
+IfNode #type-label
+{
+	color: rgba(100,100,100,1);
+}
+
+VariableNode #title
+{
+	background-color: #E76F51;
+}
+
+VariableNode #type-label
+{
+	color: rgba(75,75,75,1);
+}
+
+#title-icon
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 25px;
+	height: 25px;
+	align-self: center;
+}
+
+#secret-input-port
+{
+	width: 0px;
+	height: 0px;
+	padding: 0px;
+	visibility: hidden;
+}
+
+.choice-container:enabled
+{
+}
+
+.choice-container:disabled
+{
+	width: 0px;
+	height: 1px;
+	padding: 0px;
+	margin: 0px;
+	visibility: hidden;
+}

@@ -1,0 +1,11 @@
+say "You chose choice {testVar}!"
+say "This is another thing!"
+say "Whoa this works, that's pretty cool!"
+say "I can also have multiple choices in a script"
+choice:
+    "Second Choice 1":
+        jump end
+	"Second Choice 2":
+		jump end
+	"Second Choice 3":
+		jump end

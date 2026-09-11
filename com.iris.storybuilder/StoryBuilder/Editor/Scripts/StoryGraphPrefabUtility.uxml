@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:engine="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
+>
+
+  <engine:Box name="Main">
+    <engine:Box name="Header">
+      <engine:Image name="header-icon"/>
+      <engine:Label text="Story Graph" name="title"/>
+    </engine:Box>
+    <engine:Box name="Body">
+      <engine:Box name="StoryList">
+        <engine:Box name="StoryListTitle" class="title-refresh">
+          <engine:Label text="Story List" name="list-label" />
+          <engine:Button text="Refresh" name="refresh-list" />
+        </engine:Box>
+        <engine:Label name="StoryListDescription" text="List of all .SGL files in your project"/>
+        <engine:ListView name="story-list" />
+      </engine:Box>
+      <engine:Box name="StoryDetails">
+        <engine:Box name="DetailsHeader">
+          <engine:Box name="DetailsHeaderTitle" class="title-refresh">
+            <engine:Label text="Asset List" name="AssetDetailsLabel" />
+            <engine:Button text="Refresh" name="refresh-asset-list" />
+          </engine:Box>
+          <engine:Label name="DetailsHeaderDesc" text ="List of all assets referenced in this StoryScript file."/>
+        </engine:Box>
+        <engine:Box name="AssetLists">
+          <engine:Box class="asset-list">
+            <engine:Box>
+              <engine:Image name="speaker-icon" />
+              <engine:Label text="Speakers"/>
+            </engine:Box>
+            <engine:ListView name="speaker-list" />
+          </engine:Box>
+          <engine:Box class="asset-list">
+            <engine:Box>
+              <engine:Image name="background-icon" />
+              <engine:Label text="Backgrounds"/>
+            </engine:Box>
+            <engine:ListView name="background-list" />
+          </engine:Box>
+          <engine:Box class="asset-list">
+            <engine:Box>
+              <engine:Image name="sound-icon" />
+              <engine:Label text="AudioClips"/>
+            </engine:Box>
+            <engine:ListView name="sound-list" />
+          </engine:Box>
+        </engine:Box>
+        <engine:Box name="Settings">
+          <engine:Box class ="settings-title">
+            <engine:Label text="Settings"/>
+          </engine:Box>
+          <engine:Box name="layout-settings">
+            <engine:Label text="Dialogue Layout" name="layout-label"/>
+            <engine:Box class="layouts">
+              <engine:Box class="layout">
+                <engine:Box>
+                  <engine:Image name="layout1"/>
+                </engine:Box>
+                <engine:Label text="Layout Name"/>
+              </engine:Box>
+              <engine:Box class="layout selected-layout">
+                <engine:Box>
+                  <engine:Image name="layout2"/>
+                </engine:Box>
+                <engine:Label text="Layout Name"/>
+              </engine:Box>
+              <engine:Box class="layout">
+                <engine:Box>
+                  <engine:Image name="layout3"/>
+                </engine:Box>
+                <engine:Label text="Layout Name"/>
+              </engine:Box>
+          </engine:Box>
+          </engine:Box>
+          <engine:VisualElement name="speaker-stuff">
+            <engine:Label text="Primary Speaker"/>
+            <editor:EnumField name="popup">
+            </editor:EnumField>
+          </engine:VisualElement>
+        </engine:Box>
+        <engine:Box name="Prefabs">
+          <engine:Box>
+            <engine:Label text=""/>
+          </engine:Box>
+          <engine:Box name="ButtonsBox">
+            <engine:Button name="make-prefab" text="Generate Prefab"/>
+            <engine:Button name="add-prefab" text="Add Prefab to Current Scene"/>
+          </engine:Box>
+        </engine:Box>
+      </engine:Box>
+    </engine:Box>
+  </engine:Box>
+
+</engine:UXML>

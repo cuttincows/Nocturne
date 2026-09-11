@@ -1,0 +1,29 @@
+block startofweek:
+	say Jess "Hey, Sharlene!"
+	say Sharlene "Hey, what's up?"
+	say Jess "I'm a little bummed, actually. Hackweek's coming up, and I still don't have anyone to help with documentation :("
+	say Sharlene "Did you say documentation? O.O"
+	say Sharlene "I'd love to help, I've been looking for a project! What are you working on?"
+	say Jess ":O"
+	setBackground fridges_blurred 1
+	say Jess "Oh! So I'm working on this project called StoryBuilder - if you've ever played games like Doki Doki Literature Club or Butterfly Soup, those are all visual novels!"
+	say Jess "I want to make this genre more accessible for creators, so that anyone can make beautiful stories <3"
+	say Sharlene "Oh, I love visual novels! Don't tell anyone, but I spent a lot of time playing Tokimeki Memorial Girl's Side back in the day."
+	say Sharlene "What kind of documentation would you need?"
+	setBackground StoryScript_snap 0.5
+	say Jess "StoryBuilder uses a custom scripting language called StoryScript, so that even writers and artists can easily create VNs."
+	say Jess "Through the DialogueRenderer and LanguageInterpreter, you can make a VN without ever touching code!"
+	say "Jess shows Sharlene how to create a simple dialogue file."
+	say Sharlene "This is pretty intuitive!"
+	say Sharlene "Okay, so how would we add a dramatic pause?"
+	pause 1
+	say Jess "I didn't even think of adding that! That's something we could work on this week."
+	say Sharlene "Can the characters produce sounds?"
+	playSound hmm 2
+	say Jess "That's a good idea! I'll just have to figure out the syntax for that."
+	say Sharlene "How do I switch the background image?"
+	setBackground officeBackground 1
+	say Jess "I don't know. I'll have to work on that this week."
+	say Jess "Sounds like we've got a lot to do. Let's get cracking!"
+	endscript
+endblock

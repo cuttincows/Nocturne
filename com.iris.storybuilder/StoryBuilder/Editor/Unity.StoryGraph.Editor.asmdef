@@ -1,0 +1,10 @@
+{
+    "name": "Unity.StoryBuilder.Editor",
+    "references": [
+      "Unity.StoryBuilder"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

@@ -1,0 +1,31 @@
+block start:
+
+	run SetPrimary Hunter
+	run SetSecondary Feldspar
+
+	var tmpvar = True
+	if {tmpvar} == True:
+		print "tempvar is True!"
+
+	say Hunter "Malkin siamese puma. Scottish fold puma, for mouser or malkin or turkish angora and ocicat panther"
+	say Feldspar "Grimalkin puma for kitty but norwegian forest and grimalkin havana brown so birman. Ragdoll scottish fold, tomcat or cheetah malkin"
+	choice "Like, nyah?~":
+		"Choice 1":
+			run SetDirection "left"
+			say Hunter "American bobtail bombay sphynx"
+			endscript
+		"Choice 2":
+			run SetDirection "left"
+			say Hunter "Bengal kitten bobcat but sphynx kitten cheetah. Lynx manx, and kitty or tom jaguar singapura and kitty"
+			endscript
+		"Choice 3":
+			run SetDirection "left"
+			say Hunter "Panther singapura. Kitten mouser for egyptian mau. Egyptian mau puma burmese for lion"
+			endscript
+	endscript
+endblock
+
+block blockName:
+	say whatever
+	endscript
+endblock

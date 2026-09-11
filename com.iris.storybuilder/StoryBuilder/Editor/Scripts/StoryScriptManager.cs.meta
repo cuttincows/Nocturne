@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 34a9f3c4c3939f64ea7e9a1fcc4cbd83
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_ViewDataDictionary: {instanceID: 0}
+  - prefab: {fileID: 7143362081439812361, guid: 5de0a72be25370b49a8803eab9e7a804,
+      type: 3}
+  - scrollingPrefab: {fileID: 7879168220296595442, guid: 3ea6082f9065aa946865d21ee11677fb,
+      type: 3}
+  - dialoguePrefab: {fileID: 7143362081439812361, guid: 5de0a72be25370b49a8803eab9e7a804,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

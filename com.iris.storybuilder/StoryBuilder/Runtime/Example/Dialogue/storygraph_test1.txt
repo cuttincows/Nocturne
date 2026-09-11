@@ -1,0 +1,110 @@
+block start:
+	var book = False
+	setBackground officeBackground 1
+	playSound grunt_1
+	say "It's only when I hear the sounds of shuffling feet and supplies being put away that I realize that the lecture's over."
+	say "Professor Eileen's lectures are usually interesting, but today I just couldn't concentrate on it."
+	say "I've had a lot of other thoughts on my mind...thoughts that culminate in a question."
+	say "It's a question that I've been meaning to ask a certain someone."
+	say "When we come out of the university, I spot her right away."
+	say "I've known Sylvie since we were kids. She's got a big heart and she's always been a good friend to me."
+	say "But recently... I've felt that I want something more."
+	say "More than just talking, more than just walking home together when our classes end."
+	choice  "As soon as she catches my eye, I decide...":
+		"To ask her right away.":
+			jump rightaway
+			endscript
+		"To ask her later.":
+			jump later
+			endscript
+endblock
+
+block rightaway:
+	setBackground forestBackground 1
+	say "Sylvie" "Hi there! How was class?"
+	say "Me" "Good..."
+	say "I can't bring myself to admit that it all went in one ear and out the other."
+	say "Me" "Are you going home now? Wanna walk back with me?"
+	say "Sylvie" "Sure!"
+	say "After a short while, we reach the meadows just outside the neighborhood where we both live."
+	say "It's a scenic view I've grown used to. Autumn is especially beautiful here."
+	say "When we were children, we played in these meadows a lot, so they're full of memories."
+	say "Me" "Hey... Umm..."
+	say "She turns to me and smiles. She looks so welcoming that I feel my nervousness melt away."
+	say "I'll ask her...!"
+	say "Me" "Ummm... Will you..."
+	say "Me" "Will you be my artist for a visual novel?"
+	say "Silence."
+	say "She looks so shocked that I begin to fear the worst. But then..."
+	choice "Sure, but what's a \"visual novel?\"":
+		"It's a videogame.":
+			jump game
+			endscript
+		"It's an interactive book.":
+			jump book
+			endscript
+endblock
+
+block game:
+	say "Me" "It's a kind of videogame you can play on your computer or a console."
+	say "Me" "Visual novels tell a story with pictures and music."
+	say "Me" "Sometimes, you also get to make choices that affect the outcome of the story."
+	say "Sylvie" "So it's like those choose-your-adventure books?"
+	say "Me" "Exactly! I've got lots of different ideas that I think would work."
+	say "Me" "And I thought maybe you could help me...since I know how you like to draw."
+	say "Me" "It'd be hard for me to make a visual novel alone."
+	say "Sylvie" "Well, sure! I can try. I just hope I don't disappoint you."
+	say "Me" "You know you could never disappoint me, Sylvie."
+	jump marry
+endblock
+
+block book:
+	var book = True
+	say "Me" "It's like an interactive book that you can read on a computer or a console."
+	say "Sylvie" "Interactive?"
+	say "Me" "You can make choices that lead to different events and endings in the story."
+	say "Sylvie" "So where does the \"visual\" part come in?"
+	say "Me" "Visual novels have pictures and even music, sound effects, and sometimes voice acting to go along with the text."
+	say "Sylvie" "I see! That certainly sounds like fun. I actually used to make webcomics way back when, so I've got lots of story ideas."
+	say "Me" "That's great! So...would you be interested in working with me as an artist?"
+	say "Sylvie" "I'd love to!"
+	jump marry
+endblock
+
+block marry:
+	say "And so, we become a visual novel creating duo."
+	say "Over the years, we make lots of games and have a lot of fun making them."
+	if book == true:
+		say "Our first game is based on one of Sylvie's ideas, but afterwards I get to come up with stories of my own, too."
+	say "We take turns coming up with stories and characters and support each other to make some great games!"
+	say "And one day..."
+	say "Sylvie" "Hey..."
+	say "Me" "Yes?"
+	say "Sylvie" "Will you marry me?"
+	say "Me" "What? Where did this come from?"
+	say "Sylvie" "Come on, how long have we been dating?"
+	say "Me" "A while..."
+	say "Sylvie" "These last few years we've been making visual novels together, spending time together, helping each other..."
+	say "Sylvie" "I've gotten to know you and care about you better than anyone else. And I think the same goes for you, right?"
+	say "Me" "Sylvie..."
+	say "Sylvie" "But I know you're the indecisive type. If I held back, who knows when you'd propose?"
+	say "Sylvie" "So will you marry me?"
+	say "Me" "Of course I will! I've actually been meaning to propose, honest!"
+	say "Sylvie" "I know, I know."
+	say "Me" "I guess... I was too worried about timing. I wanted to ask the right question at the right time."
+	say "Sylvie" "You worry too much. If only this were a visual novel and I could pick an option to give you more courage!"
+	say "We get married shortly after that."
+	say "Our visual novel duo lives on even after we're married...and I try my best to be more decisive."
+	say "Together, we live happily ever after even now."
+	say "<b>Good Ending</b>."
+	endscript
+endblock
+
+block later:
+	say "I can't get up the nerve to ask right now. With a gulp, I decide to ask her later."
+	say "But I'm an indecisive person."
+	say "I couldn't ask her that day and I end up never being able to ask her."
+	say "I guess I'll never know the answer to my question now..."
+	say "<b>Bad Ending</b>."
+	endscript
+endblock

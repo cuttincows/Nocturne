@@ -1,0 +1,230 @@
+:root {
+	padding: 10px;
+	background-color:#AAAAAA;
+}
+
+Box {
+	border-width:0px;
+}
+
+Label {
+	white-space:normal;
+}
+
+ListView {
+	background-color: #CDCDCD;
+	height:200px;
+	-unity-text-align:middle-left;
+}
+
+#Main {
+	width:auto;
+}
+
+#Header {
+	border-top-width:10px;
+	border-top-color:black;
+	padding:10px;
+	height:80px;
+	flex-direction:row;
+	background-color:#33ACBC
+}
+
+#title{
+	font-size: 40px;
+}
+
+#header-icon {
+	width:50px;
+	height:50px;
+}
+
+#Body {
+	width:auto;
+	flex-direction:row;
+}
+
+#StoryList {
+	width:200px;
+}
+
+.title-refresh{
+	padding:10px;
+	flex-direction:row;
+}
+
+.title-refresh Label {
+	font-size:20px;
+	height:20px;
+	-unity-text-align:middle-left;
+}
+
+.title-refresh Button {
+	margin-left:25px;
+	height:25px;
+	width:60px;
+}
+
+#StoryListDescription {
+	padding:10px;
+}
+
+
+#story-list {
+	margin:0 10px;
+	height: 500px;
+}
+#story-list Label {
+	padding:5px;
+	color:red;
+}
+
+#StoryDetails {
+	margin-left:15px;
+	width:auto;
+	height:auto;
+	padding:10px;
+	border-left-width:10px;
+	border-left-color:#AAAAAA;
+}
+
+#AssetLists {
+	flex-direction:row;
+	width:auto;
+}
+
+#DetailsHeaderDesc {
+	margin:0 10px;
+}
+
+.asset-list ListView {
+	width:200px;
+	margin:0 10px;
+	padding:10px;
+}
+
+.asset-list Image {
+	margin-left:5px;
+	height:30px;
+	width:30px;
+}
+
+.asset-list Box {
+	background-color:#D9792A;
+	border-top-color:black;
+	border-top-width:5px;
+	flex-direction:row;
+	margin:10px;
+	padding:5px 0;
+}
+
+.asset-list Box Label {
+	-unity-text-align:middle-left;
+	margin-left:5px;
+	font-size: 20px;
+}
+
+#Settings {
+	height:auto;
+}
+
+#Prefabs{
+	height:100px;
+}
+
+#ButtonsBox {
+	flex-direction:row;
+
+}
+
+#Prefabs Button {
+	font-size:20px;
+	width:200px;
+	height:75px;
+	white-space:normal;
+	margin:0 20px;
+}
+
+#add-prefab {
+	background-color:#C1A3EF
+}
+
+#make-prefab {
+	background-color:#73BF64
+}
+
+#Settings {
+	padding:10px;
+}
+
+.settings-title Label {
+	font-size: 20px;
+}
+
+.layouts {
+	flex-direction: row;
+}
+
+.layout {
+	border-width:1px;
+	padding:5px;
+	margin-right:10px;
+}
+
+.layout:hover {
+	background-color: white;
+}
+
+.selected-layout {
+	background-color: #A4A4A4;
+}
+.layout Image {
+	height:150px;
+	width:150px;
+}
+
+.layout Label {
+	-unity-text-align:middle-center;
+	margin-top:5px;
+}
+
+.Main {
+	padding: 10px;
+}
+
+
+.blue {
+    font-size: 20px;
+    -unity-font-style: bold;
+}
+
+.missing-asset {
+	color: red;
+}
+
+.found-asset {
+	color: green;
+}
+
+ListView Label {
+	padding:10px;
+}
+
+#speaker-stuff {
+	font-size:16px;
+	margin: 10px 0;
+	flex-direction:row;
+	-unity-text-align:middle-left;
+}
+
+#speaker-settings {
+	margin: 0 10px;
+}
+
+#layout-label {
+	visibility: hidden;
+}
+
+.unity-enum-field__input {
+	padding: 10px;
+}

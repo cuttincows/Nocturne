@@ -1,0 +1,25 @@
+# This is a comment
+var test = "t\#hing"  # Another comment
+print {test}
+if test == "t\#hing":
+	print "Test worked"
+say "This is a thing???"
+say "here is more stuff " +
+"which is across multiple lines"
+
+run TestType false# thing
+if testThing:
+	run TestType {testThing}
+choice:
+	"Choice 1":
+		var testVar = 1
+		jump test
+	"Choice 2":
+		var testVar = 2
+		jump test
+	"Choice 3":
+		var testVar = 3
+		jump test
+	"Choice 4":
+		var testVar = 4
+		jump test

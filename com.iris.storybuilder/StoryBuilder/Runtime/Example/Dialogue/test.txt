@@ -1,0 +1,20 @@
+label start
+
+say "Are you sitting comfortable? Then let's begin"
+say "Also, I built a really cool thing"
+say "Look, I can get it do say anything"
+say "I can also have choices"
+choice:
+	"See":
+		say "this is the end of the demo"  # Trying to get 4x spaces to tabs
+		endscript
+	"I":
+		say "this is the end of the demo"
+		endscript
+	"Didn't":
+		say "this is the end of the demo"
+		endscript
+	"Lie":
+		say "this is the end of the demo"
+		endscript
+endscript

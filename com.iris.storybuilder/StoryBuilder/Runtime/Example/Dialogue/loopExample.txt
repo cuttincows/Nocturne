@@ -1,0 +1,24 @@
+label start
+say "This is an example on how to loop dialogue"
+say "I you put a bunch of instructions, you may want to let users repeat a set"
+say "Offering a choice to repeat is actually pretty easy"
+say "Simply put in a \"jump\" statement, directed at the beginning of the instructions"
+say "It might also be a good idea to offer a way out, as you don't want to loop forever"
+	
+var test = "thing"
+if {test} == "thing":
+	print "Test worked"
+
+var origin = "start"
+choice:
+	"I understood that":
+		goto end
+	"I did not understand that"
+		say "Well, I'll say it again"
+		goto start
+endblock
+
+
+label end
+say "Well, then let's get started!"
+endscript

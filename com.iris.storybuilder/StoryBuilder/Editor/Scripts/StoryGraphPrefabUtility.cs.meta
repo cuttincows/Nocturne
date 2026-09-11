@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 1c513db5b6f43d14bbdb33be6fcced57
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_ViewDataDictionary: {instanceID: 0}
+  - HeaderIcon: {fileID: 2800000, guid: 4ffa70c9395891e4697ebdb630e5faca, type: 3}
+  - SpeakerIcon: {fileID: 2800000, guid: 4858c71bcee93264db16185bd47a2bfc, type: 3}
+  - BackgroundIcon: {fileID: 2800000, guid: 218f54f41ed416c49937bf3136c0682f, type: 3}
+  - SoundIcon: {fileID: 2800000, guid: 9d0a4924f655101479110f9e41c50917, type: 3}
+  - Layout: {fileID: 2800000, guid: 5a043516a812e46418ea0003dee676a2, type: 3}
+  - styleSheet: {fileID: 7433441132597879392, guid: 66330b36c6f584b418497cbafdf81f5b,
+      type: 3}
+  - xmlDoc: {fileID: 9197481963319205126, guid: 2399051e2a4637543ba01885278edeff,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
