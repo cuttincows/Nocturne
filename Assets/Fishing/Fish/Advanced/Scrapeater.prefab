@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Grabber
   col: {fileID: 190569219813008638}
-  grabCooldown: 2
+  grabCooldown: 0.3
   disableWhenGrabbing:
   - {fileID: 4091240942061811412}
 --- !u!114 &9081737219193853553
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03823821231b90a4bb4a8f7194cf74db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eater
-  munchDuration: 0
+  munchDuration: 2
   disableWhileEating:
   - {fileID: 3847792482029170188}
   - {fileID: 9081737219193853553}
