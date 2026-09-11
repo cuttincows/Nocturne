@@ -11,7 +11,9 @@ public class SpawnObject
     // How rare this fish is to spawn compared to others.
     public float relativeRarity;
 }
-
+/// <summary>
+/// contact ande for help (: (sorry)
+/// </summary>
 public class Spawning : MonoBehaviour
 {
     float currPower = 0;
@@ -46,6 +48,7 @@ public class Spawning : MonoBehaviour
                 float powerToAssign = maxPower / objToSpawn.idealMaxAmountInSceneAtOnce;
                 spawnable.Spawn(this, powerToAssign);
                 currPower += powerToAssign;
+                spawnable.gameObject.SetActive(true);
             }
         }
     }
@@ -79,6 +82,6 @@ public class Spawning : MonoBehaviour
     private float GetSpawnChance()
     {
         float ratio = currPower / maxPower;
-        return 2 * (1 - (1/(1 + Mathf.Exp(-5 * ratio))));
+        return 2 * (1 - (1/(1 + Mathf.Exp(-4 * ratio))));
     }
 }

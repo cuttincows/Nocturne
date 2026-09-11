@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7784431384039299623}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.73, y: 2.31, z: -2.45}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Spearable
   isSpearable: 1
   spearTip: {fileID: 0}
+  disableWhileSpeared: []
   col: {fileID: 1298863768855870280}
 --- !u!114 &2665376784438653180
 MonoBehaviour:
