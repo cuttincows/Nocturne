@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 4137879464895814239}
   - component: {fileID: 378288712160102420}
   - component: {fileID: 190569219813008638}
+  - component: {fileID: 1541514451259782691}
   m_Layer: 19
   m_Name: Salmon
   m_TagString: Untagged
@@ -144,7 +145,7 @@ MonoBehaviour:
   isSpearable: 1
   spearTip: {fileID: 0}
   disableWhileSpeared:
-  - {fileID: 4137879464895814239}
+  - {fileID: 1541514451259782691}
   - {fileID: 378288712160102420}
   col: {fileID: 190569219813008638}
 --- !u!114 &2665376784438653180
@@ -211,9 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d5a22ed2155e64aa1576850140cf51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveRandomly
-  speed: 3
-  acceleration: 1
-  rb: {fileID: 7637694481111627133}
   spawnBox: {fileID: 0}
 --- !u!114 &378288712160102420
 MonoBehaviour:
@@ -252,3 +250,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1541514451259782691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3023c193eff93924d8ba4bf1709bc7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveTowards
+  speed: 3
+  acceleration: 1
+  rb: {fileID: 7637694481111627133}
+  provider: {fileID: 4137879464895814239}

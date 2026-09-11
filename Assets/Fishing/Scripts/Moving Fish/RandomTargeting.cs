@@ -1,10 +1,7 @@
 using UnityEngine;
 
-public class MoveRandomly : MonoBehaviour
+public class RandomTargeting : DirectionProvider
 {
-    public float speed = 1f;
-    public float acceleration = 1f;
-    public Rigidbody rb;
     public SpawnBox spawnBox;
     private Vector3 target;
     private float doneDistance = 1f;
@@ -14,9 +11,6 @@ public class MoveRandomly : MonoBehaviour
     }
     void FixedUpdate()
     {
-        Vector3 direction = (target - transform.position).normalized;
-        rb.AddForce(direction * acceleration, ForceMode.Acceleration);
-        rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, speed);
         if (Vector3.Distance(transform.position, target) < doneDistance)
         {
             ChangeDirection();
@@ -25,5 +19,10 @@ public class MoveRandomly : MonoBehaviour
     void ChangeDirection()
     {
         target = spawnBox.GetRandomPosition();
+    }
+
+    public override Vector3 GetDirection()
+    {
+        return (target - transform.position).normalized;
     }
 }
