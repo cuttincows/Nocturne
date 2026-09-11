@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dd24cdc56d61b3049b899280d4170b94, type: 2}
+  - {fileID: 2100000, guid: c1d5a5a123ba598489324713075c41ec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 190569219813008638}
   - component: {fileID: 9105624010333293194}
   m_Layer: 19
-  m_Name: Bass
+  m_Name: Scrapeater
   m_TagString: Bass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,8 +126,8 @@ Transform:
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 4287781691946384686}
-  - {fileID: 7601242737526296198}
+  - {fileID: 3815334883889050405}
+  - {fileID: 4130875944912579581}
   - {fileID: 8369808913438889163}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -254,9 +254,9 @@ MonoBehaviour:
   acceleration: 1
   rb: {fileID: 7637694481111627133}
   provider:
-  - {fileID: 4013984428213614815}
-  - {fileID: 7298297420578409335}
---- !u!1001 &11513663032445404
+  - {fileID: 4091240942061811412}
+  - {fileID: 3847792482029170188}
+--- !u!1001 &214612504889237263
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -267,17 +267,17 @@ PrefabInstance:
     - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.5669714
       objectReference: {fileID: 0}
     - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.2114428
       objectReference: {fileID: 0}
     - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.16540015
       objectReference: {fileID: 0}
     - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
@@ -314,11 +314,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4547526040289335994, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8103658506385282075, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
       propertyPath: m_Name
@@ -329,11 +324,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3935c92468f7b3044ab3da1d65ee0a7c, type: 3}
---- !u!114 &4013984428213614815 stripped
+--- !u!114 &3847792482029170188 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4007198781748801795, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
     type: 3}
-  m_PrefabInstance: {fileID: 11513663032445404}
+  m_PrefabInstance: {fileID: 214612504889237263}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -341,13 +336,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941bbe528ade66e4487a1e5d1d32e95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NearbyAvoider
---- !u!4 &4287781691946384686 stripped
+--- !u!4 &4130875944912579581 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
     type: 3}
-  m_PrefabInstance: {fileID: 11513663032445404}
+  m_PrefabInstance: {fileID: 214612504889237263}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &67517160920309918
+--- !u!1001 &6728410433108892989
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -358,22 +353,22 @@ PrefabInstance:
     - target: {fileID: 2472062918354865905, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}
       propertyPath: m_Name
-      value: Sphere
+      value: ScrapDetector
       objectReference: {fileID: 0}
     - target: {fileID: 6266227470572269558, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}
-      propertyPath: blacklist.Array.size
+      propertyPath: whitelistEnabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6266227470572269558, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}
-      propertyPath: 'blacklist.Array.data[0]'
-      value: Bass
+      propertyPath: whitelist.Array.size
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7324854474807978985, guid: 909c4baded5ea0d479c2c1150f931491,
+    - target: {fileID: 6266227470572269558, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}
-      propertyPath: attractStrength
-      value: -1
+      propertyPath: 'whitelist.Array.data[0]'
+      value: Scrap
       objectReference: {fileID: 0}
     - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}
@@ -430,11 +425,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 909c4baded5ea0d479c2c1150f931491, type: 3}
---- !u!114 &7298297420578409335 stripped
+--- !u!4 &3815334883889050405 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
+    type: 3}
+  m_PrefabInstance: {fileID: 6728410433108892989}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4091240942061811412 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7324854474807978985, guid: 909c4baded5ea0d479c2c1150f931491,
     type: 3}
-  m_PrefabInstance: {fileID: 67517160920309918}
+  m_PrefabInstance: {fileID: 6728410433108892989}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -442,9 +443,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941bbe528ade66e4487a1e5d1d32e95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NearbyAvoider
---- !u!4 &7601242737526296198 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-    type: 3}
-  m_PrefabInstance: {fileID: 67517160920309918}
-  m_PrefabAsset: {fileID: 0}

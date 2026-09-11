@@ -450,6 +450,11 @@ MonoBehaviour:
       type: 3}
     idealMaxAmountInSceneAtOnce: 5
     relativeRarity: 10
+  - name: Bait
+    spawnable: {fileID: 107549408028584785, guid: 8e301ac59cc244342ab5914b8ab99e54,
+      type: 3}
+    idealMaxAmountInSceneAtOnce: 5
+    relativeRarity: 10
   spawnBox: {fileID: 397424851}
   spawnInterval: 0.5
 --- !u!114 &397424851
