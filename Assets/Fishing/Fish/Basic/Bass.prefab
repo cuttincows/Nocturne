@@ -275,7 +275,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eater
   munchDuration: 2
-  disableWhileEating: []
+  disableWhileEating:
+  - {fileID: 4013984428213614815}
+  - {fileID: 7298297420578409335}
 --- !u!1001 &11513663032445404
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ public class Clam : MonoBehaviour
 {
     public Eater eater;
     public Spearable spearable;
+    public GameObject openVisuals;
 
     public void Start()
     {
@@ -20,5 +21,6 @@ public class Clam : MonoBehaviour
     private void OnEatStateChange(Eater eater)
     {
         spearable.isSpearable = eater.IsEating;
+        openVisuals.SetActive(spearable.isSpearable);
     }
 }
