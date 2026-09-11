@@ -150,6 +150,9 @@ MonoBehaviour:
   - {fileID: 9105624010333293194}
   - {fileID: 378288712160102420}
   col: {fileID: 190569219813008638}
+  onSpeared:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2665376784438653180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823562a5d41c08a498eda1b2bf97d780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dumpable
+  canDump: 1
+  fuel: 50
 --- !u!114 &107549408028584785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,9 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eater
   munchDuration: 2
-  disableWhileEaten:
-  - {fileID: 4013984428213614815}
-  - {fileID: 7298297420578409335}
+  disableWhileEating: []
 --- !u!1001 &11513663032445404
 PrefabInstance:
   m_ObjectHideFlags: 0
