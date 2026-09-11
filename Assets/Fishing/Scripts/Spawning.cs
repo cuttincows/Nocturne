@@ -1,16 +1,84 @@
+using System.Collections.Generic;
 using UnityEngine;
+
+[System.Serializable]
+public class SpawnObject
+{
+    public string name;
+    public Spawnable spawnable;
+    // How many there should realistically be in the scene at once.
+    public int idealMaxAmountInSceneAtOnce;
+    // How rare this fish is to spawn compared to others.
+    public float relativeRarity;
+}
 
 public class Spawning : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    float currPower = 0;
+    public float maxPower = 100;
+    public List<SpawnObject> spawnObjects;
+    public SpawnBox spawnBox;
+
+    public float spawnInterval = 0.5f;
+    float timer = 0;
+    public void Update()
     {
-        
+        timer += Time.deltaTime;
+        if (timer >= spawnInterval)
+        {
+            timer -= spawnInterval;
+            TrySpawn();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TrySpawn()
     {
-        
+        float spawnChance = GetSpawnChance();
+        if (Random.value < spawnChance)
+        {
+            SpawnObject objToSpawn = GetRandomSpawnObject();
+            if (objToSpawn != null)
+            {
+                Vector3 pos = spawnBox.GetRandomPosition();
+                Quaternion rot = objToSpawn.spawnable.transform.rotation;
+                GameObject prefab = objToSpawn.spawnable.gameObject;
+                Spawnable spawnable = Instantiate(prefab, pos, rot).GetComponent<Spawnable>();
+                float powerToAssign = maxPower / objToSpawn.idealMaxAmountInSceneAtOnce;
+                spawnable.Spawn(this, powerToAssign);
+                currPower += powerToAssign;
+            }
+        }
+    }
+
+    public void ReportDeath(Spawnable spawnable)
+    {
+        currPower -= spawnable.power;
+    }
+
+    private SpawnObject GetRandomSpawnObject()
+    {
+        float totalRarity = 0;
+        foreach (SpawnObject obj in spawnObjects)
+        {
+            totalRarity += obj.relativeRarity;
+        }
+
+        float randomValue = Random.value * totalRarity;
+        foreach (SpawnObject obj in spawnObjects)
+        {
+            if (randomValue < obj.relativeRarity)
+            {
+                return obj;
+            }
+            randomValue -= obj.relativeRarity;
+        }
+
+        throw new System.Exception("No spawn object found. Check if the spawnObjects list is empty or if all rarities are zero.");
+    }
+
+    private float GetSpawnChance()
+    {
+        float ratio = currPower / maxPower;
+        return 2 * (1 - (1/(1 + Mathf.Exp(-5 * ratio))));
     }
 }
