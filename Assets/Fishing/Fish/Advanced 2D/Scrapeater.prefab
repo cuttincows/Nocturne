@@ -249,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ReenterBox
   targetBox:
     spawnBoxOverride: {fileID: 0}
-  tolerance: 1
+  tolerance: 0.1
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0

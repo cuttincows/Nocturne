@@ -234,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ReenterBox
   targetBox:
     spawnBoxOverride: {fileID: 0}
-  tolerance: 1
+  tolerance: 0.1
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +549,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6266227470572269558, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}
+      propertyPath: whitelistEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266227470572269558, guid: 909c4baded5ea0d479c2c1150f931491,
+        type: 3}
       propertyPath: blacklist.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -570,7 +575,7 @@ PrefabInstance:
     - target: {fileID: 7324854474807978985, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}
       propertyPath: attractStrength
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}

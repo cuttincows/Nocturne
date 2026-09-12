@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2196210190001776642}
   - component: {fileID: 6028533422062566733}
   - component: {fileID: 3870675123941651624}
+  - component: {fileID: 2203913672795874598}
   m_Layer: 19
   m_Name: Gammaspear
   m_TagString: Untagged
@@ -245,7 +246,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ReenterBox
   targetBox:
     spawnBoxOverride: {fileID: 0}
-  tolerance: 1
+  tolerance: 0.1
+--- !u!114 &2203913672795874598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accabc4ccb51d7c4496865ea68809384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionEvent
+  rb: {fileID: 6964431724867206812}
+  minSpeed: 10
+  onCollide:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6028533422062566733}
+        m_TargetAssemblyTypeName: Death, Assembly-CSharp
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hitTag: Scrap
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +471,12 @@ PrefabInstance:
     - target: {fileID: 2472062918354865905, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472062918354865905, guid: 909c4baded5ea0d479c2c1150f931491,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6266227470572269558, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}

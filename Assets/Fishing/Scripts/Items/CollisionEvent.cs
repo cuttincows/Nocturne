@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class CollisionEvent : MonoBehaviour
 {
-    public Rigidbody rb;
+    public Rigidbody2D rb;
     public float minSpeed;
     public UnityEvent onCollide;
     public string hitTag;
