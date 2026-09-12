@@ -76,20 +76,25 @@ namespace Unity.FPS.UI
             m_MenuAction.Enable();
         }
 
+        public static bool ControllingCursor = false;
         void Update()
         {
-            // Lock cursor when clicking outside of menu
-            if (!MenuRoot.activeSelf && Mouse.current.leftButton.wasPressedThisFrame)
+            if (ControllingCursor)
             {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-            }
+                // Lock cursor when clicking outside of menu
+                if (!MenuRoot.activeSelf && Mouse.current.leftButton.wasPressedThisFrame)
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
+                    Cursor.visible = false;
+                }
 
-            if (Keyboard.current.escapeKey.wasPressedThisFrame)
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
+                if (Keyboard.current.escapeKey.wasPressedThisFrame)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                }
             }
+            
 
             if (m_MenuAction.WasPressedThisFrame()
                 || (MenuRoot.activeSelf && m_CancelAction.WasPressedThisFrame()))

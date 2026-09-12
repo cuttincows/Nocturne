@@ -1,9 +1,13 @@
+using Unity.FPS.Gameplay;
+using Unity.FPS.UI;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class FishingGameDialogue : BasicDialogue
 {
     public AudioSource blipSource;
+    public PlayerCharacterController playerController;
 
     protected override void Start()
     {
@@ -48,7 +52,6 @@ public class FishingGameDialogue : BasicDialogue
 
 
     }
-
     public void SetNextScene(string nextScene)
     {
     //    PlushieGameDialogue.NextScene = nextScene;
@@ -79,5 +82,16 @@ public class FishingGameDialogue : BasicDialogue
     public void OpenScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public override void StopUsing()
+    {
+        base.StopUsing();
+        InteractWithObject.InteractionLocked = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        InGameMenuManager.ControllingCursor = true;
+        playerController.enabled = true;
     }
 }
