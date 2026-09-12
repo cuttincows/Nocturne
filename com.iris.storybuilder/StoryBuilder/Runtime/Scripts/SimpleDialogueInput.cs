@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Dialogue))]
 public class SimpleDialogueInput : MonoBehaviour
@@ -19,7 +18,9 @@ public class SimpleDialogueInput : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Submit")/* Input.GetKeyDown(KeyCode.Return)*/)
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+
+        // if (Input.GetButtonDown("Submit")/* Input.GetKeyDown(KeyCode.Return)*/)
         {
             if (_dialogue.optionCount > 0 && _currentOption >= 0)
             {
