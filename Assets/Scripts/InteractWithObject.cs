@@ -39,6 +39,11 @@ public class InteractWithObject : MonoBehaviour
         closestDist = Mathf.Infinity;
         foreach (Interactable interactable in allInteractables)
         {
+            if (!interactable.CanBeInteractedWith)
+            {
+                continue;
+            }
+
             float dist = Vector3.Distance(player.transform.position, interactable.transform.position);
             if (dist < closestDist)
             {

@@ -7,10 +7,4 @@ block botconvo1:
 			endscript
 		"Might as well give up...":
 			endscript
-	say Bot "Our mission was [collect debris near the black hole]"
-	say Bot "But diving straight into it is an option too!"
-	say Bot "Not that we have any other options right now"
-	say Bot "Aside from like, keeping the engine fed to keep us moving fast enough to not get crushed"
-	say Bot "Not that it matters to me"
-	say Bot "No more floor to clean sounds like a swell deal to me"
 endblock

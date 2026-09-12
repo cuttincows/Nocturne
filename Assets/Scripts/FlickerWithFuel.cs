@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Light))]
 public class FlickerWithFuel : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -11,6 +12,6 @@ public class FlickerWithFuel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       //Mathf.PerlinNoise1D(Mathf.time) 
     }
 }

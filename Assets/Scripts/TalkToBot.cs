@@ -14,15 +14,30 @@ public class TalkToBot : Interactable
 
     public override void Interact()
     {
+        if (dialogueScripts.Count == 0)
+        {
+            return;
+        }
+
         InteractWithObject.InteractionLocked = true;
         playerController.enabled = false;
         Cursor.visible = true;
         InGameMenuManager.ControllingCursor = false;
         Cursor.lockState = CursorLockMode.Confined;
 
-        interpreter.scriptFiles = dialogueScripts;
+        interpreter.scriptFiles.Clear();
+        interpreter.scriptFiles.Add(dialogueScripts[0]);
         interpreter.Initialize();
 
         dialogue.gameObject.SetActive(true);
+        if (dialogueScripts.Count > 0)
+        {
+            dialogueScripts.RemoveAt(0);
+        }
+
+        if (dialogueScripts.Count == 0)
+        {
+            CanBeInteractedWith = false;
+        }
     }
 }

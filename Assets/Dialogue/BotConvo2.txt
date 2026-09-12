@@ -1,9 +1,13 @@
 block botconvo2:
-	say Bot "Why fish, you ask?"
-	say Bot "Why not fish?  It was the primordial beast in the sea, was it not?"
-	say Bot "But diving straight into it is an option too!"
-	say Bot "Not that we have any other options right now"
-	say Bot "Aside from like, keeping the engine fed to keep us moving fast enough to not get crushed"
-	say Bot "Not that it matters to me"
-	say Bot "No more floor to clean sounds like a swell deal to me"
+	say Bot "Ba beboooooo"
+	choice "Ba beboooooo":
+		"Could you like, help me fish?":
+			say Bot "Baboop :("
+			endscript
+		"There's a way out, right?":
+			say Bot "Baboop?"
+			endscript
+		"You pile of scrap get me out of here":
+			say Bot "..."
+			endscript
 endblock
