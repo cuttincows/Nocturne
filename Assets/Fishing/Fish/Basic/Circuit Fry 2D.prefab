@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dumpable
   canDump: 1
-  fuel: 100
+  fuel: 150
 --- !u!114 &107549408028584785
 MonoBehaviour:
   m_ObjectHideFlags: 0
