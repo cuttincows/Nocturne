@@ -8,6 +8,7 @@ TagManager:
   - Bait
   - Scrap
   - SpearTarget
+  - Wall
   layers:
   - Default
   - TransparentFX
