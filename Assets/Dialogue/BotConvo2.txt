@@ -1,6 +1,6 @@
-block conversation1:
-	say Bot "Now you've gone and done it"
-	say Bot "Our mission was [collect debris near the black hole]"
+block botconvo2:
+	say Bot "Why fish, you ask?"
+	say Bot "Why not fish?  It was the primordial beast in the sea, was it not?"
 	say Bot "But diving straight into it is an option too!"
 	say Bot "Not that we have any other options right now"
 	say Bot "Aside from like, keeping the engine fed to keep us moving fast enough to not get crushed"

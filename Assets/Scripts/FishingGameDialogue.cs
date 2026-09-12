@@ -1,8 +1,11 @@
+using System.Collections.Generic;
+using TMPro;
 using Unity.FPS.Gameplay;
 using Unity.FPS.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FishingGameDialogue : BasicDialogue
 {
@@ -90,6 +93,31 @@ public class FishingGameDialogue : BasicDialogue
         });
         currentTypingField = layout.GetDialogueBox();
         layout.GetChoicesContainer().gameObject.SetActive(false);
+    }
+
+    List<string> currentChoices;
+    protected override void DoChoice(string choicePrompt, List<string> choiceTexts)
+    {
+        //base.DoChoice(choicePrompt, choiceTexts);
+        currentChoices = new List<string>();
+        RectTransform choiceContainer = layout.GetChoicesContainer();
+
+        //while (choiceContainer.childCount > 0)
+        foreach (Transform child in choiceContainer)
+        {
+            Destroy(child.gameObject);
+        }
+        //for (int i = 0; i < choiceTexts.Count; i++) 
+        foreach (string choiceText in choiceTexts) 
+        {
+            GameObject choice = Instantiate(layout.GetChoiceButton(0, choiceTexts.Count), parent:choiceContainer);
+            (choice.transform as RectTransform).sizeDelta = new Vector2(1200, 100);
+                choice.GetComponentInChildren<TextMeshProUGUI>().text = choiceText;//choiceTexts[i];
+            choice.GetComponent<Button>().onClick.AddListener(() => {
+                HandleInput(choiceText);
+            });
+        }
+        layout.GetChoicesContainer().gameObject.SetActive(true);
     }
     public void OpenScene(string sceneName)
     {

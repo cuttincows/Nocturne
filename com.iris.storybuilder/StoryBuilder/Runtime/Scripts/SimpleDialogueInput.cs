@@ -31,24 +31,27 @@ public class SimpleDialogueInput : MonoBehaviour
                 _dialogue.HandleInput();
             } 
         }
-        else if (_dialogue.optionCount > 0)
-        {
-            float vertical = Input.GetButtonDown("Vertical")?Input.GetAxis("Vertical"):0;
-            if (vertical > 0)
-            {
-                _currentOption = circular
-                    ? (int)Mathf.Repeat(_currentOption - 1,_dialogue.optionCount)
-                    : Mathf.Clamp(_currentOption - 1, 0, _dialogue.optionCount - 1);
-                _dialogue.HighlightChoice(_currentOption);
-            }
-            else if (vertical < 0)
-            {
-                _currentOption = circular
-                    ? (int)Mathf.Repeat(_currentOption + 1,_dialogue.optionCount)
-                    : Mathf.Clamp(_currentOption + 1, 0, _dialogue.optionCount - 1);
-                _dialogue.HighlightChoice(_currentOption);
-            }
-        }
+        
+
+        /// Uncomment and make work if we want controller support
+        //else if (_dialogue.optionCount > 0)
+        //{
+        //    float vertical = Input.GetButtonDown("Vertical")?Input.GetAxis("Vertical"):0;
+        //    if (vertical > 0)
+        //    {
+        //        _currentOption = circular
+        //            ? (int)Mathf.Repeat(_currentOption - 1,_dialogue.optionCount)
+        //            : Mathf.Clamp(_currentOption - 1, 0, _dialogue.optionCount - 1);
+        //        _dialogue.HighlightChoice(_currentOption);
+        //    }
+        //    else if (vertical < 0)
+        //    {
+        //        _currentOption = circular
+        //            ? (int)Mathf.Repeat(_currentOption + 1,_dialogue.optionCount)
+        //            : Mathf.Clamp(_currentOption + 1, 0, _dialogue.optionCount - 1);
+        //        _dialogue.HighlightChoice(_currentOption);
+        //    }
+        //}
     }
 
     private void OnSayOrChoice()
