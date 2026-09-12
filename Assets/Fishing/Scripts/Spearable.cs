@@ -8,7 +8,7 @@ public class Spearable : MonoBehaviour
     // Can be null if not speared
     public SpearTip spearTip;
     public List<Behaviour> disableWhileSpeared;
-    public Collider col;
+    public Collider2D col;
     public UnityEvent onSpeared;
 
     public bool Speared => spearTip != null;
@@ -32,12 +32,12 @@ public class Spearable : MonoBehaviour
 
     private void UpdatePos()
     {
-        transform.position = spearTip.transform.position;
+        transform.position = spearTip.itemParent.position;
     }
 
     public void Unspear()
     {
-        UpdatePos();
+        transform.position = spearTip.transform.position;
         this.spearTip = null;
         foreach (var comp in disableWhileSpeared)
         {

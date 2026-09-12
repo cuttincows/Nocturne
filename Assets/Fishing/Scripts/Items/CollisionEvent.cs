@@ -7,9 +7,9 @@ public class CollisionEvent : MonoBehaviour
     public float minSpeed;
     public UnityEvent onCollide;
     public string hitTag;
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (rb.linearVelocity.magnitude > minSpeed && collision.collider.CompareTag(hitTag)) 
             onCollide.Invoke();
     }
-}
+}   

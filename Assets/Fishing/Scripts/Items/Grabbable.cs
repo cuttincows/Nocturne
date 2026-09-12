@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Grabbable : MonoBehaviour
 {
-    public Rigidbody rb;
+    public Rigidbody2D rb;
     public Grabber grabber;
 
     public bool Grab(Grabber grabber)

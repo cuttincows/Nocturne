@@ -1,19 +1,14 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
 
 public class SpearTip : MonoBehaviour
 {
     public Spear spear;
     public Transform itemParent;
     public Spearable item;
-    bool drop = false;
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (CanSpear() && other.TryGetComponent(out Spearable spearable) && spearable.isSpearable)
-        {
-            SpearItem(spearable);
-        }
-    }
+    public float radius = 0.5f;
+    public LayerMask mask;
 
     private void Start()
     {
@@ -27,20 +22,13 @@ public class SpearTip : MonoBehaviour
 
     private void OnSpearStateChanged(SpearState state)
     {
-        if (state == SpearState.Throwing && item != null)
+        if (state == SpearState.Thrown)
         {
-            drop = true;
+            if (item != null)
+                DropItem();
+            else
+                TrySpear();
         }
-        if (state == SpearState.Thrown && drop)
-        {
-            DropItem();
-        }
-    }
-
-    private bool CanSpear()
-    {
-        // Only allow spearing if the spear is in the throwing state
-        return item == null && spear.CurrentState == SpearState.Throwing;
     }
 
     private void SpearItem(Spearable itemToSpear)
@@ -49,10 +37,37 @@ public class SpearTip : MonoBehaviour
         item = itemToSpear;
     }
 
+    private void TrySpear()
+    {
+        Spearable spearable = FishForSpearedItems();
+        if (spearable != null)
+            SpearItem(spearable);
+    }
+
+    private Spearable FishForSpearedItems()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius, layerMask: mask);
+        colliders = colliders.OrderBy(c => (c.transform.position - transform.position).sqrMagnitude).ToArray();
+        foreach (Collider2D hit in colliders)
+        {
+            if (hit.TryGetComponent(out Spearable spearable) && spearable.isSpearable)
+            {
+                return spearable;
+            }
+        }
+        return null;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, radius);
+    }
+
     private void DropItem()
     {
+        item.transform.position = transform.position;
         item.Unspear();
         item = null;
-        drop = false;
     }
 }

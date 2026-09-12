@@ -13,10 +13,10 @@ public class SpawnBoxReference
     public SpawnBox SpawnBox => spawnBoxOverride != null ? spawnBoxOverride : SpawnBox.instance;
 }
 
-[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class SpawnBox : MonoBehaviour
 {
-    BoxCollider boxCollider;
+    BoxCollider2D boxCollider;
     public static SpawnBox instance;
 
     private void Awake()
@@ -26,7 +26,7 @@ public class SpawnBox : MonoBehaviour
 
     public Vector3 GetRandomPosition()
     {
-        if (boxCollider == null) boxCollider = GetComponent<BoxCollider>();
+        if (boxCollider == null) boxCollider = GetComponent<BoxCollider2D>();
         Vector3 min = boxCollider.bounds.min;
         Vector3 max = boxCollider.bounds.max;
         
@@ -39,7 +39,7 @@ public class SpawnBox : MonoBehaviour
 
     public Vector3 Clamp(Vector3 input)
     {
-        if (boxCollider == null) boxCollider = GetComponent<BoxCollider>();
+        if (boxCollider == null) boxCollider = GetComponent<BoxCollider2D>();
         Vector3 min = boxCollider.bounds.min;
         Vector3 max = boxCollider.bounds.max;
 
