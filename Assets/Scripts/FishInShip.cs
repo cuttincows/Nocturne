@@ -14,14 +14,31 @@ public class FishInShip : MonoBehaviour {
     public Action<FishInShip> OnStateChanged;
 
     float heat;
-    public bool CanCarry => State == FishState.Raw && Pan == null;
+
+    public bool CanCarry {
+        get {
+            if (State != FishState.Raw) {
+                return false;
+            }
+
+            return Pan == null;
+        }
+    }
 
     public float CookProgress {
         get {
-            if (definition == null || definition.cookTime <= 0f) return 1f;
+            if (definition == null) {
+                return 1f;
+            }
+
+            if (definition.cookTime <= 0f) {
+                return 1f;
+            }
+
             return Mathf.Clamp01(heat / definition.cookTime);
         }
     }
+
     private void OnEnable() {
         FishRegistry.instance.Register(this);
         ApplySprite();
@@ -29,34 +46,70 @@ public class FishInShip : MonoBehaviour {
 
     private void OnDisable() {
         FishRegistry reg = FishRegistry.Existing;
-        if (reg != null) reg.Unregister(this);
+
+        if (reg != null) {
+            reg.Unregister(this);
+        }
     }
 
     public void PlaceInPan(Stove stove, Transform anchor) {
         Pan = stove;
-        if (rb != null) rb.isKinematic = true;
-        if (col != null) col.enabled = false;
+
+        if (rb != null) {
+            rb.isKinematic = true;
+        }
+
+        if (col != null) {
+            col.enabled = false;
+        }
+
         transform.SetParent(anchor, false);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
     }
+
     public void AddHeat(float amount) {
-        if (State != FishState.Raw || definition == null) return;
+        if (State != FishState.Raw) {
+            return;
+        }
+
+        if (definition == null) {
+            return;
+        }
+
         heat += amount;
-        if (heat >= definition.cookTime) SetState(FishState.Cooked);
+
+        if (heat >= definition.cookTime) {
+            SetState(FishState.Cooked);
+        }
     }
 
     private void SetState(FishState newState) {
-        if (State == newState) return;
+        if (State == newState) {
+            return;
+        }
+
         State = newState;
         ApplySprite();
-        OnStateChanged?.Invoke(this);
+
+        if (OnStateChanged != null) {
+            OnStateChanged.Invoke(this);
+        }
     }
 
     private void ApplySprite() {
-        if (spriteRenderer == null || definition == null) return;
-        spriteRenderer.sprite = State == FishState.Cooked
-            ? definition.cookedSprite
-            : definition.rawSprite;
+        if (spriteRenderer == null) {
+            return;
+        }
+
+        if (definition == null) {
+            return;
+        }
+
+        if (State == FishState.Cooked) {
+            spriteRenderer.sprite = definition.cookedSprite;
+        } else {
+            spriteRenderer.sprite = definition.rawSprite;
+        }
     }
 }
