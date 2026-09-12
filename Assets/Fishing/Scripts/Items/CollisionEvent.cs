@@ -12,4 +12,9 @@ public class CollisionEvent : MonoBehaviour
         if (rb.linearVelocity.magnitude > minSpeed && collision.collider.CompareTag(hitTag)) 
             onCollide.Invoke();
     }
+
+    public void ResetVelocity()
+    {
+        rb.linearVelocity = Vector3.zero;
+    }
 }   

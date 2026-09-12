@@ -376,6 +376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Death
   expirationTime: 10
+  spriteRenderer: {fileID: 3247093487246405646}
+  deadSprite: {fileID: 0}
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class Grabber : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Time.time - lastGrabTime < grabCooldown) return;
+        if (Time.time - lastGrabTime < grabCooldown || this.grabbable != null) return;
         if (collision.collider.TryGetComponent(out Grabbable grabbable))
         {
             if (grabbable.Grab(this))

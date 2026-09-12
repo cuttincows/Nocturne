@@ -50,7 +50,7 @@ public class SpearTip : MonoBehaviour
         colliders = colliders.OrderBy(c => (c.transform.position - transform.position).sqrMagnitude).ToArray();
         foreach (Collider2D hit in colliders)
         {
-            if (hit.TryGetComponent(out Spearable spearable) && spearable.isSpearable)
+            if (hit.TryGetComponent(out Spearable spearable) && spearable.isSpearable && spearable.enabled)
             {
                 return spearable;
             }
