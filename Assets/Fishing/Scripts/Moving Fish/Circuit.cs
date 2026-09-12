@@ -6,6 +6,9 @@ public class Circuit : DirectionProvider
     List<Vector3> positions = new();
     int currIndex = 0;
     Vector3 currTarget => positions == null ? transform.position : positions[currIndex];
+
+    public override bool Can_Perform => enabled;
+
     public SpawnBoxReference spawnBoxRef;
     public int maxPositions = 6;
     public float doneDistance = 1f;

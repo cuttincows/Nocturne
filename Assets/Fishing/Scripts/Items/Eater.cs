@@ -2,21 +2,24 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eater : MonoBehaviour
+public class Eater : DirectionProvider
 {
     public float munchDuration;
     bool eating;
     float lastMunchTime = -100;
     public bool IsEating => eating;
+    public override bool Can_Perform => eating;
+    public override Vector3 GetDirection()
+    {
+        return Vector3.zero;
+    }
 
     public Action<Eater> OnEatStateChange;
-    public List<Behaviour> disableWhileEating;
     private void Update()
     {
         if (eating && Time.time - lastMunchTime > munchDuration)
         {
             eating = false;
-            ToggleAll(true);
             OnEatStateChange?.Invoke(this);
         }
     }
@@ -28,16 +31,7 @@ public class Eater : MonoBehaviour
             bait.GetEatenBy(this);
             lastMunchTime = Time.time;
             eating = true;
-            ToggleAll(false);
             OnEatStateChange?.Invoke(this);
-        }
-    }
-
-    private void ToggleAll(bool on)
-    {
-        foreach (var comp in disableWhileEating)
-        {
-            comp.enabled = on;
         }
     }
 }

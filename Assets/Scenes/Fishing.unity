@@ -258,12 +258,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawning
   spawnObjects:
-  - name: Bass
+  - name: Salmon
     spawnable: {fileID: 107549408028584785, guid: d191b37838d474d4c81f0afc4db862a0,
       type: 3}
     idealMaxAmountInSceneAtOnce: 8
     relativeRarity: 10
-  - name: Salmon
+  - name: Tuna
     spawnable: {fileID: 107549408028584785, guid: 4cd596242c76ae84b990680d8b24dedd,
       type: 3}
     idealMaxAmountInSceneAtOnce: 8
@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 397424851}
   - component: {fileID: 397424850}
   m_Layer: 18
-  m_Name: Debris Spawner
+  m_Name: Scrap Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -736,13 +736,8 @@ MonoBehaviour:
   - name: Scrap
     spawnable: {fileID: 107549408028584785, guid: 217858579a9f5634b90e086a67a1d912,
       type: 3}
-    idealMaxAmountInSceneAtOnce: 5
-    relativeRarity: 10
-  - name: Bait
-    spawnable: {fileID: 107549408028584785, guid: 8e301ac59cc244342ab5914b8ab99e54,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 5
-    relativeRarity: 10
+    idealMaxAmountInSceneAtOnce: 4
+    relativeRarity: 1
   spawnBox: {fileID: 397424851}
   spawnInterval: 0.5
 --- !u!114 &397424851
@@ -961,6 +956,11 @@ MonoBehaviour:
       type: 3}
     idealMaxAmountInSceneAtOnce: 3
     relativeRarity: 1
+  - name: Gamma Spearfish
+    spawnable: {fileID: 107549408028584785, guid: ccc1a601843e20f41a36507448bd9db6,
+      type: 3}
+    idealMaxAmountInSceneAtOnce: 1
+    relativeRarity: 100
   spawnBox: {fileID: 619137846}
   spawnInterval: 0.5
 --- !u!114 &619137846
@@ -1373,7 +1373,7 @@ GameObject:
   - component: {fileID: 994354590}
   m_Layer: 0
   m_Name: Target
-  m_TagString: Untagged
+  m_TagString: SpearTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1483,6 +1483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd6bb8ef78c0384aa2c2b8789c68a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpearTarget
+  Spear: {fileID: 0}
   Camera: {fileID: 342678265}
   TargetLayerMask:
     serializedVersion: 2
@@ -2852,6 +2853,152 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RestartButton
   Scene: Fishing
+--- !u!1 &2029450142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2029450148}
+  - component: {fileID: 2029450147}
+  - component: {fileID: 2029450146}
+  - component: {fileID: 2029450145}
+  - component: {fileID: 2029450144}
+  - component: {fileID: 2029450143}
+  m_Layer: 18
+  m_Name: Food / Bomb Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2029450143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029450142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570e4d069d8d27f4ca75986c157eaa8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawning
+  spawnObjects:
+  - name: Bait
+    spawnable: {fileID: 107549408028584785, guid: 8e301ac59cc244342ab5914b8ab99e54,
+      type: 3}
+    idealMaxAmountInSceneAtOnce: 2
+    relativeRarity: 2
+  spawnBox: {fileID: 2029450144}
+  spawnInterval: 0.5
+--- !u!114 &2029450144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029450142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40c7fd37350e204d8037da86796c457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnBox
+--- !u!65 &2029450145
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029450142}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2029450146
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029450142}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6ac687b8f768f72429742d6b0037c55f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2029450147
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029450142}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2029450148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029450142}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.5}
+  m_LocalScale: {x: 13, y: 8.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2053827397
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,6 +3086,7 @@ SceneRoots:
   - {fileID: 86549694}
   - {fileID: 619137850}
   - {fileID: 397424855}
+  - {fileID: 2029450148}
   - {fileID: 994354589}
   - {fileID: 1339212662}
   - {fileID: 1840690091}

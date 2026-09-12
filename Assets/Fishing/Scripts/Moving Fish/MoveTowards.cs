@@ -10,13 +10,18 @@ public class MoveTowards : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 direction = Vector3.zero;
-        foreach (DirectionProvider p in provider)
-        {
-            direction = p.GetDirection();
-            if (direction != Vector3.zero) break;
-        }
+        Vector3 direction = GetDir();
         rb.AddForce(direction * acceleration, ForceMode.Acceleration);
         rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, speed);
+    }
+
+    private Vector3 GetDir()
+    {
+        foreach (DirectionProvider p in provider)
+        {
+            if (p.Can_Perform)
+                return  p.GetDirection();
+        }
+        return Vector3.zero;
     }
 }
