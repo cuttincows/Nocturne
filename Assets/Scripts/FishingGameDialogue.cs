@@ -9,6 +9,8 @@ public class FishingGameDialogue : BasicDialogue
     public AudioSource blipSource;
     public PlayerCharacterController playerController;
 
+    public bool hasBeenUsedBefore;
+
     protected override void Start()
     {
         base.Start();
@@ -20,6 +22,16 @@ public class FishingGameDialogue : BasicDialogue
         // }
         TextTyper.blipSource = blipSource;
     }
+
+    public void OnEnable()
+    {
+        if (hasBeenUsedBefore)
+        {
+            OnPress();
+        }
+        hasBeenUsedBefore = true;
+    }
+
     public override void OnPress()
     {
         if (typing)

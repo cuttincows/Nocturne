@@ -19,7 +19,7 @@ public class InteractWithObject : MonoBehaviour
     // Toggle this when you are locked in an interaction state
     public static bool InteractionLocked = false;
 
-    private void Start()
+    private void Awake()
     {
         InteractionLocked = false;
         allInteractables.Clear();
@@ -46,7 +46,6 @@ public class InteractWithObject : MonoBehaviour
                 closestInteractable = interactable;
             }
         }
-        Debug.Log(closestInteractable);
 
         bool closeEnough = closestDist < maxInteractDist;
         interactPrompt.SetActive(closeEnough);

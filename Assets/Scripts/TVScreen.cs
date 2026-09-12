@@ -1,18 +1,18 @@
 using System.Collections.Generic;
-using NUnit.Framework;
 using Unity.FPS.Gameplay;
 using Unity.FPS.UI;
 using UnityEngine;
 
-public class TalkToBot : Interactable
+public class TVScreen : Interactable
 {
+    public List<TextAsset> dialogueScripts;
+
+
     public FishingGameDialogue dialogue;
     public LanguageInterpreter interpreter;
     public PlayerCharacterController playerController;
 
-    public List<TextAsset> dialogueScripts;
-
-    public override void Interact()
+    override public void Interact()
     {
         InteractWithObject.InteractionLocked = true;
         playerController.enabled = false;

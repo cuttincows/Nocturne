@@ -1,0 +1,4 @@
+block noctconvo1:
+	say Noct "HOW DARE YOU TRY TO WASTE AN ESCAPE POD!!!!"
+	say Noct "DO YOU KNOW HOW EXPENSIVE THOSE ARE??"
+endblock
