@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 public class Grabber : MonoBehaviour
 {
-    public Collider col;
+    public Collider2D col;
     Grabbable grabbable;
     public float grabCooldown = 2f;
     float lastGrabTime = -100;
     public List<Behaviour> disableWhenGrabbing;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (Time.time - lastGrabTime < grabCooldown) return;
         if (collision.collider.TryGetComponent(out Grabbable grabbable))

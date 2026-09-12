@@ -8,21 +8,21 @@ public class NearbySensor : MonoBehaviour
     [Header("Only avoid objects with these tags, if enabled.")]
     public bool whitelistEnabled;
     public List<string> whitelist;
-    List<Collider> nearbyColliders = new();
+    List<Collider2D> nearbyColliders = new();
 
-    private bool Check(Collider other)
+    private bool Check(Collider2D other)
     {
         if (!whitelistEnabled) return !blacklist.Contains(other.tag);
         return whitelist.Contains(other.tag);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (!Check(other)) return;
         nearbyColliders.Add(other);
     }
 
-    public List<Collider> GetNearbyColliders()
+    public List<Collider2D> GetNearbyColliders()
     {
         PruneColliders();
         return new(nearbyColliders);
@@ -30,7 +30,7 @@ public class NearbySensor : MonoBehaviour
 
     private void PruneColliders()
     {
-        List<Collider> collidersToRemove = new();
+        List<Collider2D> collidersToRemove = new();
         foreach (var collider in nearbyColliders)
         {
             if (collider == null)
@@ -38,7 +38,7 @@ public class NearbySensor : MonoBehaviour
                 collidersToRemove.Add(collider);
             }
         }
-        foreach (Collider col in collidersToRemove)
+        foreach (Collider2D col in collidersToRemove)
         {
             nearbyColliders.Remove(col);
         }
@@ -50,7 +50,7 @@ public class NearbySensor : MonoBehaviour
         return nearbyColliders.Count;
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (!Check(other)) return;
         nearbyColliders.Remove(other);

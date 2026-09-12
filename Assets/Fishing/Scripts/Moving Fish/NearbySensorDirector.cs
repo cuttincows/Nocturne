@@ -14,7 +14,7 @@ public class NearbySensorDirector : DirectionProvider
     public override Vector3 GetDirection()
     {
         Vector3 targetDirection = Vector3.zero;
-        foreach (Collider col in sensor.GetNearbyColliders())
+        foreach (Collider2D col in sensor.GetNearbyColliders())
         {
             Vector3 dir = col.transform.position - transform.position;
             dir *= attractStrength;

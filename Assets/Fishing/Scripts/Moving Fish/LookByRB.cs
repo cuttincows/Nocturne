@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class LookByRB : MonoBehaviour
 {
-    public Rigidbody rb;
+    public Rigidbody2D rb;
     public float rotationSpeed = 5f;
-    void Update()
+    void FixedUpdate()
     {
         Vector3 velocity = rb.linearVelocity;
         if (velocity != Vector3.zero)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(velocity);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            transform.right = Vector3.Lerp(transform.right, velocity, rotationSpeed * Time.fixedDeltaTime);
         }
     }
 }
