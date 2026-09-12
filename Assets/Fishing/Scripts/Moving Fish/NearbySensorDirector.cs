@@ -9,9 +9,10 @@ public class NearbySensorDirector : DirectionProvider
     [Header("Attraction Strength. Negative Repels.")]
     public float attractStrength = 1f;
 
+    public override bool Can_Perform => IsEnabled();
+
     public override Vector3 GetDirection()
     {
-        if (!enabled) return Vector3.zero;
         Vector3 targetDirection = Vector3.zero;
         foreach (Collider col in sensor.GetNearbyColliders())
         {
@@ -26,5 +27,10 @@ public class NearbySensorDirector : DirectionProvider
         }
 
         return targetDirection.normalized;
+    }
+
+    private bool IsEnabled()
+    {
+        return enabled && sensor.GetNearbyCount() > 0;
     }
 }

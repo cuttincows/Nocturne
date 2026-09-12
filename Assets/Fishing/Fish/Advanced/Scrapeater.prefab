@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dumpable
   canDump: 1
-  fuel: 250
+  fuel: 225
 --- !u!114 &107549408028584785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +262,7 @@ MonoBehaviour:
   acceleration: 3
   rb: {fileID: 7637694481111627133}
   provider:
+  - {fileID: 4781122607570670022}
   - {fileID: 4091240942061811412}
   - {fileID: 3847792482029170188}
   - {fileID: 9081737219193853553}
@@ -308,9 +309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eater
   munchDuration: 2
-  disableWhileEating:
-  - {fileID: 3847792482029170188}
-  - {fileID: 9081737219193853553}
 --- !u!1001 &214612504889237263
 PrefabInstance:
   m_ObjectHideFlags: 0

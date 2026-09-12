@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class SpearTarget : MonoBehaviour
 {
+    public Spear Spear;
     public Camera Camera;
     public LayerMask TargetLayerMask;
 

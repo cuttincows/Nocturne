@@ -8,7 +8,6 @@ public class NearbySensor : MonoBehaviour
     [Header("Only avoid objects with these tags, if enabled.")]
     public bool whitelistEnabled;
     public List<string> whitelist;
-    [HideInInspector]
     List<Collider> nearbyColliders = new();
 
     private bool Check(Collider other)
@@ -25,6 +24,12 @@ public class NearbySensor : MonoBehaviour
 
     public List<Collider> GetNearbyColliders()
     {
+        PruneColliders();
+        return new(nearbyColliders);
+    }
+
+    private void PruneColliders()
+    {
         List<Collider> collidersToRemove = new();
         foreach (var collider in nearbyColliders)
         {
@@ -37,7 +42,12 @@ public class NearbySensor : MonoBehaviour
         {
             nearbyColliders.Remove(col);
         }
-        return new(nearbyColliders);
+    }
+
+    public int GetNearbyCount()
+    {
+        PruneColliders();
+        return nearbyColliders.Count;
     }
 
     private void OnTriggerExit(Collider other)

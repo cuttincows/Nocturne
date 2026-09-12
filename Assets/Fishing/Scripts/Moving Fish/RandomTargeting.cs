@@ -5,18 +5,21 @@ public class RandomTargeting : DirectionProvider
     public SpawnBoxReference spawnBox;
     private Vector3 target;
     private float doneDistance = 1f;
+
+    public override bool Can_Perform => enabled;
+
     void Start()
     {
-        ChangeDirection();
+        RandomizeTarget();
     }
     void FixedUpdate()
     {
         if (Vector3.Distance(transform.position, target) < doneDistance)
         {
-            ChangeDirection();
+            RandomizeTarget();
         }
     }
-    void ChangeDirection()
+    void RandomizeTarget()
     {
         target = spawnBox.SpawnBox.GetRandomPosition();
     }

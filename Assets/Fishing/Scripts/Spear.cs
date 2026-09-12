@@ -21,6 +21,7 @@ public class Spear : MonoBehaviour
     public SpearState CurrentState { get; private set; } = SpearState.Held;
 
     public Action<SpearState> OnStateChanged;
+    public static Action<Spear, SpearState> OnAnySpearStateChanged;
 
     private void FixedUpdate()
     {
@@ -84,6 +85,7 @@ public class Spear : MonoBehaviour
     {
         CurrentState = newState;
         OnStateChanged?.Invoke(newState);
+        OnAnySpearStateChanged?.Invoke(this, newState);
     }
 
     private void ThrowSpear()
