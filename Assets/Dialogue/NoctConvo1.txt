@@ -1,4 +1,23 @@
 block noctconvo1:
 	say Noct "HOW DARE YOU TRY TO WASTE AN ESCAPE POD!!!!"
+	choice "HOW DARE YOU TRY TO WASTE AN ESCAPE POD!!!!":
+		"We were going into a black hole!":
+			jump noctconvo1-2
+		"Wait did you remote lock the escape pod?":
+			jump noctconvo1-2
+endblock
+
+block noctconvo1-2:
 	say Noct "DO YOU KNOW HOW EXPENSIVE THOSE ARE??"
+	choice "DO YOU KNOW HOW EXPENSIVE THOSE ARE??":
+		"Hello?  Can you even hear me?":
+			jump noctconvo1-3
+endblock
+
+block noctconvo1-3:
+	say Noct "Every time a ship is lost we lose a QUATER PERCENT our stock value!"
+	say Noct "Do you have any idea how many billion times your puny value that is????"
+	choice "Do you have any idea how many billion times your puny value that is????":
+		"These messages aren't getting out of the event horizon are they...":
+			endscript
 endblock
