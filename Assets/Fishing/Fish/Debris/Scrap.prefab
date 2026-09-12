@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1960655845541325368}
   - component: {fileID: 2062067876043455097}
   - component: {fileID: 2215059467450554140}
+  - component: {fileID: 2788192610772781109}
   m_Layer: 19
   m_Name: Scrap
   m_TagString: Scrap
@@ -252,3 +253,18 @@ MonoBehaviour:
   rb: {fileID: 3860000616425932109}
   provider:
   - {fileID: 2062067876043455097}
+--- !u!114 &2788192610772781109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e160d389cd5f246ac7cecbb3c65777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Death
+  expirationTime: 0
+  spriteRenderer: {fileID: 5215994381249154169}
+  deadSprite: {fileID: 0}

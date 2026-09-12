@@ -237,7 +237,6 @@ MonoBehaviour:
   grabCooldown: 2
   disableWhenGrabbing:
   - {fileID: 2166002612471761422}
-  - {fileID: 4137879464895814239}
 --- !u!114 &7485151857605279636
 MonoBehaviour:
   m_ObjectHideFlags: 0
