@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 3658635725247917351}
   - component: {fileID: 1573084561376800053}
   - component: {fileID: 3611793651263645906}
+  - component: {fileID: 1063224009343259664}
   m_Layer: 19
   m_Name: Clam
   m_TagString: Untagged
@@ -174,7 +175,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 1
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0.2
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -279,6 +280,7 @@ MonoBehaviour:
   acceleration: 5
   rb: {fileID: 6964431724867206812}
   provider:
+  - {fileID: 1063224009343259664}
   - {fileID: 4375804181954118405}
   - {fileID: 4211039419027188558}
   - {fileID: 1573084561376800053}
@@ -361,6 +363,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &1063224009343259664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e160d389cd5f246ac7cecbb3c65777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Death
+  expirationTime: 10
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0

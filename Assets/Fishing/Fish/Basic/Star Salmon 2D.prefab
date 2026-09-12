@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4375804181954118405}
   - component: {fileID: 2196210190001776642}
   - component: {fileID: 3426436703133136175}
+  - component: {fileID: 7399734645970072904}
   m_Layer: 19
   m_Name: Star Salmon 2D
   m_TagString: Untagged
@@ -59,7 +60,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 1
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0.2
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -164,11 +165,12 @@ MonoBehaviour:
   acceleration: 7
   rb: {fileID: 6964431724867206812}
   provider:
+  - {fileID: 7399734645970072904}
   - {fileID: 4375804181954118405}
+  - {fileID: 3426436703133136175}
+  - {fileID: 4211039419027188558}
   - {fileID: 3531015963182935003}
   - {fileID: 1824149488535648487}
-  - {fileID: 4211039419027188558}
-  - {fileID: 3426436703133136175}
   - {fileID: 4137879464895814239}
 --- !u!114 &4375804181954118405
 MonoBehaviour:
@@ -235,6 +237,19 @@ MonoBehaviour:
   targetBox:
     spawnBoxOverride: {fileID: 0}
   tolerance: 0.1
+--- !u!114 &7399734645970072904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e160d389cd5f246ac7cecbb3c65777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Death
+  expirationTime: 10
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +444,7 @@ PrefabInstance:
     - target: {fileID: 6266227470572269558, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}
       propertyPath: blacklist.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6266227470572269558, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}

@@ -44,10 +44,10 @@ public class Spear : MonoBehaviour
             {
                 ThrowSpear();
             }
-            else if (CurrentState == SpearState.Thrown)
-            {
-                RetractSpear();
-            }
+        }
+        if (CurrentState == SpearState.Thrown && !Mouse.current.leftButton.isPressed)
+        {
+            RetractSpear();
         }
     }
 
