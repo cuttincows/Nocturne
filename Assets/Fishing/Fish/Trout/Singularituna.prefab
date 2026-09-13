@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4140580885377738601}
   - component: {fileID: 1991919159889884349}
   m_Layer: 19
-  m_Name: Supernova Trout
+  m_Name: Singularituna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,6 +256,10 @@ MonoBehaviour:
   expirationTime: 10
   spriteRenderer: {fileID: 3247093487246405646}
   cookable: 0
+  skewerable: 0
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1991919159889884349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpriteManager
   spriteRenderer: {fileID: 3247093487246405646}
   death: {fileID: 4140580885377738601}
-  eater: {fileID: 0}
+  stunnable: {fileID: 0}
   spearedAndCookedSprite: {fileID: 0}
   spearedSprite: {fileID: 21300000, guid: bdb83410ed0275e4ab6e9d08973a0e72, type: 3}
   cookedSprite: {fileID: 0}

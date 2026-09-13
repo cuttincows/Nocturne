@@ -22,6 +22,6 @@ MonoBehaviour:
   audioBarks: []
   nameCard: {fileID: 0}
   pips: []
-  chatter: {fileID: 0}
+  chatter: {fileID: 8300000, guid: 1cc3339609a580b4b96acf35bc4540d8, type: 3}
   characterScale: 0
   additionalData: []
