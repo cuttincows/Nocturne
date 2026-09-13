@@ -750,4 +750,5 @@ MonoBehaviour:
   teleportVisual: {fileID: 2222344205025637374}
   rb: {fileID: 6964431724867206812}
   stunner: {fileID: -2140439438518783602}
+  death: {fileID: 285788670587835660}
   cooldown: 2
