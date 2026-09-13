@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 1573084561376800053}
   - component: {fileID: 3611793651263645906}
   - component: {fileID: 1063224009343259664}
+  - component: {fileID: -893803050155525316}
   m_Layer: 19
   m_Name: Clam
   m_TagString: Untagged
@@ -366,6 +367,20 @@ MonoBehaviour:
   expirationTime: 10
   spriteRenderer: {fileID: 3247093487246405646}
   deadSprite: {fileID: 21300000, guid: e830925f01889b14f8d370ce12b8964c, type: 3}
+--- !u!114 &-893803050155525316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ba072f1e6d5844ab79906c40b5610b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteManager
+  spriteRenderer: {fileID: 3247093487246405646}
+  sprites: []
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0

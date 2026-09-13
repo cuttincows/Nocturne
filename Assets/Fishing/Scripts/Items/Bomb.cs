@@ -9,7 +9,7 @@ public class Bomb : MonoBehaviour
         {
             if (collider.TryGetComponent(out Death deat))
             {
-                deat.Kill();
+                deat.Cook();
             }
         }
         Destroy(gameObject);

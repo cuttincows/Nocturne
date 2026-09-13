@@ -8,11 +8,8 @@ public class Eater : DirectionProvider
     bool eating;
     float lastMunchTime = -100;
     public bool IsEating => eating;
-    public override bool Can_Perform => eating;
-    public override Vector3 GetDirection()
-    {
-        return Vector3.zero;
-    }
+
+    public override bool Can_Perform => IsEating;
 
     public Action<Eater> OnEatStateChange;
     private void Update()
@@ -33,5 +30,10 @@ public class Eater : DirectionProvider
             eating = true;
             OnEatStateChange?.Invoke(this);
         }
+    }
+
+    public override Vector3 GetDirection()
+    {
+        return Vector3.zero;
     }
 }

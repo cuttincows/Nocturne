@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 6028533422062566733}
   - component: {fileID: 3870675123941651624}
   - component: {fileID: 2203913672795874598}
+  - component: {fileID: -8998096698480873288}
+  - component: {fileID: 1735253738270334080}
   m_Layer: 19
   m_Name: Gammaspear
   m_TagString: Untagged
@@ -94,7 +96,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6028533422062566733}
         m_TargetAssemblyTypeName: Death, Assembly-CSharp
-        m_MethodName: Kill
+        m_MethodName: SpearHole
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -244,7 +246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Death
   expirationTime: 10
   spriteRenderer: {fileID: 3247093487246405646}
-  deadSprite: {fileID: 21300000, guid: e912d8fc5891221429a69164a22152c1, type: 3}
 --- !u!114 &3870675123941651624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +303,37 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   hitTag: Scrap
+--- !u!114 &-8998096698480873288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ba072f1e6d5844ab79906c40b5610b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteManager
+  spriteRenderer: {fileID: 3247093487246405646}
+  sprites:
+  - {fileID: 1735253738270334080}
+--- !u!114 &1735253738270334080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5a5522d97bfa344b07ffc1d979bb1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathSpriteProvider
+  spearedAndCookedSprite: {fileID: 21300000, guid: bbb6fd333bd73554abd8f413e2c8cd94,
+    type: 3}
+  spearedSprite: {fileID: 21300000, guid: e912d8fc5891221429a69164a22152c1, type: 3}
+  cookedSprite: {fileID: 21300000, guid: bdd0a8cb692f1d8478fbf6df5ab0884a, type: 3}
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0
