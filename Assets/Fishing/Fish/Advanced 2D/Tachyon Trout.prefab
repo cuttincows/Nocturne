@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 3303637671786136786}
   - component: {fileID: 1338123336903863958}
   m_Layer: 19
-  m_Name: Tachyon Tuna
+  m_Name: Tachyon Trout
   m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
