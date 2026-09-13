@@ -6,10 +6,20 @@ public class DespawnTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer < 0)
+        if (timer > 0)
         {
-            timer = 0;
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                timer = 0;
+            }
+        }
+    }
+
+    public void TryDie()
+    {
+        if (timer <= 0)
+        {
             Destroy(gameObject);
         }
     }

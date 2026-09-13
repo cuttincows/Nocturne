@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Death : DirectionProvider
 {
-    bool dead = false;
+    public bool dead {  get; private set;}
     public float expirationTime = 10f;
     float expirationTimer;
     public SpriteRenderer spriteRenderer;

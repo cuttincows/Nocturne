@@ -7,6 +7,16 @@ public class FuelSystem : MonoBehaviour
     public static FuelSystem instance;
     public UnityEvent onRunOut;
 
+    public float GetRemainingFuelPercent()
+    {
+        return slider.value;
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        
+    }
+
     private void Awake()
     {
         instance = this;

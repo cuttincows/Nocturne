@@ -17,7 +17,6 @@ public class NearbySensorDirector : DirectionProvider
         foreach (Collider2D col in sensor.GetNearbyColliders())
         {
             Vector3 dir = col.transform.position - transform.position;
-            dir *= attractStrength;
             targetDirection += dir.normalized / dir.magnitude;
         }
         if (clamper != null)
@@ -26,7 +25,7 @@ public class NearbySensorDirector : DirectionProvider
             targetDirection = clampedTarget - transform.position;
         }
 
-        return targetDirection.normalized;
+        return targetDirection.normalized * attractStrength;
     }
 
     private bool IsEnabled()
