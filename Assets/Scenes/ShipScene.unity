@@ -396,6 +396,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1141165154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &503858283 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2429611663670151295, guid: 5acc6c5ac75df7e4aa80c06dd70c1040,
+    type: 3}
+  m_PrefabInstance: {fileID: 1795325503}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &503858284 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 4040700070538162321, guid: 5acc6c5ac75df7e4aa80c06dd70c1040,
+    type: 3}
+  m_PrefabInstance: {fileID: 1795325503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &941781470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -555,6 +567,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2601608188359942573, guid: 92c28d5b7ecd78c458cb9fd81236b4b2,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: b20ae01fad3fb1e4984c8883531321a4,
+        type: 2}
     - target: {fileID: 6041581359858903370, guid: 92c28d5b7ecd78c458cb9fd81236b4b2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -686,13 +704,37 @@ MonoBehaviour:
   lever: {fileID: 5866666019844076623}
   animator: {fileID: 995450431}
   boolParameter: IsOpen
-  blocker: {fileID: 0}
+  blocker: {fileID: 503858284}
+  extraBlockers: []
+  openDuration: 5
 --- !u!95 &995450431 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6413022422299542437, guid: 5acc6c5ac75df7e4aa80c06dd70c1040,
     type: 3}
   m_PrefabInstance: {fileID: 1795325503}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &995450433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995450428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b25c94792c443a4ab1cef59fdacb33f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Reactor
+  hatch: {fileID: 995450430}
+  plane: {fileID: 503858283}
+  matchPlaneSize: 1
+  holeSize: {x: 2, y: 2}
+  fallDistance: 1.5
+  playerFallSpeed: 5
+  deathCause: Fell into the reactor
+  onPlayerFell:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1141165154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7287069037110551423, guid: 5acc6c5ac75df7e4aa80c06dd70c1040,
@@ -1130,6 +1172,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 995450430}
+    - targetCorrespondingSourceObject: {fileID: 384034751055004517, guid: 5acc6c5ac75df7e4aa80c06dd70c1040,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 995450433}
   m_SourcePrefab: {fileID: 100100000, guid: 5acc6c5ac75df7e4aa80c06dd70c1040, type: 3}
 --- !u!224 &1877179275 stripped
 RectTransform:
