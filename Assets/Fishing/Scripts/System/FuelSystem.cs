@@ -9,7 +9,7 @@ public class FuelSystem : MonoBehaviour
 
     public float GetRemainingFuelPercent()
     {
-        return slider.value;
+        return slider.value / slider.maxValue;
     }
 
     private void OnApplicationPause(bool pause)
