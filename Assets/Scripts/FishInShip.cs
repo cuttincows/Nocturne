@@ -112,4 +112,9 @@ public class FishInShip : MonoBehaviour {
             spriteRenderer.sprite = definition.rawSprite;
         }
     }
+
+    public void Setup(FishDefinition def) {
+        definition = def;
+        ApplySprite();
+    }
 }

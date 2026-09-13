@@ -1,13 +1,11 @@
 using UnityEngine;
 
 // For dumping fish into the ship.
-public class Dumpable : MonoBehaviour
-{
+public class Dumpable : MonoBehaviour {
     public bool canDump = true;
-    public int fuel;
+    public FishDefinition definition;
 
-    public void Kill()
-    {
+    public void Kill() {
         Destroy(gameObject);
     }
 }
