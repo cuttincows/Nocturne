@@ -41,7 +41,7 @@ public class FishingStation : Interactable {
             return;
         }
 
-        if (!kb.eKey.wasPressedThisFrame) {
+        if (!kb.escapeKey.wasPressedThisFrame) {
             return;
         }
 

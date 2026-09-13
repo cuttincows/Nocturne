@@ -7,6 +7,7 @@ public class FishInShip : MonoBehaviour {
     public SpriteRenderer spriteRenderer;
     public Rigidbody rb;
     public Collider col;
+    public float visualYOffset = 0f;
 
     public FishState State { get; private set; } = FishState.Raw;
     public Stove Pan { get; private set; }
@@ -111,6 +112,30 @@ public class FishInShip : MonoBehaviour {
         } else {
             spriteRenderer.sprite = definition.rawSprite;
         }
+
+        AlignVisual();
+    }
+
+    // The sprite pivot is centred, so lift the visual until its bottom edge
+    // sits level with the bottom of the collider instead of sinking into the floor.
+    private void AlignVisual() {
+        if (spriteRenderer == null || spriteRenderer.sprite == null) {
+            return;
+        }
+
+        float bottom = 0f;
+
+        if (col is CapsuleCollider capsule) {
+            bottom = capsule.center.y - (capsule.height * 0.5f);
+        } else if (col is BoxCollider box) {
+            bottom = box.center.y - (box.size.y * 0.5f);
+        } else if (col is SphereCollider sphere) {
+            bottom = sphere.center.y - sphere.radius;
+        }
+
+        Vector3 local = spriteRenderer.transform.localPosition;
+        local.y = spriteRenderer.sprite.bounds.extents.y + bottom + visualYOffset;
+        spriteRenderer.transform.localPosition = local;
     }
 
     public void Setup(FishDefinition def) {

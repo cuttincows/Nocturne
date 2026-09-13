@@ -1,10 +1,28 @@
 using UnityEngine;
 
 public class BillboardUpright : MonoBehaviour {
+    public float maxTilt = 25f;
+    public bool randomFlip = true;
+
     private Camera target;
+    private float tilt;
+
+    private void Awake() {
+        tilt = Random.Range(-maxTilt, maxTilt);
+
+        if (randomFlip) {
+            SpriteRenderer sr = GetComponent<SpriteRenderer>();
+
+            if (sr != null) {
+                sr.flipX = Random.value < 0.5f;
+            }
+        }
+    }
 
     private void LateUpdate() {
-        if (target == null) {
+        // Re-resolve whenever the cached camera is gone or switched off, so fish
+        // spawned during fishing mode don't stay locked to the fishing camera.
+        if (target == null || !target.isActiveAndEnabled) {
             target = Camera.main;
         }
 
@@ -19,6 +37,6 @@ public class BillboardUpright : MonoBehaviour {
             return;
         }
 
-        transform.rotation = Quaternion.LookRotation(dir);
+        transform.rotation = Quaternion.LookRotation(dir) * Quaternion.Euler(0f, 0f, tilt);
     }
 }

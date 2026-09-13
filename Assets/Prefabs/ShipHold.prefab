@@ -79,4 +79,4 @@ MonoBehaviour:
   fishPrefab: {fileID: 0}
   exitPoint: {fileID: 4483738327007497508}
   exitForce: 1
-  spawnRadius: 0.5
+  spawnRadius: 1.5
