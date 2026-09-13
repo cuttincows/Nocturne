@@ -45,4 +45,9 @@ public class Spearable : MonoBehaviour
         }
         col.enabled = true;
     }
+
+    public void SetSpearable(bool spearable)
+    {
+        this.isSpearable = spearable;
+    }
 }

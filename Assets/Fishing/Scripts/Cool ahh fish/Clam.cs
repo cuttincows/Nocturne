@@ -3,38 +3,32 @@ using UnityEngine;
 
 public class Clam : MonoBehaviour
 {
-    public Eater eater;
+    public Stunnable stunnable;
     public Death death;
     public Spearable spearable;
-    public GameObject openVisuals;
-    public GameObject closeVisuals;
 
     public void Start()
     {
-        eater.OnEatStateChange += OnEatStateChange;
+        stunnable.OnStunStateChange += OnEatStateChange;
     }
 
     private void OnDestroy()
     {
-        if (eater != null)
-            eater.OnEatStateChange -= OnEatStateChange;
+        if (stunnable != null)
+            stunnable.OnStunStateChange -= OnEatStateChange;
     }
 
-    private void OnEatStateChange(Eater eater)
+    private void OnEatStateChange(Stunnable stunnable)
     {
         if (death.dead) return;
-        spearable.isSpearable = eater.IsEating;
-        openVisuals.SetActive(spearable.isSpearable);
-        closeVisuals.SetActive(!spearable.isSpearable);
+        spearable.isSpearable = stunnable.IsStunned;
     }
 
     private void Update()
     {
-        if (death.dead && openVisuals.activeSelf)
+        if (death.dead && !spearable.isSpearable)
         {
             spearable.isSpearable = true;
-            openVisuals.SetActive(false);
-            closeVisuals.SetActive(true);
         }
     }
 }
