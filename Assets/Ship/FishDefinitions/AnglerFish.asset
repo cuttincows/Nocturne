@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1174caaf86d7e5d48ac4abfc49baa909, type: 3}
+  m_Name: AnglerFish
+  m_EditorClassIdentifier: 
+  displayName: Angler Fish
+  rawSprite: {fileID: 21300000, guid: 03af932620fea2041a4e10743eec3440, type: 3}
+  cookedSprite: {fileID: 21300000, guid: e3559b22d2a01b44db8c23be8abac282, type: 3}
+  cookTime: 5
+  fuelValue: 50
+  foodValue: 50
