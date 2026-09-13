@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnObject
 {
     public string name;
+    public bool unlocked;
     public Spawnable spawnable;
     // How many there should realistically be in the scene at once.
     public float idealMaxAmountInSceneAtOnce;
@@ -19,7 +20,7 @@ public class Spawning : MonoBehaviour
     float currPower = 0;
     public List<SpawnObject> spawnObjects;
     public SpawnBox spawnBox;
-
+    public float capacity = 0.5f;
     public float spawnInterval = 0.5f;
     float timer = 0;
     public void Update()
@@ -34,10 +35,13 @@ public class Spawning : MonoBehaviour
 
     public void TrySpawn()
     {
+        if (capacity <= 0) return;
+        List<SpawnObject> candidates = GetUnlockedState(true);
+        if (candidates.Count == 0) return;
         float spawnChance = GetSpawnChance();
         if (Random.value < spawnChance)
         {
-            SpawnObject objToSpawn = GetRandomSpawnObject();
+            SpawnObject objToSpawn = GetRandomSpawnObject(candidates);
             if (objToSpawn != null)
             {
                 Vector3 pos = spawnBox.GetRandomPosition();
@@ -52,12 +56,47 @@ public class Spawning : MonoBehaviour
         }
     }
 
+    public void SetTest()
+    {
+        capacity = 1;
+        foreach (SpawnObject obj in spawnObjects)
+        {
+            obj.unlocked = true;
+        }
+    }
+
+    private List<SpawnObject> GetUnlockedState(bool unlocked)
+    {
+        List<SpawnObject> candidates = new();
+        foreach (SpawnObject obj in spawnObjects)
+        {
+            if (obj.unlocked == unlocked)
+            {
+                candidates.Add(obj);
+            }
+        }
+        return candidates;
+    }
+
+    public void UnlockNewFish()
+    {
+        List<SpawnObject> candidates = GetUnlockedState(false);
+        if (candidates.Count > 0)
+            candidates[Random.Range(0, candidates.Count)].unlocked = true;
+        IncreaseCapacity();
+    }
+
+    public void IncreaseCapacity()
+    {
+        capacity += 0.25f;
+    }
+
     public void ReportDeath(Spawnable spawnable)
     {
         currPower -= spawnable.power;
     }
 
-    private SpawnObject GetRandomSpawnObject()
+    private SpawnObject GetRandomSpawnObject(List<SpawnObject> spawnObjects)
     {
         float totalRarity = 0;
         foreach (SpawnObject obj in spawnObjects)
@@ -80,7 +119,7 @@ public class Spawning : MonoBehaviour
 
     private float GetSpawnChance()
     {
-        float ratio = currPower;
+        float ratio = currPower / capacity;
         return 2 * (1 - (1/(1 + Mathf.Exp(-4 * ratio))));
     }
 }

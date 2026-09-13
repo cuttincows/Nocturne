@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 7399734645970072904}
   - component: {fileID: 4021008425298790921}
   - component: {fileID: 7062754949949813981}
+  - component: {fileID: 6542702874589691349}
   m_Layer: 19
   m_Name: Star Salmon
   m_TagString: Bass
@@ -199,6 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Eater
   munchDuration: 2
   stunner: {fileID: 7062754949949813981}
+  EatTag: Bait
 --- !u!70 &2196210190001776642
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -302,6 +304,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2aa95919f34bd642a27b2ac07c01765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stunnable
+--- !u!114 &6542702874589691349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b013eab77728084f87a2eefc2e8b2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eatable
+  canEat: 1
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0

@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 285788670587835660}
   - component: {fileID: -3077405209759746821}
   - component: {fileID: -2140439438518783602}
+  - component: {fileID: -5285003882225278625}
   m_Layer: 19
   m_Name: Wormhole Bass
   m_TagString: Fish
@@ -287,6 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Eater
   munchDuration: 2
   stunner: {fileID: -2140439438518783602}
+  EatTag: Bait
 --- !u!70 &2196210190001776642
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -339,7 +341,7 @@ MonoBehaviour:
   expirationTime: 10
   spriteRenderer: {fileID: 3247093487246405646}
   cookable: 1
-  skewerable: 0
+  skewerable: 1
   onDead:
     m_PersistentCalls:
       m_Calls: []
@@ -375,6 +377,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2aa95919f34bd642a27b2ac07c01765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stunnable
+--- !u!114 &-5285003882225278625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b013eab77728084f87a2eefc2e8b2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eatable
+  canEat: 1
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0

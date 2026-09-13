@@ -5,13 +5,8 @@ public class RandomDelay : MonoBehaviour
 {
     public float delay = 10f;
     public float randomOffset = 1f;
+    [SerializeField] float timer;
     public UnityEvent onTrigger;
-    float timer;
-
-    private void Start()
-    {
-        RandomizeTimer();
-    }
 
     private void RandomizeTimer()
     {

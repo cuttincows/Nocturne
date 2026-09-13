@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3860000616425932109}
   - component: {fileID: 1960655845541325368}
   - component: {fileID: 974628912381558887}
+  - component: {fileID: 1162574817098277587}
+  - component: {fileID: 8512270620923986354}
   m_Layer: 19
   m_Name: Bait
   m_TagString: Bait
@@ -204,3 +206,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bait
   canEat: 1
+--- !u!114 &1162574817098277587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3023c193eff93924d8ba4bf1709bc7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveTowards
+  speed: 1
+  acceleration: 1
+  rb: {fileID: 3860000616425932109}
+  provider:
+  - {fileID: 8512270620923986354}
+--- !u!114 &8512270620923986354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8289e043f9afe5242a14049ad953a806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReenterBox
+  targetBox:
+    spawnBoxOverride: {fileID: 0}
+  tolerance: 0.1
