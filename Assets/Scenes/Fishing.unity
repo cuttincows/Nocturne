@@ -564,331 +564,153 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!1 &364086142
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 364086143}
-  - component: {fileID: 364086144}
-  m_Layer: 18
-  m_Name: Advanced Fish Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &364086143
+--- !u!4 &450431850 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 1914369855467930016}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364086142}
+--- !u!1001 &705758824
+PrefabInstance:
+  m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.5}
-  m_LocalScale: {x: 13, y: 8.5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1211680162}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &364086144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364086142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 570e4d069d8d27f4ca75986c157eaa8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawning
-  spawnObjects:
-  - name: Angler
-    spawnable: {fileID: 107549408028584785, guid: 3e88c4c949ba94f4bbd6ed121176caec,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 6
-    relativeRarity: 1
-  - name: Scrapeater
-    spawnable: {fileID: 107549408028584785, guid: f9ace5bde9a5c474986a6c0cc0b9237f,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 6
-    relativeRarity: 1
-  - name: Wormhole Fish
-    spawnable: {fileID: 107549408028584785, guid: 0d23f1d2a97a9f542b926e5edeabae15,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 6
-    relativeRarity: 1
-  spawnBox: {fileID: 8354399446302145463}
-  spawnInterval: 0.5
---- !u!1 &397424849
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 397424855}
-  - component: {fileID: 397424850}
-  m_Layer: 18
-  m_Name: Scrap Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &397424850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397424849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 570e4d069d8d27f4ca75986c157eaa8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawning
-  spawnObjects:
-  - name: Scrap
-    spawnable: {fileID: 107549408028584785, guid: 217858579a9f5634b90e086a67a1d912,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 4
-    relativeRarity: 1
-  spawnBox: {fileID: 8354399446302145463}
-  spawnInterval: 0.5
---- !u!4 &397424855
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1211680162}
+    m_Modifications:
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: capacity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnBox
+      value: 
+      objectReference: {fileID: 8354399446302145463}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].name
+      value: Bait
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].name
+      value: Bomb
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].unlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].unlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: 606ea55be0ebfb64aa50983343ee0a37,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: 0da77dd1f03ec7246bcc874d3dbf8a0c,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].relativeRarity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].relativeRarity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].idealMaxAmountInSceneAtOnce
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].idealMaxAmountInSceneAtOnce
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021779718473967000, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Item Spawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12e84d19cca3f7947bfaa4052313f6ba, type: 3}
+--- !u!4 &705758825 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 705758824}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397424849}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.5}
-  m_LocalScale: {x: 13, y: 8.5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1211680162}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &450431849
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 450431850}
-  - component: {fileID: 450431851}
-  m_Layer: 0
-  m_Name: Basic Fish Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &450431850
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450431849}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1211680162}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &450431851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450431849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 570e4d069d8d27f4ca75986c157eaa8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawning
-  spawnObjects:
-  - name: Salmon
-    spawnable: {fileID: 107549408028584785, guid: fc5334d25f8052d4280e56c567c781d0,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 8
-    relativeRarity: 9
-  - name: Tuna
-    spawnable: {fileID: 107549408028584785, guid: 4cd596242c76ae84b990680d8b24dedd,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 8
-    relativeRarity: 9
-  - name: Circuit Fry
-    spawnable: {fileID: 107549408028584785, guid: fbdfe8c1d155b314590c86b3ea0687db,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 8
-    relativeRarity: 6
-  spawnBox: {fileID: 8354399446302145463}
-  spawnInterval: 0.5
---- !u!1 &510775548
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 510775549}
-  - component: {fileID: 510775550}
-  m_Layer: 0
-  m_Name: Test Fish Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &510775549
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510775548}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1211680162}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &510775550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510775548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 570e4d069d8d27f4ca75986c157eaa8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawning
-  spawnObjects:
-  - name: Tuna
-    spawnable: {fileID: 107549408028584785, guid: 4cd596242c76ae84b990680d8b24dedd,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 20
-    relativeRarity: 10
-  - name: Salmon
-    spawnable: {fileID: 107549408028584785, guid: fc5334d25f8052d4280e56c567c781d0,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 20
-    relativeRarity: 10
-  - name: Fry
-    spawnable: {fileID: 107549408028584785, guid: fbdfe8c1d155b314590c86b3ea0687db,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 20
-    relativeRarity: 10
-  - name: Spear
-    spawnable: {fileID: 107549408028584785, guid: 7be7baf23e5ef864e92d496e0250fb62,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 20
-    relativeRarity: 10
-  - name: Clam
-    spawnable: {fileID: 107549408028584785, guid: 9b1b8eb7246cfff4f97f8437480044ce,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 20
-    relativeRarity: 10
-  - name: Scrapeater
-    spawnable: {fileID: 107549408028584785, guid: f9ace5bde9a5c474986a6c0cc0b9237f,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 20
-    relativeRarity: 10
-  - name: Scrap
-    spawnable: {fileID: 107549408028584785, guid: 217858579a9f5634b90e086a67a1d912,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 20
-    relativeRarity: 10
-  - name: Bait
-    spawnable: {fileID: 107549408028584785, guid: 606ea55be0ebfb64aa50983343ee0a37,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 20
-    relativeRarity: 10
-  spawnBox: {fileID: 8354399446302145463}
-  spawnInterval: 0.5
---- !u!1 &619137844
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 619137850}
-  - component: {fileID: 619137845}
-  m_Layer: 18
-  m_Name: Master Fish Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &619137845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619137844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 570e4d069d8d27f4ca75986c157eaa8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawning
-  spawnObjects:
-  - name: Clam
-    spawnable: {fileID: 107549408028584785, guid: 9b1b8eb7246cfff4f97f8437480044ce,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 3
-    relativeRarity: 1
-  - name: Quantum Cod
-    spawnable: {fileID: 107549408028584785, guid: 389ccd0ca58e6f04780b2031ae172eab,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 3
-    relativeRarity: 1
-  - name: Gamma Spearfish
-    spawnable: {fileID: 107549408028584785, guid: 7be7baf23e5ef864e92d496e0250fb62,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 3
-    relativeRarity: 1
-  spawnBox: {fileID: 8354399446302145463}
-  spawnInterval: 0.5
---- !u!4 &619137850
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619137844}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.5}
-  m_LocalScale: {x: 13, y: 8.5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1211680162}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1045180113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,46 +1013,197 @@ Transform:
   m_Children:
   - {fileID: 8354399446302145462}
   - {fileID: 1704159427}
-  - {fileID: 510775549}
   - {fileID: 450431850}
-  - {fileID: 364086143}
-  - {fileID: 619137850}
-  - {fileID: 397424855}
-  - {fileID: 2029450148}
+  - {fileID: 1371924449}
+  - {fileID: 1595762212}
+  - {fileID: 1794228535}
+  - {fileID: 705758825}
   - {fileID: 90450792}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1349097639
-GameObject:
+--- !u!1001 &1371924448
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1349097640}
-  m_Layer: 0
-  m_Name: FishUnlocking
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1349097640
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1349097639}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.06, y: -0.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1211680162}
+    m_Modifications:
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: delay
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: timer
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: capacity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnBox
+      value: 
+      objectReference: {fileID: 8354399446302145463}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].name
+      value: Pufferfish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].name
+      value: Scrapeater
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].name
+      value: Wormhole Fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[3].name
+      value: Wormhole Fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: 581d2f268e00686478ae282468ac69eb,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: f9ace5bde9a5c474986a6c0cc0b9237f,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: 0d23f1d2a97a9f542b926e5edeabae15,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[3].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: 0d23f1d2a97a9f542b926e5edeabae15,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].relativeRarity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].relativeRarity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].relativeRarity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[3].relativeRarity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].idealMaxAmountInSceneAtOnce
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].idealMaxAmountInSceneAtOnce
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].idealMaxAmountInSceneAtOnce
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[3].idealMaxAmountInSceneAtOnce
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021779718473967000, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Advanced Fish Spawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12e84d19cca3f7947bfaa4052313f6ba, type: 3}
+--- !u!4 &1371924449 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 1371924448}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1473498955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,8 +1264,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d20388337823fd44abc5ed6bb79bd33b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomDelay
-  delay: 6
-  randomOffset: 1
+  delay: 120
+  randomOffset: 10
+  timer: 60
   onTrigger:
     m_PersistentCalls:
       m_Calls:
@@ -1308,6 +1282,228 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &1595762211
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1211680162}
+    m_Modifications:
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: timer
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: capacity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnBox
+      value: 
+      objectReference: {fileID: 8354399446302145463}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].name
+      value: Clam
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].name
+      value: Quantum Cod
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].name
+      value: Gamma Spearfish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[3].name
+      value: Anglerfish (NEW)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: 9b1b8eb7246cfff4f97f8437480044ce,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: 389ccd0ca58e6f04780b2031ae172eab,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: 7be7baf23e5ef864e92d496e0250fb62,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[3].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: 76705c75351f8fb4fbbf04bdf233fe23,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].relativeRarity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].relativeRarity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].relativeRarity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[3].relativeRarity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].idealMaxAmountInSceneAtOnce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].idealMaxAmountInSceneAtOnce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].idealMaxAmountInSceneAtOnce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[3].idealMaxAmountInSceneAtOnce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021779718473967000, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Master Fish Spawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12e84d19cca3f7947bfaa4052313f6ba, type: 3}
+--- !u!4 &1595762212 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 1595762211}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1619966213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1619966214}
+  - component: {fileID: 1619966215}
+  m_Layer: 0
+  m_Name: Testicles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1619966214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619966213}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1619966215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619966213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a49d69cd4c674241a6c0e582155180c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishTesticles
 --- !u!1 &1656924147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1603,121 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &1794228534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1211680162}
+    m_Modifications:
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: capacity
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnBox
+      value: 
+      objectReference: {fileID: 8354399446302145463}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].name
+      value: Scrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].unlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: 217858579a9f5634b90e086a67a1d912,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].relativeRarity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].idealMaxAmountInSceneAtOnce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021779718473967000, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Scrap Spawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12e84d19cca3f7947bfaa4052313f6ba, type: 3}
+--- !u!4 &1794228535 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 1794228534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1880104819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,63 +1809,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 10, y: 100}
   m_EdgeRadius: 0
---- !u!1 &2029450142
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2029450148}
-  - component: {fileID: 2029450143}
-  m_Layer: 18
-  m_Name: Food / Bomb Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2029450143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029450142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 570e4d069d8d27f4ca75986c157eaa8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spawning
-  spawnObjects:
-  - name: Bait
-    spawnable: {fileID: 107549408028584785, guid: 606ea55be0ebfb64aa50983343ee0a37,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 2
-    relativeRarity: 2
-  - name: Bomb
-    spawnable: {fileID: 107549408028584785, guid: 0da77dd1f03ec7246bcc874d3dbf8a0c,
-      type: 3}
-    idealMaxAmountInSceneAtOnce: 2
-    relativeRarity: 1
-  spawnBox: {fileID: 8354399446302145463}
-  spawnInterval: 0.5
---- !u!4 &2029450148
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029450142}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.5}
-  m_LocalScale: {x: 13, y: 8.5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1211680162}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1532340994767209922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,6 +1842,172 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &1914369855467930016
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1211680162}
+    m_Modifications:
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 664565970416185212, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: delay
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: capacity
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnBox
+      value: 
+      objectReference: {fileID: 8354399446302145463}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].name
+      value: Salmon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].name
+      value: Tuna
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].name
+      value: Circuit Fry
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].unlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].unlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].unlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: fc5334d25f8052d4280e56c567c781d0,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: 4cd596242c76ae84b990680d8b24dedd,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].spawnable
+      value: 
+      objectReference: {fileID: 107549408028584785, guid: fbdfe8c1d155b314590c86b3ea0687db,
+        type: 3}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].relativeRarity
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].relativeRarity
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].relativeRarity
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[0].idealMaxAmountInSceneAtOnce
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[1].idealMaxAmountInSceneAtOnce
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: spawnObjects.Array.data[2].idealMaxAmountInSceneAtOnce
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021779718473967000, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Basic Fish Spawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12e84d19cca3f7947bfaa4052313f6ba, type: 3}
 --- !u!1 &2929321090811491919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,4 +2513,4 @@ SceneRoots:
   - {fileID: 1045180116}
   - {fileID: 1473498956}
   - {fileID: 1656924149}
-  - {fileID: 1349097640}
+  - {fileID: 1619966214}

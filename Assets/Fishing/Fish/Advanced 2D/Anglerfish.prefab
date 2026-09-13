@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 6600998117714813276}
   - component: {fileID: 2118496843506875082}
   - component: {fileID: -4064175677513904941}
+  - component: {fileID: 8820044658105981509}
   m_Layer: 19
   m_Name: Anglerfish
   m_TagString: Fish
@@ -180,6 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Eater
   munchDuration: 2
   stunner: {fileID: -4064175677513904941}
+  EatTag: Bait
 --- !u!70 &2196210190001776642
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -235,7 +237,19 @@ MonoBehaviour:
   skewerable: 1
   onDead:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6600998117714813276}
+        m_TargetAssemblyTypeName: KillerFish, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-3077405209759746821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,6 +312,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2aa95919f34bd642a27b2ac07c01765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stunnable
+--- !u!114 &8820044658105981509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b013eab77728084f87a2eefc2e8b2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Eatable
+  canEat: 1
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0
