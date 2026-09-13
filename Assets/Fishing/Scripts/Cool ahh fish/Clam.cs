@@ -32,6 +32,7 @@ public class Clam : MonoBehaviour
     {
         if (death.dead && openVisuals.activeSelf)
         {
+            spearable.isSpearable = true;
             openVisuals.SetActive(false);
             closeVisuals.SetActive(true);
         }

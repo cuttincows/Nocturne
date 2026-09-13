@@ -26,4 +26,9 @@ public class Grabbable : MonoBehaviour
             grabber = null;
         }
     }
+
+    private void OnDestroy()
+    {
+        Detach();
+    }
 }
