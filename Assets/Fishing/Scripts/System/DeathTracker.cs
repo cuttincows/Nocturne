@@ -26,6 +26,8 @@ public class DeathTracker : MonoBehaviour
         enabled = false;
         label.text = timeElapsed.ToString("F1");
         SceneManager.LoadScene("MainMenu");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void DestroyThis()
