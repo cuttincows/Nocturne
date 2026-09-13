@@ -8,6 +8,7 @@ public class KillerFish : MonoBehaviour
     {
         if (rb.linearVelocity.sqrMagnitude > reqVelocity)
         {
+            print(collision.collider.name);
             if (TryGetComponent(out Death death) && !death.speared && death.skewerable)
                 death.Skewer();
         }

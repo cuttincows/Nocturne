@@ -6,6 +6,7 @@ public class Teleporter : MonoBehaviour
     public GameObject teleportVisual;
     public Rigidbody2D rb;
     public Stunnable stunner;
+    public Death death;
     public float cooldown = 2f;
 
     private void Start()
@@ -26,7 +27,7 @@ public class Teleporter : MonoBehaviour
 
     public void Teleport()
     {
-        if (stunner.IsStunned) return;
+        if (stunner.IsStunned || death.dead) return;
         rb.MovePosition(teleportVisual.transform.position);
         rb.linearVelocity = Vector3.zero;
         RandomizeTeleport();

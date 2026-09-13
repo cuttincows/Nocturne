@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 364086143}
   - component: {fileID: 364086144}
   m_Layer: 18
-  m_Name: More Advanced Fish Spawner
+  m_Name: Advanced Fish Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -612,17 +612,17 @@ MonoBehaviour:
   - name: Angler
     spawnable: {fileID: 107549408028584785, guid: 26fe15d3364839a47bea11bd091c054b,
       type: 3}
-    idealMaxAmountInSceneAtOnce: 8
+    idealMaxAmountInSceneAtOnce: 6
     relativeRarity: 1
-  - name: Quantum
-    spawnable: {fileID: 107549408028584785, guid: 389ccd0ca58e6f04780b2031ae172eab,
+  - name: Scrapeater
+    spawnable: {fileID: 107549408028584785, guid: f9ace5bde9a5c474986a6c0cc0b9237f,
       type: 3}
-    idealMaxAmountInSceneAtOnce: 8
+    idealMaxAmountInSceneAtOnce: 6
     relativeRarity: 1
   - name: Wormhole Fish
     spawnable: {fileID: 107549408028584785, guid: 0d23f1d2a97a9f542b926e5edeabae15,
       type: 3}
-    idealMaxAmountInSceneAtOnce: 8
+    idealMaxAmountInSceneAtOnce: 6
     relativeRarity: 1
   spawnBox: {fileID: 8354399446302145463}
   spawnInterval: 0.5
@@ -838,7 +838,7 @@ GameObject:
   - component: {fileID: 619137850}
   - component: {fileID: 619137845}
   m_Layer: 18
-  m_Name: Advanced Fish Spawner
+  m_Name: Master Fish Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -860,17 +860,17 @@ MonoBehaviour:
   - name: Clam
     spawnable: {fileID: 107549408028584785, guid: 9b1b8eb7246cfff4f97f8437480044ce,
       type: 3}
-    idealMaxAmountInSceneAtOnce: 4
+    idealMaxAmountInSceneAtOnce: 3
     relativeRarity: 1
-  - name: Scrapeater
-    spawnable: {fileID: 107549408028584785, guid: f9ace5bde9a5c474986a6c0cc0b9237f,
+  - name: Quantum Cod
+    spawnable: {fileID: 107549408028584785, guid: 389ccd0ca58e6f04780b2031ae172eab,
       type: 3}
-    idealMaxAmountInSceneAtOnce: 8
-    relativeRarity: 2
+    idealMaxAmountInSceneAtOnce: 3
+    relativeRarity: 1
   - name: Gamma Spearfish
     spawnable: {fileID: 107549408028584785, guid: 7be7baf23e5ef864e92d496e0250fb62,
       type: 3}
-    idealMaxAmountInSceneAtOnce: 4
+    idealMaxAmountInSceneAtOnce: 3
     relativeRarity: 1
   spawnBox: {fileID: 8354399446302145463}
   spawnInterval: 0.5
@@ -1193,8 +1193,8 @@ Transform:
   - {fileID: 1704159427}
   - {fileID: 510775549}
   - {fileID: 450431850}
-  - {fileID: 619137850}
   - {fileID: 364086143}
+  - {fileID: 619137850}
   - {fileID: 397424855}
   - {fileID: 2029450148}
   - {fileID: 90450792}
@@ -1293,7 +1293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1656924148
 MonoBehaviour:
   m_ObjectHideFlags: 0
