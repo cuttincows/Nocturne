@@ -6,7 +6,7 @@ Properties {
     [Gamma] _Exposure ("Exposure", Range(0, 8)) = 1.0
     _Rotation ("Rotation", Range(0, 360)) = 0
     _RotateSpeed ("RotateSpeed", Range(0.01, 1000)) = 1
-    _BlurAmount ("BlurAmount", Range(0, 100)) = 1
+    _BlurAmount ("BlurAmount", Range(0, 500)) = 1
     [NoScaleOffset] _Tex ("Cubemap   (HDR)", Cube) = "grey" {}
 }
 

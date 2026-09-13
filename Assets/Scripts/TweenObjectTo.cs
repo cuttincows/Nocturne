@@ -11,14 +11,25 @@ public class TweenObjectTo : MonoBehaviour
     Ease.DelegateType delType;
     Ease.EaseType easeType;
 
+    private float prevFuelValue;
+    public float fuelEaseCatchupSpeed = 0.1f;
+
     void Start()
     {
         startPos = ObjectToTween.transform.position;
+        prevFuelValue = 1f - FuelSystem.instance.GetRemainingFuelPercent();
+
     }
 
     void Update()
     {
-        TweenByToWith(FuelSystem.instance.GetRemainingFuelPercent(), delType, easeType);
+        float easedT = Mathf.Lerp(
+            prevFuelValue,
+            1f - FuelSystem.instance.GetRemainingFuelPercent(),
+            Time.deltaTime * fuelEaseCatchupSpeed
+        );
+        prevFuelValue = easedT;
+        TweenByToWith(easedT, delType, easeType);
     }
 
     private void TweenByToWith(float t, Ease.DelegateType delType, Ease.EaseType easeType)

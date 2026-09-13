@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81372bdfb162104dbbc11d0991d0baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  skyboxMaterial: {fileID: 0}
 --- !u!4 &177962371
 Transform:
   m_ObjectHideFlags: 0
@@ -450,6 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   ObjectToTween: {fileID: 1730434372}
   TweenToTr: {fileID: 1235037678}
+  fuelEaseCatchupSpeed: 2
 --- !u!4 &1235037678
 Transform:
   m_ObjectHideFlags: 0
