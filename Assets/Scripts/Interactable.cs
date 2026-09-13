@@ -9,6 +9,11 @@ public class Interactable : MonoBehaviour
         InteractWithObject.allInteractables.Add(this);
     }
 
+    public void OnDestroy()
+    {
+        InteractWithObject.allInteractables.Remove(this);
+    }
+
     public virtual void Interact()
     {
 
