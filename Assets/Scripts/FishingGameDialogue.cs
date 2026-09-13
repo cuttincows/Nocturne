@@ -124,6 +124,13 @@ public class FishingGameDialogue : BasicDialogue
         SceneManager.LoadScene(sceneName);
     }
 
+    [Header("Friendbot screen")]
+    public TextMeshPro friendBotText;
+    public void SetBotScreen(string screenText)
+    {
+        friendBotText.text = screenText;
+    }
+
     public override void StopUsing()
     {
         base.StopUsing();

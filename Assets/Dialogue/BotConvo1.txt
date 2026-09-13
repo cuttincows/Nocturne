@@ -1,5 +1,6 @@
 block botconvo1:
-	say Bot "[ERRORERRORERRROR]"
+	say SetBotScreen "[ERRORERRORERRROR]"
+	say Bot "<i>A screen on the bot reads</i>[ERRORERRORERRROR]"
 	choice "Beeeeboooppp":
 		"Hmmm.... what do I do":
 			endscript
