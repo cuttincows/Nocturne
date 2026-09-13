@@ -339,7 +339,7 @@ MonoBehaviour:
   expirationTime: 10
   spriteRenderer: {fileID: 3247093487246405646}
   cookable: 1
-  skewerable: 0
+  skewerable: 1
   onDead:
     m_PersistentCalls:
       m_Calls: []
