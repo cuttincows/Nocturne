@@ -13,16 +13,17 @@ GameObject:
   - component: {fileID: 4906256406345645252}
   - component: {fileID: 2665376784438653180}
   - component: {fileID: 107549408028584785}
+  - component: {fileID: 4137879464895814239}
   - component: {fileID: 378288712160102420}
   - component: {fileID: 1541514451259782691}
   - component: {fileID: 4375804181954118405}
   - component: {fileID: 2196210190001776642}
-  - component: {fileID: 3483956423209414072}
-  - component: {fileID: 7175097472970311659}
-  - component: {fileID: 2162428352239879401}
+  - component: {fileID: 285788670587835660}
+  - component: {fileID: -3077405209759746821}
+  - component: {fileID: 6261893296749934114}
   m_Layer: 19
-  m_Name: Circuit Fry 2D
-  m_TagString: Untagged
+  m_Name: Quantum Cod
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +38,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3910625461414424255}
@@ -56,8 +57,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.2
-  m_LinearDamping: 5
+  m_Mass: 1
+  m_LinearDamping: 1
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -83,17 +84,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8097cf09d192e7c499673481bec3c71f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spearable
-  isSpearable: 1
+  isSpearable: 0
   spearTip: {fileID: 0}
   disableWhileSpeared:
-  - {fileID: 7175097472970311659}
+  - {fileID: 285788670587835660}
   col: {fileID: 2196210190001776642}
   onSpeared:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7175097472970311659}
+      - m_Target: {fileID: 285788670587835660}
         m_TargetAssemblyTypeName: Death, Assembly-CSharp
-        m_MethodName: Kill
+        m_MethodName: SpearHole
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -116,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dumpable
   canDump: 1
-  definition: {fileID: 11400000, guid: bc0102ff51cd4ce19463fdee235fa071, type: 2}
+  fuel: 50
 --- !u!114 &107549408028584785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +131,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawnable
   power: 0
+--- !u!114 &4137879464895814239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d5a22ed2155e64aa1576850140cf51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveRandomly
+  spawnBox:
+    spawnBoxOverride: {fileID: 0}
 --- !u!114 &378288712160102420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LookByRB
   rb: {fileID: 6964431724867206812}
-  rotationSpeed: 50
+  rotationSpeed: 10
 --- !u!114 &1541514451259782691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,13 +172,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveTowards
   speed: 10
-  acceleration: 20
+  acceleration: 10
   rb: {fileID: 6964431724867206812}
   provider:
-  - {fileID: 7175097472970311659}
-  - {fileID: 4375804181954118405}
+  - {fileID: 285788670587835660}
+  - {fileID: 6261893296749934114}
   - {fileID: 4211039419027188558}
-  - {fileID: 3483956423209414072}
+  - {fileID: 4137879464895814239}
 --- !u!114 &4375804181954118405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eater
   munchDuration: 2
+  stunner: {fileID: 6261893296749934114}
 --- !u!70 &2196210190001776642
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -212,25 +228,9 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2, y: 1}
+  m_Size: {x: 2, y: 2}
   m_Direction: 1
---- !u!114 &3483956423209414072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7784431384039299623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48b7e7f64d105b0458d989c39a7b9cc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Circuit
-  spawnBoxRef:
-    spawnBoxOverride: {fileID: 0}
-  maxPositions: 3
-  doneDistance: 1
---- !u!114 &7175097472970311659
+--- !u!114 &285788670587835660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,8 +244,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Death
   expirationTime: 10
   spriteRenderer: {fileID: 3247093487246405646}
-  deadSprite: {fileID: 21300000, guid: d6678e02679044e42acd9eceae6025c7, type: 3}
---- !u!114 &2162428352239879401
+  cookable: 1
+  skewerable: 1
+  onDead:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4906256406345645252}
+        m_TargetAssemblyTypeName: Spearable, Assembly-CSharp
+        m_MethodName: SetSpearable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &-3077405209759746821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,8 +274,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteManager
   spriteRenderer: {fileID: 3247093487246405646}
-  defaultSprite: {fileID: 21300000, guid: 0aeb6aea6efbaaa44a3a5197f73a59dd, type: 3}
-  sprites: []
+  death: {fileID: 285788670587835660}
+  stunnable: {fileID: 6261893296749934114}
+  spearedAndCookedSprite: {fileID: 21300000, guid: dc7cbfdfcea4f5e4fb844b641f998fbb,
+    type: 3}
+  spearedSprite: {fileID: 21300000, guid: f91119749e64b844b8d02bbbf9e4cd67, type: 3}
+  cookedSprite: {fileID: 21300000, guid: d35f0e159bb275c4585778804ee5ce1e, type: 3}
+  eatingSprite: {fileID: 21300000, guid: be92e4f5e4fb4ab46be7fded6b3a48d6, type: 3}
+--- !u!114 &6261893296749934114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2aa95919f34bd642a27b2ac07c01765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Stunnable
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +320,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3996921033285460084}
@@ -341,7 +374,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 0aeb6aea6efbaaa44a3a5197f73a59dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 21b649c866e035745a2cc872619ed790, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -359,21 +392,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3996921033285460084}
     m_Modifications:
-    - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
       propertyPath: m_LocalPosition.x

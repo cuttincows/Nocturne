@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 7485151857605279636}
   - component: {fileID: 986163945627879165}
   - component: {fileID: 7866735941307150589}
+  - component: {fileID: 1424538406411858429}
   m_Layer: 19
   m_Name: Scrapeater
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +96,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 986163945627879165}
         m_TargetAssemblyTypeName: Death, Assembly-CSharp
-        m_MethodName: Kill
+        m_MethodName: SpearHole
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -177,7 +178,7 @@ MonoBehaviour:
   rb: {fileID: 6964431724867206812}
   provider:
   - {fileID: 986163945627879165}
-  - {fileID: 4375804181954118405}
+  - {fileID: 1424538406411858429}
   - {fileID: 2166002612471761422}
   - {fileID: 4211039419027188558}
   - {fileID: 7485151857605279636}
@@ -195,6 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eater
   munchDuration: 2
+  stunner: {fileID: 1424538406411858429}
 --- !u!70 &2196210190001776642
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -277,7 +279,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Death
   expirationTime: 10
   spriteRenderer: {fileID: 3247093487246405646}
-  deadSprite: {fileID: 21300000, guid: adb96ce3ae14c954cbf152ef66df27c5, type: 3}
+  cookable: 1
+  skewerable: 1
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7866735941307150589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,9 +296,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ba072f1e6d5844ab79906c40b5610b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteManager
-  spriteRenderer: {fileID: 0}
-  defaultSprite: {fileID: 0}
-  sprites: []
+  spriteRenderer: {fileID: 3247093487246405646}
+  death: {fileID: 986163945627879165}
+  stunnable: {fileID: 1424538406411858429}
+  spearedAndCookedSprite: {fileID: 21300000, guid: 619195842f052964180d18b8fa511a80,
+    type: 3}
+  spearedSprite: {fileID: 21300000, guid: adb96ce3ae14c954cbf152ef66df27c5, type: 3}
+  cookedSprite: {fileID: 21300000, guid: f126c94bc0882944bbc1eb40b8b31a13, type: 3}
+  eatingSprite: {fileID: 21300000, guid: 4f3c34636d73df64d869997d7a704284, type: 3}
+--- !u!114 &1424538406411858429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2aa95919f34bd642a27b2ac07c01765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Stunnable
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0

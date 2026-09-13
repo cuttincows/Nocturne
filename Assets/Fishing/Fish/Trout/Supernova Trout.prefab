@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 7960866816744564755}
   - component: {fileID: 5130634294617951446}
   - component: {fileID: 4140580885377738601}
+  - component: {fileID: 1991919159889884349}
   m_Layer: 19
   m_Name: Supernova Trout
   m_TagString: Untagged
@@ -91,7 +92,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4140580885377738601}
         m_TargetAssemblyTypeName: Death, Assembly-CSharp
-        m_MethodName: Kill
+        m_MethodName: SpearHole
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -254,7 +255,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Death
   expirationTime: 10
   spriteRenderer: {fileID: 3247093487246405646}
-  deadSprite: {fileID: 21300000, guid: bdb83410ed0275e4ab6e9d08973a0e72, type: 3}
+  cookable: 0
+--- !u!114 &1991919159889884349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ba072f1e6d5844ab79906c40b5610b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteManager
+  spriteRenderer: {fileID: 3247093487246405646}
+  death: {fileID: 4140580885377738601}
+  eater: {fileID: 0}
+  spearedAndCookedSprite: {fileID: 0}
+  spearedSprite: {fileID: 21300000, guid: bdb83410ed0275e4ab6e9d08973a0e72, type: 3}
+  cookedSprite: {fileID: 0}
+  eatingSprite: {fileID: 0}
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0

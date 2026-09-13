@@ -13,17 +13,17 @@ GameObject:
   - component: {fileID: 4906256406345645252}
   - component: {fileID: 2665376784438653180}
   - component: {fileID: 107549408028584785}
-  - component: {fileID: 4137879464895814239}
   - component: {fileID: 378288712160102420}
   - component: {fileID: 1541514451259782691}
   - component: {fileID: 4375804181954118405}
   - component: {fileID: 2196210190001776642}
-  - component: {fileID: 3426436703133136175}
-  - component: {fileID: 7399734645970072904}
-  - component: {fileID: 7867705781451278260}
+  - component: {fileID: 3483956423209414072}
+  - component: {fileID: 7175097472970311659}
+  - component: {fileID: 2162428352239879401}
+  - component: {fileID: -3255915524063499089}
   m_Layer: 19
-  m_Name: Quantum Fish
-  m_TagString: Untagged
+  m_Name: Circuit Fry
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,10 +38,9 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 4410567089484246570}
   - {fileID: 3910625461414424255}
   - {fileID: 8789435691461094747}
   m_Father: {fileID: 0}
@@ -58,9 +57,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 1
-  m_AngularDamping: 0.2
+  m_Mass: 0.2
+  m_LinearDamping: 5
+  m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -88,14 +87,14 @@ MonoBehaviour:
   isSpearable: 1
   spearTip: {fileID: 0}
   disableWhileSpeared:
-  - {fileID: 7399734645970072904}
+  - {fileID: 7175097472970311659}
   col: {fileID: 2196210190001776642}
   onSpeared:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7399734645970072904}
+      - m_Target: {fileID: 7175097472970311659}
         m_TargetAssemblyTypeName: Death, Assembly-CSharp
-        m_MethodName: Kill
+        m_MethodName: SpearHole
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -118,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dumpable
   canDump: 1
-  definition: {fileID: 11400000, guid: 08c580e82b2f4483b6b6cfc1600b8d9b, type: 2}
+  definition: {fileID: 11400000, guid: bc0102ff51cd4ce19463fdee235fa071, type: 2}
 --- !u!114 &107549408028584785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,20 +131,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawnable
   power: 0
---- !u!114 &4137879464895814239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7784431384039299623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49d5a22ed2155e64aa1576850140cf51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MoveRandomly
-  spawnBox:
-    spawnBoxOverride: {fileID: 0}
 --- !u!114 &378288712160102420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LookByRB
   rb: {fileID: 6964431724867206812}
-  rotationSpeed: 20
+  rotationSpeed: 50
 --- !u!114 &1541514451259782691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,16 +157,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3023c193eff93924d8ba4bf1709bc7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveTowards
-  speed: 7
-  acceleration: 7
+  speed: 10
+  acceleration: 20
   rb: {fileID: 6964431724867206812}
   provider:
-  - {fileID: 7399734645970072904}
-  - {fileID: 4375804181954118405}
-  - {fileID: 3426436703133136175}
+  - {fileID: 7175097472970311659}
+  - {fileID: -3255915524063499089}
   - {fileID: 4211039419027188558}
-  - {fileID: 3531015963182935003}
-  - {fileID: 4137879464895814239}
+  - {fileID: 3483956423209414072}
 --- !u!114 &4375804181954118405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eater
   munchDuration: 2
+  stunner: {fileID: -3255915524063499089}
 --- !u!70 &2196210190001776642
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -232,7 +216,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2, y: 1}
   m_Direction: 1
---- !u!114 &3426436703133136175
+--- !u!114 &3483956423209414072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,13 +225,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7784431384039299623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8289e043f9afe5242a14049ad953a806, type: 3}
+  m_Script: {fileID: 11500000, guid: 48b7e7f64d105b0458d989c39a7b9cc6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ReenterBox
-  targetBox:
+  m_EditorClassIdentifier: Assembly-CSharp::Circuit
+  spawnBoxRef:
     spawnBoxOverride: {fileID: 0}
-  tolerance: 0.1
---- !u!114 &7399734645970072904
+  maxPositions: 3
+  doneDistance: 1
+--- !u!114 &7175097472970311659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,8 +246,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Death
   expirationTime: 10
   spriteRenderer: {fileID: 3247093487246405646}
-  deadSprite: {fileID: 21300000, guid: 8eaae312abfee6146b5c029774516fd6, type: 3}
---- !u!114 &7867705781451278260
+  cookable: 1
+  skewerable: 1
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2162428352239879401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,9 +263,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ba072f1e6d5844ab79906c40b5610b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteManager
-  spriteRenderer: {fileID: 0}
-  defaultSprite: {fileID: 0}
-  sprites: []
+  spriteRenderer: {fileID: 3247093487246405646}
+  death: {fileID: 7175097472970311659}
+  stunnable: {fileID: -3255915524063499089}
+  spearedAndCookedSprite: {fileID: 21300000, guid: fdf27f01001c181498cfafdfc9908ca6,
+    type: 3}
+  spearedSprite: {fileID: 21300000, guid: d6678e02679044e42acd9eceae6025c7, type: 3}
+  cookedSprite: {fileID: 21300000, guid: a7a813cb81dbbcf418ea8898357620f0, type: 3}
+  eatingSprite: {fileID: 21300000, guid: ab9874b5bdb8d5646ab502261cd6af94, type: 3}
+--- !u!114 &-3255915524063499089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2aa95919f34bd642a27b2ac07c01765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Stunnable
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,7 +364,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: a1df51f64b1d4eb4181e838826f9609d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0aeb6aea6efbaaa44a3a5197f73a59dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -376,6 +382,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3996921033285460084}
     m_Modifications:
+    - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -454,124 +475,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941bbe528ade66e4487a1e5d1d32e95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NearbyAvoider
---- !u!1001 &6100033445811748914
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3996921033285460084}
-    m_Modifications:
-    - target: {fileID: 2472062918354865905, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_Name
-      value: AvoidOthers
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266227470572269558, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: blacklist.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6266227470572269558, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: 'blacklist.Array.data[0]'
-      value: Bass
-      objectReference: {fileID: 0}
-    - target: {fileID: 7324854474807978985, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: attractStrength
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903547450787592366, guid: 909c4baded5ea0d479c2c1150f931491,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 909c4baded5ea0d479c2c1150f931491, type: 3}
---- !u!114 &3531015963182935003 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7324854474807978985, guid: 909c4baded5ea0d479c2c1150f931491,
-    type: 3}
-  m_PrefabInstance: {fileID: 6100033445811748914}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 941bbe528ade66e4487a1e5d1d32e95c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NearbyAvoider
---- !u!4 &4410567089484246570 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
-    type: 3}
-  m_PrefabInstance: {fileID: 6100033445811748914}
-  m_PrefabAsset: {fileID: 0}

@@ -3,25 +3,25 @@ using UnityEngine;
 
 public class Clam : MonoBehaviour
 {
-    public Eater eater;
+    public Stunnable stunnable;
     public Death death;
     public Spearable spearable;
 
     public void Start()
     {
-        eater.OnEatStateChange += OnEatStateChange;
+        stunnable.OnStunStateChange += OnEatStateChange;
     }
 
     private void OnDestroy()
     {
-        if (eater != null)
-            eater.OnEatStateChange -= OnEatStateChange;
+        if (stunnable != null)
+            stunnable.OnStunStateChange -= OnEatStateChange;
     }
 
-    private void OnEatStateChange(Eater eater)
+    private void OnEatStateChange(Stunnable stunnable)
     {
         if (death.dead) return;
-        spearable.isSpearable = eater.IsEating;
+        spearable.isSpearable = stunnable.IsStunned;
     }
 
     private void Update()
