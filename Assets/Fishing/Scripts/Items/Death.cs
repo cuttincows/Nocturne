@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// determines cooked, speared, and alive state.
@@ -11,19 +12,35 @@ public class Death : DirectionProvider
     float expirationTimer;
     public SpriteRenderer spriteRenderer;
     public bool cookable;
+    public bool skewerable;
     public bool speared {get; private set; }
+
+    public UnityEvent onDead;
     public bool cooked { get; private set; }
     public override bool Can_Perform => dead;
     public void Cook()
     {
         if (!cookable) return;
         cooked = true;
-        dead = true;
+        SetDead();
+    }
+
+    public void Skewer()
+    {
+        if (skewerable)
+            SpearHole();
     }
 
     public void SpearHole()
     {
         speared = true;
+        SetDead();
+    }
+
+    private void SetDead()
+    {
+        onDead?.Invoke();
+        tag = "DeadFish";
         dead = true;
     }
 

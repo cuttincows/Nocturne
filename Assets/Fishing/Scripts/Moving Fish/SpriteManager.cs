@@ -6,7 +6,7 @@ public class SpriteManager : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     Sprite defaultSprite;
     public Death death;
-    public Eater eater;
+    public Stunnable stunnable;
     public Sprite spearedAndCookedSprite;
     public Sprite spearedSprite;
     public Sprite cookedSprite;
@@ -34,7 +34,7 @@ public class SpriteManager : MonoBehaviour
             if (death.speared)
                 return spearedSprite;
         }
-        if (eater != null && eater.IsEating)
+        if (stunnable != null && stunnable.IsStunned)
             return eatingSprite;
         return defaultSprite;
     }

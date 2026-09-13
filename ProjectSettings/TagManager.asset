@@ -9,6 +9,8 @@ TagManager:
   - Scrap
   - SpearTarget
   - Wall
+  - DeadFish
+  - Fish
   layers:
   - Default
   - TransparentFX

@@ -564,6 +564,68 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &364086142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 364086143}
+  - component: {fileID: 364086144}
+  m_Layer: 18
+  m_Name: More Advanced Fish Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &364086143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364086142}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.5}
+  m_LocalScale: {x: 13, y: 8.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1211680162}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &364086144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364086142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570e4d069d8d27f4ca75986c157eaa8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawning
+  spawnObjects:
+  - name: Angler
+    spawnable: {fileID: 107549408028584785, guid: 26fe15d3364839a47bea11bd091c054b,
+      type: 3}
+    idealMaxAmountInSceneAtOnce: 8
+    relativeRarity: 1
+  - name: Quantum
+    spawnable: {fileID: 107549408028584785, guid: 389ccd0ca58e6f04780b2031ae172eab,
+      type: 3}
+    idealMaxAmountInSceneAtOnce: 8
+    relativeRarity: 1
+  - name: Wormhole Fish
+    spawnable: {fileID: 107549408028584785, guid: 0d23f1d2a97a9f542b926e5edeabae15,
+      type: 3}
+    idealMaxAmountInSceneAtOnce: 8
+    relativeRarity: 1
+  spawnBox: {fileID: 8354399446302145463}
+  spawnInterval: 0.5
 --- !u!1 &397424849
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +732,7 @@ MonoBehaviour:
     spawnable: {fileID: 107549408028584785, guid: 4cd596242c76ae84b990680d8b24dedd,
       type: 3}
     idealMaxAmountInSceneAtOnce: 8
-    relativeRarity: 15
+    relativeRarity: 9
   - name: Circuit Fry
     spawnable: {fileID: 107549408028584785, guid: fbdfe8c1d155b314590c86b3ea0687db,
       type: 3}
@@ -798,7 +860,7 @@ MonoBehaviour:
   - name: Clam
     spawnable: {fileID: 107549408028584785, guid: 9b1b8eb7246cfff4f97f8437480044ce,
       type: 3}
-    idealMaxAmountInSceneAtOnce: 3
+    idealMaxAmountInSceneAtOnce: 4
     relativeRarity: 1
   - name: Scrapeater
     spawnable: {fileID: 107549408028584785, guid: f9ace5bde9a5c474986a6c0cc0b9237f,
@@ -808,7 +870,7 @@ MonoBehaviour:
   - name: Gamma Spearfish
     spawnable: {fileID: 107549408028584785, guid: 7be7baf23e5ef864e92d496e0250fb62,
       type: 3}
-    idealMaxAmountInSceneAtOnce: 3
+    idealMaxAmountInSceneAtOnce: 4
     relativeRarity: 1
   spawnBox: {fileID: 8354399446302145463}
   spawnInterval: 0.5
@@ -1132,6 +1194,7 @@ Transform:
   - {fileID: 510775549}
   - {fileID: 450431850}
   - {fileID: 619137850}
+  - {fileID: 364086143}
   - {fileID: 397424855}
   - {fileID: 2029450148}
   - {fileID: 90450792}
@@ -1230,7 +1293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1656924148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1603,17 +1666,27 @@ PrefabInstance:
     - target: {fileID: 2309575407038641883, guid: eaa716923f8816b478cb3db22c6562c8,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.13333334
       objectReference: {fileID: 0}
     - target: {fileID: 2309575407038641883, guid: eaa716923f8816b478cb3db22c6562c8,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3875254510682249319, guid: eaa716923f8816b478cb3db22c6562c8,
         type: 3}
       propertyPath: m_Name
       value: Fuel, Food, And Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 3875254510682249319, guid: eaa716923f8816b478cb3db22c6562c8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864333796480426011, guid: eaa716923f8816b478cb3db22c6562c8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7090527743051346734, guid: eaa716923f8816b478cb3db22c6562c8,
         type: 3}
@@ -1713,6 +1786,11 @@ PrefabInstance:
     - target: {fileID: 7090527743051346734, guid: eaa716923f8816b478cb3db22c6562c8,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419167662194058714, guid: eaa716923f8816b478cb3db22c6562c8,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
