@@ -19,10 +19,11 @@ GameObject:
   - component: {fileID: 2196210190001776642}
   - component: {fileID: 285788670587835660}
   - component: {fileID: -3077405209759746821}
-  - component: {fileID: 6600998117714813276}
   - component: {fileID: 2118496843506875082}
   - component: {fileID: -4064175677513904941}
-  - component: {fileID: 8820044658105981509}
+  - component: {fileID: -5907284306718036365}
+  - component: {fileID: 2992657943321339379}
+  - component: {fileID: 8829450283665722355}
   m_Layer: 19
   m_Name: Anglerfish
   m_TagString: Fish
@@ -159,14 +160,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3023c193eff93924d8ba4bf1709bc7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveTowards
-  speed: 3
-  acceleration: 1
+  speed: 20
+  acceleration: 20
   rb: {fileID: 6964431724867206812}
   provider:
   - {fileID: 285788670587835660}
   - {fileID: -4064175677513904941}
-  - {fileID: 6960507544069888792}
-  - {fileID: 2118496843506875082}
+  - {fileID: 2992657943321339379}
+  - {fileID: 8829450283665722355}
 --- !u!114 &4375804181954118405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Eater
   munchDuration: 2
   stunner: {fileID: -4064175677513904941}
-  EatTag: Bait
+  EatTag: DeadFish
 --- !u!70 &2196210190001776642
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -237,19 +238,7 @@ MonoBehaviour:
   skewerable: 1
   onDead:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6600998117714813276}
-        m_TargetAssemblyTypeName: KillerFish, Assembly-CSharp
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &-3077405209759746821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,20 +259,6 @@ MonoBehaviour:
   spearedSprite: {fileID: 21300000, guid: 03af932620fea2041a4e10743eec3440, type: 3}
   cookedSprite: {fileID: 21300000, guid: a80c3224fe737bd48a0dea5a1608a8a0, type: 3}
   eatingSprite: {fileID: 21300000, guid: c7b3717642599d64682ae59779b9ae89, type: 3}
---- !u!114 &6600998117714813276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7784431384039299623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7955eb1afe7093b439d02faa353e8216, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KillerFish
-  rb: {fileID: 6964431724867206812}
-  reqVelocity: 0
 --- !u!114 &2118496843506875082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2aa95919f34bd642a27b2ac07c01765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stunnable
---- !u!114 &8820044658105981509
+--- !u!114 &-5907284306718036365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -325,6 +300,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eatable
   canEat: 1
+--- !u!114 &2992657943321339379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fa360fe37056f43bd6fe5af877ae4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Invisibility
+  spriteRenderer: {fileID: 3247093487246405646}
+  reflection: {fileID: 6960507544069888792}
+  decaySpeed: 0.5
+  growSpeed: 3
+--- !u!114 &8829450283665722355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8289e043f9afe5242a14049ad953a806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReenterBox
+  targetBox:
+    spawnBoxOverride: {fileID: 0}
+  tolerance: 0.1
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +438,7 @@ PrefabInstance:
     - target: {fileID: 346054752735261980, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
       propertyPath: whitelist.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 346054752735261980, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
@@ -447,17 +453,17 @@ PrefabInstance:
     - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4299148905116857586, guid: 3935c92468f7b3044ab3da1d65ee0a7c,
         type: 3}
