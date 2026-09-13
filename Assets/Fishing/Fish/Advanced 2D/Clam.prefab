@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dumpable
   canDump: 1
-  fuel: 500
+  definition: {fileID: 11400000, guid: d7b985d7c37f43b68737e316fa69b956, type: 2}
 --- !u!114 &107549408028584785
 MonoBehaviour:
   m_ObjectHideFlags: 0
