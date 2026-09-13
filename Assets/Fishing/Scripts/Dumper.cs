@@ -14,13 +14,16 @@ public class Dumper : MonoBehaviour
         }
     }
 
-    private void TryDump()
-    {
-        // Implement the logic for dumping items here
-        if (tip.item != null && tip.item.TryGetComponent(out Dumpable dumpable) && dumpable.canDump)
-        {
-            FuelSystem.instance.AddFuel(dumpable.fuel);
-            dumpable.Kill();
+    private void TryDump() {
+        if (tip.item == null) return;
+        if (!tip.item.TryGetComponent(out Dumpable dumpable)) return;
+        if (!dumpable.canDump) return;
+
+        if (ShipHold.instance != null) {
+            ShipHold.instance.Receive(dumpable.definition);
         }
+
+        tip.item = null;
+        dumpable.Kill();
     }
 }
