@@ -449,7 +449,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   ObjectToTween: {fileID: 1730434372}
   TweenToTr: {fileID: 1235037678}
+  delType: 1
+  easeType: 6
   fuelEaseCatchupSpeed: 2
+  MinSkyboxBlur: 2
+  MaxSkyboxBlur: 245
+  skyboxMaterial: {fileID: 2100000, guid: e0594306cc15b4d2ebabdb1e0c9830e5, type: 2}
 --- !u!4 &1235037678
 Transform:
   m_ObjectHideFlags: 0

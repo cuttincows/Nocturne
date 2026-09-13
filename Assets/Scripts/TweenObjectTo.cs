@@ -8,11 +8,17 @@ public class TweenObjectTo : MonoBehaviour
     public Transform TweenToTr;
     private Vector3 startPos;
 
-    Ease.DelegateType delType;
-    Ease.EaseType easeType;
+    public Ease.DelegateType delType;
+    public Ease.EaseType easeType;
 
     private float prevFuelValue;
     public float fuelEaseCatchupSpeed = 0.1f;
+
+    [Header("Skybox Blur")]
+    public float MinSkyboxBlur = 2f;
+    public float MaxSkyboxBlur = 60f;
+
+    public Material skyboxMaterial;
 
     void Start()
     {
@@ -35,6 +41,9 @@ public class TweenObjectTo : MonoBehaviour
     private void TweenByToWith(float t, Ease.DelegateType delType, Ease.EaseType easeType)
     {
         t = Ease.GetDelegate(delType, easeType)(t);
+
+        // What actually moves the object
         ObjectToTween.transform.position = Vector3.Lerp(startPos, TweenToTr.transform.position, t);
+        skyboxMaterial.SetFloat("_BlurAmount", Mathf.Lerp(MinSkyboxBlur, MaxSkyboxBlur, t));
     }
 }
