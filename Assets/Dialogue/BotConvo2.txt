@@ -1,4 +1,5 @@
 block botconvo2:
+	say SetBotScreen "External [FISH] detected"
 	say Bot "Ba beboooooo"
 	choice "Ba beboooooo":
 		"Could you like, help me fish?":

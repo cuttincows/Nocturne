@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.FPS.Gameplay;
 using Unity.FPS.UI;
@@ -58,6 +59,7 @@ public class FishingGameDialogue : BasicDialogue
     // not static so it resets each new minigame, set this from the instance 
     private string triggerWereWaitingFor = string.Empty;
 
+    float lastChatterIndex = 0;
     public void Update()
     {
         if (triggerWereWaitingFor == string.Empty)
@@ -65,17 +67,29 @@ public class FishingGameDialogue : BasicDialogue
             return;
         }
 
+        float chatterSpeed = 0.1f;
+        int chatterIndex = Mathf.FloorToInt(Time.realtimeSinceStartup / chatterSpeed);
 
+        if (TextTyper.IsTyping(layout.GetDialogueBox()) && chatterIndex != lastChatterIndex)
+        {
+            blipSource.time = UnityEngine.Random.Range(0, currentSpeaker.chatter.length);
+            lastChatterIndex = chatterIndex;
+            blipSource.Play();
+        }
     }
+
     public void SetNextScene(string nextScene)
     {
     //    PlushieGameDialogue.NextScene = nextScene;
     }
 
+    Speaker currentSpeaker = null;
     protected override void DoSay(Speaker speaker, string[] args)
     {
         // The statement being said is always the last args element
         string statement = args[args.Length - 1];
+
+        currentSpeaker = speaker;
 
         if (args.Length >= 2)
         {  // 2 args is speakerEmotion, statement
@@ -86,6 +100,13 @@ public class FishingGameDialogue : BasicDialogue
             layout.SetSpeakerEmotion(speaker, "default");
         }
 
+        blipSource.Stop();
+        if (speaker != null && speaker.chatter != null)
+        {
+            blipSource.clip = speaker.chatter;
+            blipSource.time = UnityEngine.Random.Range(0, speaker.chatter.length);
+            blipSource.Play();
+        }
 
         layout.GetDialogueBox().TypeText(statement, TextTyper.DEFAULT_TYPE, TextTyper.DEFAULT_SPEED, () =>
         {
