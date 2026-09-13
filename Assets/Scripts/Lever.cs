@@ -13,11 +13,16 @@ public class Lever : Interactable {
     }
 
     public override void Interact() {
-        isOn = !isOn;
+        SetOn(!isOn);
+    }
+
+    public void SetOn(bool value) {
+        if (isOn == value) return;
+
+        isOn = value;
         Apply();
         OnToggled?.Invoke(isOn);
     }
-
     private void Apply() {
         if (animator != null) animator.SetBool(boolParameter, isOn);
     }
