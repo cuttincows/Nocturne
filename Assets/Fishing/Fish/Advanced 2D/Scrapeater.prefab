@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Grabber
   col: {fileID: 2196210190001776642}
-  grabCooldown: 2
+  grabCooldown: 0.2
   disableWhenGrabbing:
   - {fileID: 2166002612471761422}
 --- !u!114 &7485151857605279636
@@ -481,6 +481,11 @@ PrefabInstance:
         type: 3}
       propertyPath: 'whitelist.Array.data[0]'
       value: Scrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324854474807978985, guid: 909c4baded5ea0d479c2c1150f931491,
+        type: 3}
+      propertyPath: attractStrength
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7607379661800091160, guid: 909c4baded5ea0d479c2c1150f931491,
         type: 3}
