@@ -1,16 +1,29 @@
 using UnityEngine;
 
+/// <summary>
+/// determines cooked, speared, and alive state.
+/// really cooked and speared should be their own script but meh
+/// </summary>
 public class Death : DirectionProvider
 {
-    public bool dead {  get; private set;}
+    public bool dead { get; private set; }
     public float expirationTime = 10f;
     float expirationTimer;
     public SpriteRenderer spriteRenderer;
-    public Sprite deadSprite;
+    public bool cookable;
+    public bool speared {get; private set; }
+    public bool cooked { get; private set; }
     public override bool Can_Perform => dead;
-    public void Kill()
+    public void Cook()
     {
-        spriteRenderer.sprite = deadSprite;
+        if (!cookable) return;
+        cooked = true;
+        dead = true;
+    }
+
+    public void SpearHole()
+    {
+        speared = true;
         dead = true;
     }
 

@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RestartButton : MonoBehaviour
+public class LoadScener : MonoBehaviour
 {
     public string Scene;
 
-    public void Restart()
+    public void Load()
     {
         SceneManager.LoadScene(Scene);
     }
