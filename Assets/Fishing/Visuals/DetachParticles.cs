@@ -28,6 +28,12 @@ public class DetachParticles : MonoBehaviour
         StartCoroutine(WaitForDeath(particleSystem));
     }
 
+    public void Duplicate()
+    {
+        DetachParticles dp = Instantiate(gameObject).GetComponent<DetachParticles>();
+        dp.Detach();
+    }
+
     IEnumerator WaitForDeath(ParticleSystem ps)
     {
         // withChildren=true also checks sub-emitters

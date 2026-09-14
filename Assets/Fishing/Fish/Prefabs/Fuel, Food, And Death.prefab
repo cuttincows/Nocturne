@@ -794,8 +794,8 @@ MonoBehaviour:
           m_StringArgument: Singularity
           m_BoolArgument: 0
         m_CallState: 2
-  decaySpeed: 5
-  decayAcceleration: 1
+  decaySpeed: 2
+  decayAcceleration: 0.2
   slider: {fileID: 3113274939174656235}
 --- !u!222 &3141833575808452304
 CanvasRenderer:
