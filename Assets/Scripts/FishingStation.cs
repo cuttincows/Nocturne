@@ -8,6 +8,7 @@ public class FishingStation : Interactable {
 
     private bool fishing;
     private int stoppedFrame = -1;
+    private int startedFrame = -1;
 
     public override void Interact() {
         if (fishing) {
@@ -19,10 +20,17 @@ public class FishingStation : Interactable {
         }
 
         if (FishingRig.instance == null) {
+            Debug.LogError("FishingStation: FishingRig.instance is null", this);
+            return;
+        }
+
+        if (playerController == null) {
+            Debug.LogError("FishingStation: playerController is not assigned", this);
             return;
         }
 
         fishing = true;
+        startedFrame = Time.frameCount;
 
         InteractWithObject.InteractionLocked = true;
         playerController.enabled = false;
@@ -37,6 +45,10 @@ public class FishingStation : Interactable {
 
     private void Update() {
         if (!fishing) {
+            return;
+        }
+
+        if (Time.frameCount == startedFrame) {
             return;
         }
 
