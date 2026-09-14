@@ -5,6 +5,7 @@ public class FishingRig : MonoBehaviour {
 
     public GameObject fishingCamera;
     public GameObject spearRig;
+    public GameObject fishingAudio;
 
     public bool IsActive { get; private set; }
 
@@ -30,6 +31,10 @@ public class FishingRig : MonoBehaviour {
 
         if (spearRig != null) {
             spearRig.SetActive(on);
+        }
+
+        if (fishingAudio != null) {
+            fishingAudio.SetActive(on);
         }
     }
 }

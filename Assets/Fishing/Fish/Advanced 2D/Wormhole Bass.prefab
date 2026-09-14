@@ -9883,7 +9883,8 @@ AudioSource:
   m_GameObject: {fileID: 5142521107404232437}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: cd4ff303de4d67c43b4770665c8ab0bf,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 3ca4f533692469c49b60c756497ae065, type: 3}
   m_PlayOnAwake: 0
@@ -10286,19 +10287,7 @@ MonoBehaviour:
   onDestroy:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 838360654138478538}
-        m_TargetAssemblyTypeName: DetachParticles, Assembly-CSharp
-        m_MethodName: Duplicate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 838360654138478538}
+      - m_Target: {fileID: 3470802407991709190}
         m_TargetAssemblyTypeName: DetachParticles, Assembly-CSharp
         m_MethodName: Detach
         m_Mode: 1
