@@ -11,7 +11,6 @@ public class SpearTip : MonoBehaviour
     public float radius = 0.5f;
     public LayerMask mask;
     public UnityEvent onSpearSomething;
-    public UnityEvent onSpearClicked;
 
     private void Start()
     {
