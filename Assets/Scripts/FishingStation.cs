@@ -7,9 +7,14 @@ public class FishingStation : Interactable {
     public PlayerCharacterController playerController;
 
     private bool fishing;
+    private int stoppedFrame = -1;
 
     public override void Interact() {
         if (fishing) {
+            return;
+        }
+
+        if (Time.frameCount == stoppedFrame) {
             return;
         }
 
@@ -41,7 +46,7 @@ public class FishingStation : Interactable {
             return;
         }
 
-        if (!kb.escapeKey.wasPressedThisFrame) {
+        if (!kb.eKey.wasPressedThisFrame) {
             return;
         }
 
@@ -50,6 +55,7 @@ public class FishingStation : Interactable {
 
     private void StopFishing() {
         fishing = false;
+        stoppedFrame = Time.frameCount;
 
         if (FishingRig.instance != null) {
             FishingRig.instance.Exit();

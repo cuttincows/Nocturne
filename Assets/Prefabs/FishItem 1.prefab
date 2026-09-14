@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5562700645573595777
+--- !u!1 &7346289087210028594
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6063820886716186096}
-  - component: {fileID: 6256360027293276685}
-  - component: {fileID: 8730259254691880481}
+  - component: {fileID: 4772300447522689613}
+  - component: {fileID: 1662856367761178928}
+  - component: {fileID: 9089746781043991674}
   m_Layer: 13
   m_Name: Visual
   m_TagString: Untagged
@@ -18,29 +18,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6063820886716186096
+--- !u!4 &4772300447522689613
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5562700645573595777}
+  m_GameObject: {fileID: 7346289087210028594}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6041581359858903370}
+  m_Father: {fileID: 2025049895574073127}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6256360027293276685
+--- !u!212 &1662856367761178928
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5562700645573595777}
+  m_GameObject: {fileID: 7346289087210028594}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -92,19 +92,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
---- !u!114 &8730259254691880481
+--- !u!114 &9089746781043991674
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5562700645573595777}
+  m_GameObject: {fileID: 7346289087210028594}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: def364e9c6e23c841aca6bfe4a3c0c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BillboardUpright
---- !u!1 &7993290193793126006
+  maxTilt: 25
+  randomFlip: 1
+--- !u!1 &8449900144350965201
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,40 +114,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6041581359858903370}
-  - component: {fileID: 3753633334085872107}
-  - component: {fileID: 2601608188359942573}
-  - component: {fileID: 1099729808884808157}
+  - component: {fileID: 2025049895574073127}
+  - component: {fileID: 5415852130019784000}
+  - component: {fileID: 1327182557564700604}
+  - component: {fileID: 1396004742400760052}
+  - component: {fileID: 9071226658124730482}
   m_Layer: 13
-  m_Name: FishItem
+  m_Name: FishItem 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6041581359858903370
+--- !u!4 &2025049895574073127
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7993290193793126006}
+  m_GameObject: {fileID: 8449900144350965201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9381835, y: 0.10365224, z: -17.85926}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -5.55772, y: 1.60087, z: -19.976}
+  m_LocalScale: {x: 0.10273172, y: 0.10273172, z: 0.10273172}
+  m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 6063820886716186096}
+  - {fileID: 4772300447522689613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &3753633334085872107
+--- !u!54 &5415852130019784000
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7993290193793126006}
+  m_GameObject: {fileID: 8449900144350965201}
   serializedVersion: 5
   m_Mass: 1
   m_LinearDamping: 0
@@ -166,14 +169,14 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!136 &2601608188359942573
+--- !u!136 &1327182557564700604
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7993290193793126006}
-  m_Material: {fileID: 0}
+  m_GameObject: {fileID: 8449900144350965201}
+  m_Material: {fileID: 13400000, guid: b20ae01fad3fb1e4984c8883531321a4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -189,19 +192,34 @@ CapsuleCollider:
   m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1099729808884808157
+--- !u!114 &1396004742400760052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7993290193793126006}
+  m_GameObject: {fileID: 8449900144350965201}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21a7b463e01c6d54fb235e3c1ab31c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishInShip
   definition: {fileID: 0}
-  spriteRenderer: {fileID: 6256360027293276685}
-  rb: {fileID: 3753633334085872107}
-  col: {fileID: 2601608188359942573}
+  spriteRenderer: {fileID: 1662856367761178928}
+  rb: {fileID: 5415852130019784000}
+  col: {fileID: 1327182557564700604}
+  visualYOffset: 0
+--- !u!114 &9071226658124730482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8449900144350965201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d3317bb274d5004183aab1c52f2b8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishPickup
+  CanBeInteractedWith: 1
+  fish: {fileID: 0}
