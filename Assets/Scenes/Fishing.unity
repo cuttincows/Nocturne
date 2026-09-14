@@ -1909,6 +1909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishingRig
   fishingCamera: {fileID: 342678263}
   spearRig: {fileID: 1532340994767209922}
+  fishingAudio: {fileID: 643001905}
 --- !u!4 &1656924149
 Transform:
   m_ObjectHideFlags: 0
