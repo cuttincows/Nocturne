@@ -24,6 +24,7 @@ public class PlayerCarry : MonoBehaviour {
         if (!fish.CanCarry) return false;
 
         Held = fish;
+        fish.RemoveFromPan();
 
         if (fish.rb != null) {
             fish.rb.linearVelocity = Vector3.zero;
@@ -58,6 +59,20 @@ public class PlayerCarry : MonoBehaviour {
             fish.rb.isKinematic = false;
         }
         return fish;
+    }
+
+    public void Eat() {
+        FishInShip fish = Held;
+
+        if (fish == null) return;
+        if (fish.State != FishState.Cooked) return;
+
+        if (fish.definition != null && FoodSystem.instance != null) {
+            FoodSystem.instance.AddFood(fish.definition.foodValue);
+        }
+
+        Held = null;
+        Destroy(fish.gameObject);
     }
 
     public void Throw() {
@@ -101,6 +116,11 @@ public class PlayerCarry : MonoBehaviour {
 
         if (Held == null) {
             if (mouse.leftButton.wasPressedThisFrame) TryPickUp(FindNearest());
+            return;
+        }
+
+        if (mouse.leftButton.wasPressedThisFrame && Held.State == FishState.Cooked) {
+            Eat();
             return;
         }
 

@@ -118,7 +118,6 @@ GameObject:
   - component: {fileID: 5415852130019784000}
   - component: {fileID: 1327182557564700604}
   - component: {fileID: 1396004742400760052}
-  - component: {fileID: 9071226658124730482}
   m_Layer: 13
   m_Name: FishItem 1
   m_TagString: Untagged
@@ -209,17 +208,3 @@ MonoBehaviour:
   rb: {fileID: 5415852130019784000}
   col: {fileID: 1327182557564700604}
   visualYOffset: 0
---- !u!114 &9071226658124730482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8449900144350965201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d3317bb274d5004183aab1c52f2b8bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FishPickup
-  CanBeInteractedWith: 1
-  fish: {fileID: 0}

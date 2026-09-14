@@ -18,8 +18,8 @@ public class FishInShip : MonoBehaviour {
 
     public bool CanCarry {
         get {
-            if (State != FishState.Raw) {
-                return false;
+            if (State == FishState.Cooked) {
+                return true;
             }
 
             return Pan == null;
@@ -64,9 +64,8 @@ public class FishInShip : MonoBehaviour {
             col.enabled = false;
         }
 
-        transform.SetParent(anchor, false);
-        transform.localPosition = Vector3.zero;
-        transform.localRotation = Quaternion.identity;
+        transform.position = anchor.position;
+        transform.rotation = anchor.rotation;
     }
 
     public void AddHeat(float amount) {
@@ -136,6 +135,14 @@ public class FishInShip : MonoBehaviour {
         Vector3 local = spriteRenderer.transform.localPosition;
         local.y = spriteRenderer.sprite.bounds.extents.y + bottom + visualYOffset;
         spriteRenderer.transform.localPosition = local;
+    }
+
+    public void RemoveFromPan() {
+        Pan = null;
+    }
+
+    public void SetCooked() {
+        SetState(FishState.Cooked);
     }
 
     public void Setup(FishDefinition def) {
