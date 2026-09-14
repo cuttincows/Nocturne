@@ -5,6 +5,7 @@ using UnityEngine.Events;
 /// determines cooked, speared, and alive state.
 /// really cooked and speared should be their own script but meh
 /// </summary>
+[RequireComponent(typeof(Destroyable))]
 public class Death : DirectionProvider
 {
     public bool dead { get; private set; }
@@ -53,7 +54,7 @@ public class Death : DirectionProvider
             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1 - ratio);
             if (expirationTimer >= expirationTime)
             {
-                Destroy(gameObject);
+                GetComponent<Destroyable>().Destroy();
             }
         }
     }

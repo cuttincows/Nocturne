@@ -1082,7 +1082,7 @@ PrefabInstance:
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: delay
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
@@ -1342,8 +1342,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
+      propertyPath: delay
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
       propertyPath: timer
-      value: 300
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
@@ -1378,7 +1383,7 @@ PrefabInstance:
     - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: spawnObjects.Array.data[3].name
-      value: Anglerfish (NEW)
+      value: Anglerfish
       objectReference: {fileID: 0}
     - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
@@ -1499,7 +1504,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619966213}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a49d69cd4c674241a6c0e582155180c, type: 3}
   m_Name: 
@@ -1520,7 +1525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1656924148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2091,7 +2096,7 @@ PrefabInstance:
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: delay
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
