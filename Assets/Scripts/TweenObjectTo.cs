@@ -20,6 +20,10 @@ public class TweenObjectTo : MonoBehaviour
 
     public Material skyboxMaterial;
 
+    [Header("Sting")]
+    public AudioClip stingClip;
+    public AudioSource blackHoleSource;
+
     void Start()
     {
         startPos = ObjectToTween.transform.position;
@@ -27,6 +31,7 @@ public class TweenObjectTo : MonoBehaviour
 
     }
 
+    private bool hasPlayedSting = false;
     void Update()
     {
         float easedT = Mathf.Lerp(
@@ -34,6 +39,13 @@ public class TweenObjectTo : MonoBehaviour
             1f - FuelSystem.instance.GetRemainingFuelPercent(),
             Time.deltaTime * fuelEaseCatchupSpeed
         );
+        if (!hasPlayedSting && easedT >= 1)
+        {
+            blackHoleSource.clip = stingClip;
+            blackHoleSource.loop = false;
+            blackHoleSource.Play();
+            hasPlayedSting = true;
+        }
         prevFuelValue = easedT;
         TweenByToWith(easedT, delType, easeType);
     }

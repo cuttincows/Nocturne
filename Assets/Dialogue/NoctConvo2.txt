@@ -1,0 +1,8 @@
+block noctconvo2:
+	say Noct "Where did you take the ship now?"
+	say Noct "You know that you're responsible for all company tech!"
+	say Noct "Every ding and scratch?  On your PERMANENT record"
+	say Noct "Shouldn't be possible to steer the ship but you must've given you "
+	say Noct "I don't know how you steered the ship given autopilot can't be disabled..."
+	say Noct "But it'll be YOUR fault when we figure it out!!!"
+endblock
