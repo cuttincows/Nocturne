@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.Events;
 
 public class SpearTip : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class SpearTip : MonoBehaviour
     public Spearable item;
     public float radius = 0.5f;
     public LayerMask mask;
+    public UnityEvent onSpearSomething;
+    public UnityEvent onSpearClicked;
 
     private void Start()
     {
@@ -33,6 +36,7 @@ public class SpearTip : MonoBehaviour
 
     private void SpearItem(Spearable itemToSpear)
     {
+        onSpearSomething?.Invoke();
         itemToSpear.Spear(this);
         item = itemToSpear;
     }

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: -5907284306718036365}
   - component: {fileID: 2992657943321339379}
   - component: {fileID: 8829450283665722355}
+  - component: {fileID: 8469245905257628571}
   m_Layer: 19
   m_Name: Anglerfish
   m_TagString: Fish
@@ -331,6 +332,21 @@ MonoBehaviour:
   targetBox:
     spawnBoxOverride: {fileID: 0}
   tolerance: 0.1
+--- !u!114 &8469245905257628571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ea304654e535547a0b62d982f54fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Destroyable
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0

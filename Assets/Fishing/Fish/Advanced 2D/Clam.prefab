@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: -893803050155525316}
   - component: {fileID: -2767796316551035328}
   - component: {fileID: -661326539438127170}
+  - component: {fileID: -2537651728022705302}
   m_Layer: 19
   m_Name: Clam
   m_TagString: Fish
@@ -326,6 +327,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Eatable
   canEat: 1
+--- !u!114 &-2537651728022705302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7784431384039299623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ea304654e535547a0b62d982f54fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Destroyable
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8900939742488173737
 GameObject:
   m_ObjectHideFlags: 0

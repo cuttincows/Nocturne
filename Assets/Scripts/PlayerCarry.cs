@@ -8,6 +8,7 @@ public class PlayerCarry : MonoBehaviour {
     public Vector3 holdRotation = new Vector3(0f, 155f, 25f);
     public float followSpeed = 12f;
     public float turnSpeed = 14f;
+    public float pickupRange = 3f;
     public float throwForce = 7f;
     public float throwLift = 2f;
 
@@ -23,6 +24,7 @@ public class PlayerCarry : MonoBehaviour {
         if (!fish.CanCarry) return false;
 
         Held = fish;
+        fish.RemoveFromPan();
 
         if (fish.rb != null) {
             fish.rb.linearVelocity = Vector3.zero;
@@ -59,6 +61,20 @@ public class PlayerCarry : MonoBehaviour {
         return fish;
     }
 
+    public void Eat() {
+        FishInShip fish = Held;
+
+        if (fish == null) return;
+        if (fish.State != FishState.Cooked) return;
+
+        if (fish.definition != null && FoodSystem.instance != null) {
+            FoodSystem.instance.AddFood(fish.definition.foodValue);
+        }
+
+        Held = null;
+        Destroy(fish.gameObject);
+    }
+
     public void Throw() {
         Transform aim = holdPoint;
         FishInShip fish = Release();
@@ -70,14 +86,45 @@ public class PlayerCarry : MonoBehaviour {
         fish.rb.AddForce(force, ForceMode.Impulse);
     }
 
+    public FishInShip FindNearest() {
+        FishRegistry reg = FishRegistry.Existing;
+        if (reg == null) return null;
+
+        FishInShip best = null;
+        float bestDist = pickupRange;
+
+        for (int i = 0; i < reg.All.Count; i++) {
+            FishInShip fish = reg.All[i];
+
+            if (fish == null) continue;
+            if (!fish.CanCarry) continue;
+
+            float dist = Vector3.Distance(transform.position, fish.transform.position);
+            if (dist > bestDist) continue;
+
+            bestDist = dist;
+            best = fish;
+        }
+        return best;
+    }
+
     private void Update() {
-        if (Held == null) return;
         if (InteractWithObject.InteractionLocked) return;
 
         Mouse mouse = Mouse.current;
         if (mouse == null) return;
 
-        if (mouse.leftButton.wasPressedThisFrame) Throw();
+        if (Held == null) {
+            if (mouse.leftButton.wasPressedThisFrame) TryPickUp(FindNearest());
+            return;
+        }
+
+        if (mouse.leftButton.wasPressedThisFrame && Held.State == FishState.Cooked) {
+            Eat();
+            return;
+        }
+
+        if (mouse.rightButton.wasPressedThisFrame) Throw();
     }
 
     private void LateUpdate() {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Teleporter : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Teleporter : MonoBehaviour
     public Stunnable stunner;
     public Death death;
     public float cooldown = 2f;
+    public UnityEvent onTeleport;
 
     private void Start()
     {
@@ -31,6 +33,7 @@ public class Teleporter : MonoBehaviour
         rb.MovePosition(teleportVisual.transform.position);
         rb.linearVelocity = Vector3.zero;
         RandomizeTeleport();
+        onTeleport?.Invoke();
         stunner.Stun(cooldown);
     }
 }
