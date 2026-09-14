@@ -8,6 +8,10 @@ public class InteractWithObject : MonoBehaviour
     public GameObject interactPrompt;
     public GameObject player;
 
+    [Header("Drag the player camera here. Interactables outside this cone are ignored.")]
+    public Transform lookFrom;
+    public float maxLookAngle = 50f;
+
     [HideInInspector]
     public Interactable closestInteractable;
     public float closestDist = Mathf.Infinity;
@@ -37,6 +41,10 @@ public class InteractWithObject : MonoBehaviour
 
         // Reset closest 
         closestDist = Mathf.Infinity;
+        closestInteractable = null;
+
+        Transform eye = lookFrom != null ? lookFrom : player.transform;
+
         foreach (Interactable interactable in allInteractables)
         {
             if (!interactable.CanBeInteractedWith)
@@ -45,6 +53,17 @@ public class InteractWithObject : MonoBehaviour
             }
 
             float dist = Vector3.Distance(player.transform.position, interactable.transform.position);
+            if (dist > maxInteractDist)
+            {
+                continue;
+            }
+
+            Vector3 toTarget = interactable.transform.position - eye.position;
+            if (Vector3.Angle(eye.forward, toTarget) > maxLookAngle)
+            {
+                continue;
+            }
+
             if (dist < closestDist)
             {
                 closestDist = dist;
@@ -52,7 +71,7 @@ public class InteractWithObject : MonoBehaviour
             }
         }
 
-        bool closeEnough = closestDist < maxInteractDist;
+        bool closeEnough = closestInteractable != null;
         interactPrompt.SetActive(closeEnough);
         if (closeEnough && Keyboard.current.eKey.wasPressedThisFrame)
         {

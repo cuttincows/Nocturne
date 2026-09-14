@@ -35,6 +35,12 @@ public class FishingRig : MonoBehaviour {
 
         if (fishingAudio != null) {
             fishingAudio.SetActive(on);
+
+            FishAudio audio = fishingAudio.GetComponent<FishAudio>();
+
+            if (audio != null) {
+                audio.Mute(!on);
+            }
         }
     }
 }

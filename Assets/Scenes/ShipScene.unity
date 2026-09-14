@@ -2085,6 +2085,8 @@ MonoBehaviour:
   MinSkyboxBlur: 500
   MaxSkyboxBlur: 1000
   skyboxMaterial: {fileID: 2100000, guid: e0594306cc15b4d2ebabdb1e0c9830e5, type: 2}
+  stingClip: {fileID: 0}
+  blackHoleSource: {fileID: 0}
 --- !u!4 &1235037678
 Transform:
   m_ObjectHideFlags: 0
@@ -3063,9 +3065,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractWithObject
   interactPrompt: {fileID: 2076971104}
   player: {fileID: 1343732243}
+  lookFrom: {fileID: 0}
+  maxLookAngle: 50
   closestInteractable: {fileID: 0}
   closestDist: Infinity
-  maxInteractDist: 1.8
+  maxInteractDist: 2
 --- !u!4 &1932626158
 Transform:
   m_ObjectHideFlags: 0

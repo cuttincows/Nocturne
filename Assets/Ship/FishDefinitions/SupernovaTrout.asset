@@ -16,5 +16,5 @@ MonoBehaviour:
   rawSprite: {fileID: 21300000, guid: bdb83410ed0275e4ab6e9d08973a0e72, type: 3}
   cookedSprite: {fileID: 0}
   cookTime: 5
-  fuelValue: 2000
-  foodValue: 200
+  fuelValue: 1500
+  foodValue: 240

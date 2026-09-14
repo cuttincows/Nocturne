@@ -18,6 +18,10 @@ public class FuelSystem : MonoBehaviour
     }
     [SerializeField] float decaySpeed = 1;
     [SerializeField] float decayAcceleration = 1/100f;
+    [Header("Seconds before the drain starts speeding up at all")]
+    [SerializeField] float accelerationDelay = 120f;
+    [Header("1 = straight ramp, higher = stays gentle longer then bites")]
+    [SerializeField] float accelerationPower = 1f;
     float timeElapsed;
 
     [SerializeField] Slider slider;
@@ -39,6 +43,7 @@ public class FuelSystem : MonoBehaviour
 
     private float Func(float x)
     {
-        return (decayAcceleration * x) + 1f;
+        float t = Mathf.Max(0f, x - accelerationDelay);
+        return 1f + (decayAcceleration * Mathf.Pow(t, accelerationPower));
     }
 }
