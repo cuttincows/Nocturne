@@ -138,6 +138,7 @@ MonoBehaviour:
   CanBeInteractedWith: 1
   dialogueScripts:
   - {fileID: 4900000, guid: d6dd154a6af205f44a00180095405c69, type: 3}
+  - {fileID: 4900000, guid: fd9b5ec15d1fd7744bbcf494a26a9c03, type: 3}
   dialogue: {fileID: 0}
   interpreter: {fileID: 0}
   playerController: {fileID: 0}
