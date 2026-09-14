@@ -12,11 +12,6 @@ public class FuelSystem : MonoBehaviour
         return slider.value / slider.maxValue;
     }
 
-    private void OnApplicationPause(bool pause)
-    {
-        
-    }
-
     private void Awake()
     {
         instance = this;

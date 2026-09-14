@@ -30,7 +30,8 @@ public class DetachParticles : MonoBehaviour
 
     public void Duplicate()
     {
-        DetachParticles dp = Instantiate(gameObject).GetComponent<DetachParticles>();
+        DetachParticles dp = Instantiate(gameObject, transform.position, transform.rotation).GetComponent<DetachParticles>();
+        dp.transform.localScale = transform.lossyScale;
         dp.Detach();
     }
 
