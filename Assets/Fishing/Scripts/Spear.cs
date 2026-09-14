@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public enum SpearState
@@ -14,6 +15,7 @@ public class Spear : MonoBehaviour
 {
     public SpearTarget target;
     public Rigidbody spear;
+    public UnityEvent onSpearClicked;
 
     public float throwSpeed = 10f;
     public float retractSpeed = 10f;
@@ -90,6 +92,7 @@ public class Spear : MonoBehaviour
 
     private void ThrowSpear()
     {
+        onSpearClicked?.Invoke();
         ChangeState(SpearState.Throwing);
         target.enabled = false;
     }
