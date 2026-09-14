@@ -17,4 +17,4 @@ MonoBehaviour:
   cookedSprite: {fileID: 21300000, guid: 619195842f052964180d18b8fa511a80, type: 3}
   cookTime: 5
   fuelValue: 200
-  foodValue: 50
+  foodValue: 85
