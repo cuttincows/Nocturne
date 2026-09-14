@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.45490196}
+  m_Color: {r: 0.16862746, g: 0.21568628, b: 0.28235295, a: 0.45490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.88235295}
+  m_Color: {r: 0.16954434, g: 0.21698706, b: 0.2830189, a: 0.88235295}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1108,7 +1108,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Testing
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2d0aaede2506c4ca0969c32576224028, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 75063828274bdb145a55f6dd2f22e8b2, type: 2}
   m_sharedMaterial: {fileID: 21520047123856204, guid: 2d0aaede2506c4ca0969c32576224028,
     type: 2}
   m_fontSharedMaterials: []
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &6076919337643861008
@@ -1341,7 +1341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.45490196}
+  m_Color: {r: 0.16862746, g: 0.21568628, b: 0.28235295, a: 0.45490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1366,6 +1366,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6810149238298832838}
     m_Modifications:
+    - target: {fileID: 1132291239568323741, guid: 6c52f4526dac200469f7b657674ace25,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132291239568323741, guid: 6c52f4526dac200469f7b657674ace25,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.2673814
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132291239568323741, guid: 6c52f4526dac200469f7b657674ace25,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.21306513
+      objectReference: {fileID: 0}
     - target: {fileID: 2586320905775862912, guid: 6c52f4526dac200469f7b657674ace25,
         type: 3}
       propertyPath: m_Name
@@ -1495,6 +1510,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6810149238298832838}
     m_Modifications:
+    - target: {fileID: 1132291239568323741, guid: 6c52f4526dac200469f7b657674ace25,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.28235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132291239568323741, guid: 6c52f4526dac200469f7b657674ace25,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.21568628
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132291239568323741, guid: 6c52f4526dac200469f7b657674ace25,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.16862746
+      objectReference: {fileID: 0}
     - target: {fileID: 2586320905775862912, guid: 6c52f4526dac200469f7b657674ace25,
         type: 3}
       propertyPath: m_Name
