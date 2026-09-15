@@ -950,7 +950,7 @@ PrefabInstance:
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: delay
-      value: 90
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
@@ -1598,7 +1598,7 @@ PrefabInstance:
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: delay
-      value: 70
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
@@ -1859,7 +1859,7 @@ PrefabInstance:
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: delay
-      value: 90
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
@@ -2356,7 +2356,7 @@ PrefabInstance:
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: delay
-      value: 80
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
@@ -2987,7 +2987,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   decaySpeed: 8
-  decayAcceleration: 0.05
+  decayAcceleration: 0.01
   accelerationDelay: 60
   accelerationPower: 1
   slider: {fileID: 8034767073960078519}
@@ -3068,7 +3068,7 @@ PrefabInstance:
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: delay
-      value: 70
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
