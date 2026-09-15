@@ -947,6 +947,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: delay
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: timer
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: capacity
@@ -1588,7 +1598,7 @@ PrefabInstance:
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: delay
-      value: 150
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
@@ -1849,12 +1859,12 @@ PrefabInstance:
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: delay
-      value: 250
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: timer
-      value: 200
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
@@ -2342,6 +2352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
+        type: 3}
+      propertyPath: delay
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
@@ -3053,7 +3068,7 @@ PrefabInstance:
     - target: {fileID: 2251533837003243852, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}
       propertyPath: delay
-      value: 200
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6011733734462514730, guid: 12e84d19cca3f7947bfaa4052313f6ba,
         type: 3}

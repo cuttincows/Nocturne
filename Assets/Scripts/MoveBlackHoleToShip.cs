@@ -70,6 +70,9 @@ public class MoveBlackHoleToShip : MonoBehaviour
 
         // What actually moves the object
         ObjectToTween.transform.position = Vector3.Lerp(BlackHoleSpawnPoint.position, TweenToTr.transform.position, t);
-        skyboxMaterial.SetFloat("_BlurAmount", Mathf.Lerp(MinSkyboxBlur, MaxSkyboxBlur, t));
+        if (skyboxMaterial != null)
+        {
+            skyboxMaterial.SetFloat("_BlurAmount", Mathf.Lerp(MinSkyboxBlur, MaxSkyboxBlur, t));
+        }
     }
 }
