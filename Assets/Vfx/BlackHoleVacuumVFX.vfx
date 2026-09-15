@@ -37,10 +37,10 @@ MonoBehaviour:
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: -1294
-    y: 293
-    width: 2033
-    height: 2532
+    x: -1295
+    y: 295
+    width: 2034
+    height: 2534
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -771,7 +771,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.2158605307340622,"g":0.6866854429244995,"b":1.0,"a":1.0},"time":0.3776455223560333},{"color":{"r":5.496708393096924,"g":0.022183720022439958,"b":5.501567840576172,"a":1.0},"time":0.6458838582038879}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":0.800000011920929},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.05687675625085831,"g":0.05205486714839935,"b":0.3522012233734131,"a":1.0},"time":0.2882429361343384},{"color":{"r":0.08867275714874268,"g":0.17897798120975495,"b":0.4817579388618469,"a":1.0},"time":0.5941252708435059},{"color":{"r":0.2158605307340622,"g":0.6866854429244995,"b":1.0,"a":1.0},"time":0.8274509906768799},{"color":{"r":5.496708393096924,"g":0.022183720022439958,"b":5.501567840576172,"a":1.0},"time":0.9411764740943909}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":0.7960784435272217},{"alpha":0.0,"time":0.9627526998519898},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
     m_Space: -1
   m_Property:
     name: Color
@@ -1999,7 +1999,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.AnimationCurve, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"frames":[{"time":0.0,"value":0.0,"inTangent":6.615680694580078,"outTangent":6.615680694580078,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":0.21333464980125428,"value":160.01998901367188,"inTangent":0.06686528027057648,"outTangent":0.06686528027057648,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":0.8720303177833557,"value":108.59417724609375,"inTangent":-176.23388671875,"outTangent":-176.23388671875,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":1.0,"value":0.0,"inTangent":-848.593017578125,"outTangent":-848.593017578125,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
+      m_SerializableObject: '{"frames":[{"time":0.0,"value":0.0,"inTangent":6.615680694580078,"outTangent":6.615680694580078,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":0.46889376640319826,"value":71.23811340332031,"inTangent":-5.090024948120117,"outTangent":-5.090024948120117,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":0.9386932253837586,"value":53.5706787109375,"inTangent":-176.23388671875,"outTangent":-176.23388671875,"tangentMode":0,"leftTangentMode":0,"rightTangentMode":0,"broken":false},{"time":1.0,"value":0.0,"inTangent":-873.8133544921875,"outTangent":-873.8133544921875,"tangentMode":0,"leftTangentMode":1,"rightTangentMode":1,"broken":false}],"preWrapMode":8,"postWrapMode":8,"version":1}'
     m_Space: -1
   m_Property:
     name: Size

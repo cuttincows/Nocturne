@@ -2,11 +2,11 @@ using System;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class TweenObjectTo : MonoBehaviour
+[ExecuteInEditMode]
+public class MoveBlackHoleToShip : MonoBehaviour
 {
     public GameObject ObjectToTween;
     public Transform TweenToTr;
-    private Vector3 startPos;
 
     public Ease.DelegateType delType;
     public Ease.EaseType easeType;
@@ -24,9 +24,20 @@ public class TweenObjectTo : MonoBehaviour
     public AudioClip stingClip;
     public AudioSource blackHoleSource;
 
+    [Range(0,1)]
+    public float TestEditorT = 0f;
+
+    public float minBlackHolePosOffet = -.4f;
+    public float maxBlackHolePosOffste = 0.9f;
+
+    public Transform BlackHoleSpawnPoint;
+
     void Start()
     {
-        startPos = ObjectToTween.transform.position;
+        if (!Application.isPlaying)
+        {
+            return;
+        }
         prevFuelValue = 1f - FuelSystem.instance.GetRemainingFuelPercent();
 
     }
@@ -34,12 +45,15 @@ public class TweenObjectTo : MonoBehaviour
     private bool hasPlayedSting = false;
     void Update()
     {
-        float easedT = Mathf.Lerp(
-            prevFuelValue,
-            1f - FuelSystem.instance.GetRemainingFuelPercent(),
-            Time.deltaTime * fuelEaseCatchupSpeed
-        );
-        if (!hasPlayedSting && easedT >= 1)
+        float easedT = TestEditorT;
+        if (Application.isPlaying) {
+            easedT = Mathf.Lerp(
+                prevFuelValue,
+                1f - FuelSystem.instance.GetRemainingFuelPercent(),
+                Time.deltaTime * fuelEaseCatchupSpeed
+            );
+        }
+        if (Application.isPlaying && !hasPlayedSting && easedT >= 1)
         {
             blackHoleSource.clip = stingClip;
             blackHoleSource.loop = false;
@@ -55,7 +69,7 @@ public class TweenObjectTo : MonoBehaviour
         t = Ease.GetDelegate(delType, easeType)(t);
 
         // What actually moves the object
-        ObjectToTween.transform.position = Vector3.Lerp(startPos, TweenToTr.transform.position, t);
+        ObjectToTween.transform.position = Vector3.Lerp(BlackHoleSpawnPoint.position, TweenToTr.transform.position, t);
         skyboxMaterial.SetFloat("_BlurAmount", Mathf.Lerp(MinSkyboxBlur, MaxSkyboxBlur, t));
     }
 }
