@@ -88,7 +88,7 @@ public class Spawning : MonoBehaviour
 
     public void IncreaseCapacity()
     {
-        capacity += 0.25f;
+        capacity += 0.15f;
     }
 
     public void ReportDeath(Spawnable spawnable)
